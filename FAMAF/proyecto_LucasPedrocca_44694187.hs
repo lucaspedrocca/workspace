@@ -75,3 +75,4 @@ porcPorAnio (((anio,mes,dia), st, de, fi, cp, cs):xs) =
         [(anio, (st * 100 / (st+de+fi+cp+cs)), (de * 100 / (st+de+fi+cp+cs)),(fi * 100 / (st+de+fi+cp+cs)),
         (cp * 100 / (st+de+fi+cp+cs)),(cs * 100 / (st+de+fi+cp+cs)))] ++ (porcPorAnio xs)
 
+--hola 
