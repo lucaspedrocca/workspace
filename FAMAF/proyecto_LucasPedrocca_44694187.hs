@@ -1,7 +1,3 @@
-{-# OPTIONS_GHC -Wno-overlapping-patterns #-}
-{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
-import Data.String (IsString)
-{-# HLINT ignore "Redundant bracket" #-}
 -- Proyecto base de datos
 -- Lucas Pedrocca 44694187
 
@@ -74,4 +70,3 @@ porcPorAnio [] = []
 porcPorAnio (((anio,mes,dia), st, de, fi, cp, cs):xs) = 
         [(anio, (st * 100 / (st+de+fi+cp+cs)), (de * 100 / (st+de+fi+cp+cs)),(fi * 100 / (st+de+fi+cp+cs)),
         (cp * 100 / (st+de+fi+cp+cs)),(cs * 100 / (st+de+fi+cp+cs)))] ++ (porcPorAnio xs)
-
