@@ -68,5 +68,5 @@ ingresosPorAño (((anio,mes,dia), st, de, fi, cp, cs):xs) año
 porcentajePorAño :: Base -> [(Int, Float, Float, Float, Float, Float)]
 porcentajePorAño [] = []
 porcentajePorAño (((anio,mes,dia), st, de, fi, cp, cs):xs) = 
-        [(anio, (st * 100 / (st+de+fi+cp+cs)), (de * 100 / (st+de+fi+cp+cs)),(fi * 100 / (st+de+fi+cp+cs)),
-        (cp * 100 / (st+de+fi+cp+cs)),(cs * 100 / (st+de+fi+cp+cs)))] ++ (porcentajePorAño xs)
+        (anio, (st * 100 / (st+de+fi+cp+cs)), (de * 100 / (st+de+fi+cp+cs)),(fi * 100 / (st+de+fi+cp+cs)),
+        (cp * 100 / (st+de+fi+cp+cs)),(cs * 100 / (st+de+fi+cp+cs))) : (porcentajePorAño xs)
