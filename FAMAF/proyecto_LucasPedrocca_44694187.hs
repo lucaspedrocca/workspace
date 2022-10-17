@@ -9,6 +9,8 @@ type Base = [IngresosPorAnio]
 
 -- Encabezado: "indice_tiempo", "ingresos_ventas_musica_streaming", "ingresos_ventas_musica_descargas", "ingresos_ventas_musica_formato_fisico", "ingresos_derechos_comunicacion_publica", "ingresos_contratos_sincronizacion"
 
+-- Todos los ingresos estan expresados en mil millones de dolares.
+
 base :: Base
 base = [((2001,01,01), 0, 0, 23.0, 0.6, 0),
         ((2002,01,01), 0, 0, 21.3, 0.7, 0),
@@ -53,7 +55,8 @@ ingresosPorSegmentoTotales [] segmento = 0
 ingresosPorSegmentoTotales (x:xs) segmento = (valorSegmento x segmento) + (ingresosPorSegmentoTotales xs segmento)
 
 
--- Función que devuelve todos los ingresos de un determinado año.
+-- Función que dada la base de datos y un año devuelve todos los ingresos del año ingresado.
+-- Ejemplo: ingresosPorAño base 2012 = (2012,1.0,4.4,7.6,1.5,0.3)
 
 ingresosPorAño :: Base -> Int -> (Int, Float, Float, Float, Float, Float)
 ingresosPorAño [] año = (año, 0, 0, 0, 0, 0)
@@ -70,3 +73,14 @@ porcentajePorAño [] = []
 porcentajePorAño (((anio,mes,dia), st, de, fi, cp, cs):xs) = 
         (anio, (st * 100 / (st+de+fi+cp+cs)), (de * 100 / (st+de+fi+cp+cs)),(fi * 100 / (st+de+fi+cp+cs)),
         (cp * 100 / (st+de+fi+cp+cs)),(cs * 100 / (st+de+fi+cp+cs))) : (porcentajePorAño xs)
+
+-- Función que dada una base de datos, un segmento, un año y valor del dolar blue del dia te devuelve el ingreso del segmento y año especificado expresado en pesos.
+
+ingresosEnPesos :: Base -> String -> Int -> Float -> String
+ingresosEnPesos (((anio,mes,dia), st, de, fi, cp, cs):xs) segmento año dolar
+        |anio == año = show((valorSegmento((anio,mes,dia), st, de, fi, cp, cs) segmento * dolar)) ++ " mil millones pesos argentinos."
+        |otherwise = (ingresosEnPesos xs segmento año dolar)
+ 
+
+--  hola :: (Int,Int,Int)-> String
+--  hola (a,b,c) = ("primero:" ++ show(a)++ "\n"++"primero:" ++ show(b)++ "\n" ++ "tercero:" ++ show(c)++ "\n")
