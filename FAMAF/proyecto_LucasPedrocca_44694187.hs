@@ -41,37 +41,35 @@ segmentos = ["streaming","descargas", "fisico", "publica", "sincronizacion"]
 
 -- Función que devuelve el valor de un segmento.
 
-devolverSegmento :: IngresosPorAnio -> String -> Float
-devolverSegmento (fecha, st, de, fi, cp, cs) segmento
+valorSegmento :: IngresosPorAnio -> String -> Float
+valorSegmento (fecha, st, de, fi, cp, cs) segmento
         | segmento == "streaming"= st
         | segmento == "descargas"= de
         | segmento == "fisico"= fi
         | segmento == "publica"= cp
         | segmento == "sincronizacion" = cs
-devolverSegmento ingresos _ = 0
+valorSegmento ingresos _ = 0
 
 -- Función que devuelve los ingresos totales (2001 a 2020) de una determinado segmento (streming, descargas, fisico, sincronización).
 
-ingPorSegTot :: Base -> String -> Float
-ingPorSegTot [] segmento = 0
-ingPorSegTot (x:xs) segmento = (devolverSegmento x segmento) + (ingPorSegTot xs segmento)
+ingresosPorSegmentoTotales :: Base -> String -> Float
+ingresosPorSegmentoTotales [] segmento = 0
+ingresosPorSegmentoTotales (x:xs) segmento = (valorSegmento x segmento) + (ingresosPorSegmentoTotales xs segmento)
 
 
 -- Función que devuelve todos los ingresos de un determinado año.
 
-ingPorAnio :: Base -> Int -> (Int, Float, Float, Float, Float, Float)
-ingPorAnio [] anio1 = (anio1, 0, 0, 0, 0, 0)
-ingPorAnio (((anio,mes,dia), st, de, fi, cp, cs):xs) anio1
-        | anio1 < 2001 || anio1 > 2020 = (anio1, 0, 0, 0, 0, 0)
-        | anio /= anio1 = ingPorAnio xs anio1
-        | anio == anio1 = (anio, st, de, fi, cp, cs)
+ingresosPorAño :: Base -> Int -> (Int, Float, Float, Float, Float, Float)
+ingresosPorAño [] año = (año, 0, 0, 0, 0, 0)
+ingresosPorAño (((anio,mes,dia), st, de, fi, cp, cs):xs) año
+        | año < 2001 || año > 2020 = (año, 0, 0, 0, 0, 0)
+        | anio /= año = ingresosPorAño xs año
+        | anio == año = (anio, st, de, fi, cp, cs)
 
 
 -- Función que dada la base de datos de los ingresos, devuelve el porcentaje que representa cada segmento en todos los años.
 
-porcPorAnio :: Base -> [(Int, Float, Float, Float, Float, Float)]
-porcPorAnio [] = []
-porcPorAnio (((anio,mes,dia), st, de, fi, cp, cs):xs) = 
-        [(anio, (st * 100 / (st+de+fi+cp+cs)), (de * 100 / (st+de+fi+cp+cs)),(fi * 100 / (st+de+fi+cp+cs)),
-        (cp * 100 / (st+de+fi+cp+cs)),(cs * 100 / (st+de+fi+cp+cs)))] ++ (porcPorAnio xs)
-
+porcentajePorAño :: Base -> [(Int, Float, Float, Float, Float, Float)]
+porcentajePorAño [] = []
+porcentajePorAño (((anio,mes,dia), st, de, fi, cp, cs):xs) = 
+        (anio, (st * 100 / (st+de+fi+cp+cs)), (de * 100 / (st+de+fi+cp+cs)),(fi * 100 / (st+de+fi+cp+cs)),(cp * 100 / (st+de+fi+cp+cs)),(cs * 100 / (st+de+fi+cp+cs))) : (porcentajePorAño xs)
