@@ -320,3 +320,4 @@ base = [("Cine Teatro Español", "Buenos Aires", "25 de mayo", "25 de mayo", "Ca
         ("Microcine Orion", "Tucumán", "Capital", "San Miguel de Tucumán", "Av. Mitre 817", "", 1, 36, "Pública"),
         ("Solar del Cerro", "Tucumán", "Yerba Buena", "Yerba Buena", "Av. Aconquija 1336", "http://solardelcerro.com", 5, 750, "Privada"),
         ("Sunstar Tucuman", "Tucumán", "Yerba Buena", "Yerba Buena", "Av. Fermin Carriola 42", "http://www.cinesunstar.com/", 6, 1295, "Privada")]
+
