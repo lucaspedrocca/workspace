@@ -149,6 +149,25 @@ web (n,p,dpto,l,d,web,ps,b,tg) = web ++ "."
 gestion :: Registro -> String
 gestion (n,p,dpto,l,d,web,ps,b,tg) = tg
 
+-- Contadores: 
+
+-- Contador de gestion publica.
+cPublica :: Base -> String -> Int
+cPublica [] prov = 0
+cPublica (x:xs) prov
+        | provincia x == prov && gestion x == "Pública" = 1 + cPublica xs prov
+        | provincia x == prov && gestion x /= "Pública" = 0 + cPublica xs prov
+        | provincia x /= prov = cPublica xs prov
+
+
+-- Contador de gestion publica.
+cPrivada :: Base -> String -> Int
+cPrivada [] prov = 0
+cPrivada (x:xs) prov
+        | provincia x == prov && gestion x == "Privada" = 1 + cPrivada xs prov
+        | provincia x == prov && gestion x /= "Privada" = 0 + cPrivada xs prov
+        | provincia x /= prov = cPrivada xs prov
+
 -- Funciones:
 
 -- Primera Funcion: Dada la base  y un numero Z de butacas te devuelve una lista con los cines con mas de Z butacas.
@@ -198,24 +217,10 @@ duplicarPantallas (x:xs) prov
 
 -- Quinta Función: 
 -- Funcion que dada la base y una provincia te devuelve el numero de cines con gestion publica y privada.
+-- Funcion filter-fold
+
 -- Ejemplo: tipoGestion base "Buenos Aires" = "En Buenos Aires: 40 cines son de gestion privada y 1 cine es de gestion publica."
-
-gestionPublica :: Base -> String -> Int
-gestionPublica [] prov = 0
-gestionPublica (x:xs) prov
-        | (provincia x == prov) && (gestion x == "Pública") = 1 + gestionPublica xs prov
-        | (provincia x == prov) && (gestion x /= "Pública") = 0 + gestionPublica xs prov
-        | provincia x /= prov = gestionPublica xs prov
-
-gestionPrivada :: Base -> String -> Int
-gestionPrivada [] prov = 0
-gestionPrivada (x:xs) prov
-        | provincia x == prov && gestion x == "Privada" = 1 + gestionPrivada xs prov
-        | provincia x == prov && gestion x /= "Privada" = 0 + gestionPrivada xs prov
-        | provincia x /= prov = gestionPrivada xs prov
-
 
 tipoGestion :: Base -> String -> String
 tipoGestion [] prov = "Ingrese una base con contenido."
-tipoGestion base prov = "En "++ prov ++": " ++ show(gestionPrivada base prov) ++ " cines son de gestion privada y " ++ show(gestionPublica base prov) ++ " cine es de gestion publica."
-         
+tipoGestion base prov = "En "++ prov ++": " ++ show(cPrivada base prov) ++ " cines son de gestion privada y " ++ show(cPublica base prov) ++ " cine es de gestion publica."
