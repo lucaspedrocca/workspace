@@ -122,15 +122,36 @@ base = [("Showcase Norte", "Buenos Aires", "Vicente López", "Munro", "E. Echeve
 
 -- Funciones:
 
--- Primera Funcion: Dada la base (y una provincia) te devuelve una lista con los cines con mas de 1000 butacas.
+butacas :: Registro -> Int
+butacas (n,p,dpto,l,d,web,ps,b,tp) = b
+
+butacasString :: Registro -> String
+butacasString (n,p,dpto,l,d,web,ps,b,tp) = show b ++ " butacas."
+
+nombre :: Registro -> String
+nombre (n,p,dpto,l,d,web,ps,b,tp) = "Cine: " ++ n ++ ". "
+
+direccionCompleta :: Registro -> String
+direccionCompleta (n,p,dpto,l,d,web,ps,b,tp) = p ++ ". " ++ dpto ++ ". " ++ l ++ ". "
+
+-- Primera Funcion: Dada la base  y un numero Z de butacas te devuelve una lista con los cines con mas de Z butacas.
 -- funcion filter.
 
--- Segunda Funcion: Dada la base y una provincia te devuelve la cantidad (promedio) de pantallas que tiene esa provincia.
--- funcion fold.
+butacasX :: Base -> Int ->[String]
+butacasX [] z = []
+butacasX (x:xs) z
+        | butacas x >= z = (nombre x ++ direccionCompleta x ++ butacasString x) : (butacasX xs z) 
+        | butacas x < z = (butacasX xs z) 
+
+-- Segunda Funcion: Dada la base y una provincia te devuelve la cantidad de pantallas que tiene esa provincia.
+-- funcion filter-fold.
 
 -- Tercera Funcion: Dada la base y una provincia te devuelve una lista de strings con; nombre, direccion y web de cada cine en esa provincia.
--- filter fold.
+-- filter filter-fold.
 
--- Cuarta Funcion: .
+-- Cuarta Funcion: Dada la base y una provincia te devuelve las pantallas de los cines duplicadas.
+-- filter filter-map.
+
+-- Quinta Función: 
 
 
