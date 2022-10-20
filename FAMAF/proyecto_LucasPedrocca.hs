@@ -123,28 +123,31 @@ base = [("Showcase Norte", "Buenos Aires", "Vicente López", "Munro", "E. Echeve
 -- Proyecciones:
 
 butacasString :: Registro -> String
-butacasString (n,p,dpto,l,d,web,ps,b,tp) = show b ++ " butacas."
+butacasString (n,p,dpto,l,d,web,ps,b,tg) = show b ++ " butacas."
 
 direccionCompleta :: Registro -> String
-direccionCompleta (n,p,dpto,l,d,web,ps,b,tp) =  p ++ ". " ++ dpto ++ ". " ++ l ++ ". " ++ d ++ ". "
+direccionCompleta (n,p,dpto,l,d,web,ps,b,tg) =  p ++ ". " ++ dpto ++ ". " ++ l ++ ". " ++ d ++ ". "
 
 direccionMedia :: Registro -> String
-direccionMedia (n,p,dpto,l,d,web,ps,b,tp) = p ++ ". " ++ dpto ++ ". " ++ l ++ ". "
+direccionMedia (n,p,dpto,l,d,web,ps,b,tg) = p ++ ". " ++ dpto ++ ". " ++ l ++ ". "
 
 nombre :: Registro -> String
-nombre (n,p,dpto,l,d,web,ps,b,tp) = "Cine: " ++ n ++ ". "
+nombre (n,p,dpto,l,d,web,ps,b,tg) = "Cine: " ++ n ++ ". "
 
 pantallas :: Registro -> Int
-pantallas (n,p,dpto,l,d,web,ps,b,tp) = ps
+pantallas (n,p,dpto,l,d,web,ps,b,tg) = ps
 
 provincia :: Registro -> String
-provincia (n,p,dpto,l,d,web,ps,b,tp) = p
+provincia (n,p,dpto,l,d,web,ps,b,tg) = p
 
 butacas :: Registro -> Int
-butacas (n,p,dpto,l,d,web,ps,b,tp) = b
+butacas (n,p,dpto,l,d,web,ps,b,tg) = b
 
 web :: Registro -> String
-web (n,p,dpto,l,d,web,ps,b,tp) = web ++ "."
+web (n,p,dpto,l,d,web,ps,b,tg) = web ++ "."
+
+gestion :: Registro -> String
+gestion (n,p,dpto,l,d,web,ps,b,tg) = tg
 
 -- Funciones:
 
@@ -194,3 +197,25 @@ duplicarPantallas (x:xs) prov
         | provincia x /= prov = (duplicarPantallas xs prov) 
 
 -- Quinta Función: 
+-- Funcion que dada la base y una provincia te devuelve el numero de cines con gestion publica y privada.
+-- Ejemplo: tipoGestion base "Buenos Aires" = "En Buenos Aires: 40 cines son de gestion privada y 1 cine es de gestion publica."
+
+gestionPublica :: Base -> String -> Int
+gestionPublica [] prov = 0
+gestionPublica (x:xs) prov
+        | (provincia x == prov) && (gestion x == "Pública") = 1 + gestionPublica xs prov
+        | (provincia x == prov) && (gestion x /= "Pública") = 0 + gestionPublica xs prov
+        | provincia x /= prov = gestionPublica xs prov
+
+gestionPrivada :: Base -> String -> Int
+gestionPrivada [] prov = 0
+gestionPrivada (x:xs) prov
+        | provincia x == prov && gestion x == "Privada" = 1 + gestionPrivada xs prov
+        | provincia x == prov && gestion x /= "Privada" = 0 + gestionPrivada xs prov
+        | provincia x /= prov = gestionPrivada xs prov
+
+
+tipoGestion :: Base -> String -> String
+tipoGestion [] prov = "Ingrese una base con contenido."
+tipoGestion base prov = "En "++ prov ++": " ++ show(gestionPrivada base prov) ++ " cines son de gestion privada y " ++ show(gestionPublica base prov) ++ " cine es de gestion publica."
+         
