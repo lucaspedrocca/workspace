@@ -120,3 +120,17 @@ base = [("Showcase Norte", "Buenos Aires", "Vicente López", "Munro", "E. Echeve
         ("Sunstar Ushuaia", "Tierra del Fuego", "Ushuaia", "Ushuaia", "Av. Perito Moreno 1460", "http://www.cinesunstar.com/", 3, 561, "Privada"),
         ("Atlas Tucuman", "Tucumán", "Capital", "San Miguel de Tucumán", "Monteagudo 250", "cineatlasweb.com.ar", 3, 797, "Privada")]
 
+-- Funciones:
+
+-- Primera Funcion: Dada la base (y una provincia) te devuelve una lista con los cines con mas de 1000 butacas.
+-- funcion filter.
+
+-- Segunda Funcion: Dada la base y una provincia te devuelve la cantidad (promedio) de pantallas que tiene esa provincia.
+-- funcion fold.
+
+-- Tercera Funcion: Dada la base y una provincia te devuelve una lista de strings con; nombre, direccion y web de cada cine en esa provincia.
+-- filter fold.
+
+-- Cuarta Funcion: .
+
+
