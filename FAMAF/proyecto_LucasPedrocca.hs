@@ -134,7 +134,7 @@ direccionMedia (n,p,dpto,l,d,web,ps,b,tp) = p ++ ". " ++ dpto ++ ". " ++ l ++ ".
 nombre :: Registro -> String
 nombre (n,p,dpto,l,d,web,ps,b,tp) = "Cine: " ++ n ++ ". "
 
-pantallas:: Registro -> Int
+pantallas :: Registro -> Int
 pantallas (n,p,dpto,l,d,web,ps,b,tp) = ps
 
 provincia :: Registro -> String
@@ -151,6 +151,8 @@ web (n,p,dpto,l,d,web,ps,b,tp) = web ++ "."
 -- Primera Funcion: Dada la base  y un numero Z de butacas te devuelve una lista con los cines con mas de Z butacas.
 -- funcion filter.
 
+-- Ejemplo: butacasX base 3500 = ["Cine: Showcase Norte. Buenos Aires. Vicente L\243pez. Munro. 4214 butacas.","Cine: Showcase Cinemas Haedo. Buenos Aires. Mor\243n. Haedo. 3890 butacas."]
+
 butacasX :: Base -> Int ->[String]
 butacasX [] z = []
 butacasX (x:xs) z
@@ -159,6 +161,7 @@ butacasX (x:xs) z
 
 -- Segunda Funcion: Dada la base y una provincia te devuelve la cantidad de pantallas que tiene esa provincia.
 -- funcion filter-fold.
+
 -- Ejemplo: pantallasProv base "Córdoba" = 82
 
 pantallasProv :: Base -> String -> Int
@@ -170,7 +173,8 @@ pantallasProv (x:xs) prov
 
 -- Tercera Funcion: Dada la base y una provincia te devuelve una lista de strings con; nombre, direccion y web de cada cine en esa provincia.
 -- filter filter-fold.
--- cinesProv base "Salta"  = ["Cine: Hoyts Nuevo Noa. Salta. Capital. Salta. Virrey Toledo 702. https://www.cinemarkhoyts.com.ar/.","Cine: Cinemark Salta. Salta. Capital. Salta. Av. Monse\241or Tavella 4400. https://www.cinemarkhoyts.com.ar."]
+
+-- Ejemplo: cinesProv base "Salta"  = ["Cine: Hoyts Nuevo Noa. Salta. Capital. Salta. Virrey Toledo 702. https://www.cinemarkhoyts.com.ar/.","Cine: Cinemark Salta. Salta. Capital. Salta. Av. Monse\241or Tavella 4400. https://www.cinemarkhoyts.com.ar."]
 
 cinesProv :: Base -> String -> [String]
 cinesProv [] prov = []
@@ -179,7 +183,9 @@ cinesProv (x:xs) prov
         | provincia x /= prov = (cinesProv xs prov)
 
 -- Cuarta Funcion: Dada la base y una provincia te devuelve las pantallas de los cines duplicadas.
--- filter filter-map.
+-- Filter filter-map.
+
+-- Ejemplo: duplicarPantallas base "Córdoba" = [24,16,16,14,14,12,12,8,8,8,8,6,6,6,6]
 
 duplicarPantallas :: Base -> String -> [Int]
 duplicarPantallas [] prov = []
