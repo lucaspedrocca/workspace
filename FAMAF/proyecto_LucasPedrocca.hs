@@ -2,6 +2,7 @@ type Registro = (String, String, String, String, String, String, Int, Int, Strin
 type Base = [Registro]
 
 -- Encabezado: "nombre", "provincia", "departamento", "localidad", "direccion", "web", "pantallas", "butacas", "tipo_de_gestion"
+-- Link base: https://docs.google.com/spreadsheets/d/1-khkoSoXiVFPZjZyQjBPIVYr5DLOOfwE_NjtOeBAVt0/edit#gid=1659745857
 
 base :: Base
 base = [("Showcase Norte", "Buenos Aires", "Vicente López", "Munro", "E. Echeverria 3750", "https://www.todoshowcase.com/", 17, 4214, "Privada"),
@@ -118,6 +119,4 @@ base = [("Showcase Norte", "Buenos Aires", "Vicente López", "Munro", "E. Echeve
         ("Cinemacenter La Banda", "Santiago del Estero", "Banda", "La Banda", "Aut. Juan D. Peron S/N Parque Industrial", "http://www.cinemacenter.com.ar/", 3, 822, "Privada"),
         ("Sunstar Ushuaia", "Tierra del Fuego", "Ushuaia", "Ushuaia", "Av. Perito Moreno 1460", "http://www.cinesunstar.com/", 3, 561, "Privada"),
         ("Atlas Tucuman", "Tucumán", "Capital", "San Miguel de Tucumán", "Monteagudo 250", "cineatlasweb.com.ar", 3, 797, "Privada")]
-
-
 
