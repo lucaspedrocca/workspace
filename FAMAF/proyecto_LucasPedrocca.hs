@@ -2,7 +2,6 @@ type Cine = (String, String, String, String, String, String, Int, Int, String)
 type Base = [Cine]
 
 -- Encabezado: "nombre", "provincia", "departamento", "localidad", "direccion", "web", "pantallas", "butacas", "tipo_de_gestion"
--- Link base: https://docs.google.com/spreadsheets/d/1-khkoSoXiVFPZjZyQjBPIVYr5DLOOfwE_NjtOeBAVt0/edit#gid=1659745857
 
 base :: Base
 base = [("Showcase Norte", "Buenos Aires", "Vicente López", "Munro", "E. Echeverria 3750", "https://www.todoshowcase.com/", 17, 4214, "Privada"),
@@ -164,16 +163,17 @@ cPrivada (x:xs) prov
 
 -- Funciones:
 
--- Primera Funcion: Dada la base  y un numero Z de butacas te devuelve una lista con los cines con mas de Z butacas.
--- Ejemplo: butacasX base 3500 = ["Cine: Showcase Norte. Buenos Aires. Vicente L\243pez. Munro. 4214 butacas.","Cine: Showcase Cinemas Haedo. Buenos Aires. Mor\243n. Haedo. 3890 butacas."]
+-- Primera Funcion: Dada una base con cines y butacas y además, un número Z  te devuelve una lista con los cines con más de Z butacas.
+-- Ejemplo: butacasZ base 3500 = ["Cine: Showcase Norte. Buenos Aires. Vicente L\243pez. Munro. 4214 butacas.","Cine: Showcase Cinemas Haedo. Buenos Aires. Mor\243n. Haedo. 3890 butacas."]
 
-butacasX :: Base -> Int ->[String]
-butacasX [] z = []
-butacasX (x:xs) z
-        | butacas x >= z = ("Cine: " ++ nombre x ++ ". " ++ direccionMedia x ++ show(butacas x) ++ " butacas." ) : (butacasX xs z) 
-        | butacas x < z = butacasX xs z 
+butacasZ :: Base -> Int ->[String]
+butacasZ [] z = []
+butacasZ (x:xs) z
+        | butacas x >= z = ("Cine: " ++ nombre x ++ ". " ++ direccionMedia x ++ show(butacas x) ++ " butacas." ) : (butacasZ xs z) 
+        | butacas x < z = butacasZ xs z 
 
--- Segunda Funcion: Dada la base y una provincia te devuelve la cantidad de pantallas que tiene esa provincia.
+-- Segunda Funcion: Dada una base de datos con cines y el nombre de una provincia de Argentina te devuelve la cantidad de pantallas que tiene esa provincia.
+
 -- Ejemplo: pantallasProv base "Córdoba" = 82
 
 pantallasProv :: Base -> String -> Int
@@ -183,7 +183,8 @@ pantallasProv (x:xs) prov
         | provincia x /= prov = pantallasProv xs prov
 
 
--- Tercera Funcion: Dada la base y una provincia te devuelve una lista de strings con; nombre, direccion y web de cada cine en esa provincia.
+-- Tercera Funcion: Dada una base de datos con cines y el nombre de una provincia te devuelve una lista de strings con; nombre, dirección y web de cada cine en esa provincia.
+
 -- Ejemplo: cinesProv base "Salta"  = ["Cine: Hoyts Nuevo Noa. Salta. Capital. Salta. Virrey Toledo 702. https://www.cinemarkhoyts.com.ar/.","Cine: Cinemark Salta. Salta. Capital. Salta. Av. Monse\241or Tavella 4400. https://www.cinemarkhoyts.com.ar."]
 
 cinesProv :: Base -> String -> [String]
@@ -192,7 +193,8 @@ cinesProv (x:xs) prov
         | provincia x == prov = ("Cine: " ++ nombre x ++ ". " ++ direccionCompleta x ++ web x ++ ".") : (cinesProv xs prov)
         | provincia x /= prov = (cinesProv xs prov)
 
--- Cuarta Funcion: Dada la base y una provincia te devuelve las pantallas de los cines duplicadas.
+-- Cuarta Funcion: Dada una base de datos con cines y el nombre de una provincia te devuelve las pantallas de los cines de la provincia en cuestión duplicadas.
+
 -- Ejemplo: duplicarPantallas base "Córdoba" = [24,16,16,14,14,12,12,8,8,8,8,6,6,6,6]
 
 duplicarPantallas :: Base -> String -> [Int]
@@ -201,7 +203,8 @@ duplicarPantallas (x:xs) prov
         | provincia x == prov = (pantallas x * 2) : (duplicarPantallas xs prov) 
         | provincia x /= prov = (duplicarPantallas xs prov) 
 
--- Quinta Función: Funcion que dada la base y una provincia te devuelve el número de cines con gestion publica y privada.
+-- Quinta Función: Dada una base de datos con cines y el nombre de una provincia te devuelve el número de cines con gestión pública y privada.
+
 -- Ejemplo: tipoGestion base "Buenos Aires" = "En Buenos Aires: 40 cines son de gestion privada y 1 cine es de gestion publica."
 
 tipoGestion :: Base -> String -> String
