@@ -122,17 +122,8 @@ base = [("Showcase Norte", "Buenos Aires", "Vicente López", "Munro", "E. Echeve
 
 -- Proyecciones:
 
-butacasString :: Registro -> String
-butacasString (n,p,dpto,l,d,web,ps,b,tg) = show b ++ " butacas."
-
-direccionCompleta :: Registro -> String
-direccionCompleta (n,p,dpto,l,d,web,ps,b,tg) =  p ++ ". " ++ dpto ++ ". " ++ l ++ ". " ++ d ++ ". "
-
-direccionMedia :: Registro -> String
-direccionMedia (n,p,dpto,l,d,web,ps,b,tg) = p ++ ". " ++ dpto ++ ". " ++ l ++ ". "
-
 nombre :: Registro -> String
-nombre (n,p,dpto,l,d,web,ps,b,tg) = "Cine: " ++ n ++ ". "
+nombre (n,p,dpto,l,d,web,ps,b,tg) = n
 
 pantallas :: Registro -> Int
 pantallas (n,p,dpto,l,d,web,ps,b,tg) = ps
@@ -144,29 +135,18 @@ butacas :: Registro -> Int
 butacas (n,p,dpto,l,d,web,ps,b,tg) = b
 
 web :: Registro -> String
-web (n,p,dpto,l,d,web,ps,b,tg) = web ++ "."
+web (n,p,dpto,l,d,web,ps,b,tg) = web
 
 gestion :: Registro -> String
 gestion (n,p,dpto,l,d,web,ps,b,tg) = tg
 
--- Contadores: 
+-- Funciones adicionales:
 
--- Contador de gestion publica.
-cPublica :: Base -> String -> Int
-cPublica [] prov = 0
-cPublica (x:xs) prov
-        | provincia x == prov && gestion x == "Pública" = 1 + cPublica xs prov
-        | provincia x == prov && gestion x /= "Pública" = 0 + cPublica xs prov
-        | provincia x /= prov = cPublica xs prov
+direccionCompleta :: Registro -> String
+direccionCompleta (n,p,dpto,l,d,web,ps,b,tg) =  p ++ ". " ++ dpto ++ ". " ++ l ++ ". " ++ d ++ ". "
 
-
--- Contador de gestion publica.
-cPrivada :: Base -> String -> Int
-cPrivada [] prov = 0
-cPrivada (x:xs) prov
-        | provincia x == prov && gestion x == "Privada" = 1 + cPrivada xs prov
-        | provincia x == prov && gestion x /= "Privada" = 0 + cPrivada xs prov
-        | provincia x /= prov = cPrivada xs prov
+direccionMedia :: Registro -> String
+direccionMedia (n,p,dpto,l,d,web,ps,b,tg) = p ++ ". " ++ dpto ++ ". " ++ l ++ ". "
 
 -- Funciones:
 
@@ -178,7 +158,7 @@ cPrivada (x:xs) prov
 butacasX :: Base -> Int ->[String]
 butacasX [] z = []
 butacasX (x:xs) z
-        | butacas x >= z = (nombre x ++ direccionMedia x ++ butacasString x) : (butacasX xs z) 
+        | butacas x >= z = ("Cine: " ++ nombre x ++ ". " ++ direccionMedia x ++ show(butacas x) ++ "butacas." ) : (butacasX xs z) 
         | butacas x < z = butacasX xs z 
 
 -- Segunda Funcion: Dada la base y una provincia te devuelve la cantidad de pantallas que tiene esa provincia.
@@ -201,7 +181,7 @@ pantallasProv (x:xs) prov
 cinesProv :: Base -> String -> [String]
 cinesProv [] prov = []
 cinesProv (x:xs) prov
-        | provincia x == prov = (nombre x ++ direccionCompleta x ++ web x) : (cinesProv xs prov)
+        | provincia x == prov = ("Cine: " ++ nombre x ++ ". " ++ direccionCompleta x ++ web x ++ ".") : (cinesProv xs prov)
         | provincia x /= prov = (cinesProv xs prov)
 
 -- Cuarta Funcion: Dada la base y una provincia te devuelve las pantallas de los cines duplicadas.
@@ -220,6 +200,26 @@ duplicarPantallas (x:xs) prov
 -- Funcion filter-fold
 
 -- Ejemplo: tipoGestion base "Buenos Aires" = "En Buenos Aires: 40 cines son de gestion privada y 1 cine es de gestion publica."
+
+-- Contadores: 
+
+-- Contador de gestion publica.
+cPublica :: Base -> String -> Int
+cPublica [] prov = 0
+cPublica (x:xs) prov
+        | provincia x == prov && gestion x == "Pública" = 1 + cPublica xs prov
+        | provincia x == prov && gestion x /= "Pública" = 0 + cPublica xs prov
+        | provincia x /= prov = cPublica xs prov
+
+
+-- Contador de gestion publica.
+cPrivada :: Base -> String -> Int
+cPrivada [] prov = 0
+cPrivada (x:xs) prov
+        | provincia x == prov && gestion x == "Privada" = 1 + cPrivada xs prov
+        | provincia x == prov && gestion x /= "Privada" = 0 + cPrivada xs prov
+        | provincia x /= prov = cPrivada xs prov
+
 
 tipoGestion :: Base -> String -> String
 tipoGestion [] prov = "Ingrese una base con contenido."
