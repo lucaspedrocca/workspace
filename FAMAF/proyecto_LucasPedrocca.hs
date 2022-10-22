@@ -1,5 +1,5 @@
-type Registro = (String, String, String, String, String, String, Int, Int, String)
-type Base = [Registro]
+type Cine = (String, String, String, String, String, String, Int, Int, String)
+type Base = [Cine]
 
 -- Encabezado: "nombre", "provincia", "departamento", "localidad", "direccion", "web", "pantallas", "butacas", "tipo_de_gestion"
 -- Link base: https://docs.google.com/spreadsheets/d/1-khkoSoXiVFPZjZyQjBPIVYr5DLOOfwE_NjtOeBAVt0/edit#gid=1659745857
@@ -122,30 +122,30 @@ base = [("Showcase Norte", "Buenos Aires", "Vicente López", "Munro", "E. Echeve
 
 -- Proyecciones:
 
-nombre :: Registro -> String
+nombre :: Cine -> String
 nombre (n,p,dpto,l,d,web,ps,b,tg) = n
 
-pantallas :: Registro -> Int
+pantallas :: Cine -> Int
 pantallas (n,p,dpto,l,d,web,ps,b,tg) = ps
 
-provincia :: Registro -> String
+provincia :: Cine -> String
 provincia (n,p,dpto,l,d,web,ps,b,tg) = p
 
-butacas :: Registro -> Int
+butacas :: Cine -> Int
 butacas (n,p,dpto,l,d,web,ps,b,tg) = b
 
-web :: Registro -> String
+web :: Cine -> String
 web (n,p,dpto,l,d,web,ps,b,tg) = web
 
-gestion :: Registro -> String
+gestion :: Cine -> String
 gestion (n,p,dpto,l,d,web,ps,b,tg) = tg
 
 -- Funciones adicionales:
 
-direccionCompleta :: Registro -> String
+direccionCompleta :: Cine -> String
 direccionCompleta (n,p,dpto,l,d,web,ps,b,tg) =  p ++ ". " ++ dpto ++ ". " ++ l ++ ". " ++ d ++ ". "
 
-direccionMedia :: Registro -> String
+direccionMedia :: Cine -> String
 direccionMedia (n,p,dpto,l,d,web,ps,b,tg) = p ++ ". " ++ dpto ++ ". " ++ l ++ ". "
 
 cPublica :: Base -> String -> Int
