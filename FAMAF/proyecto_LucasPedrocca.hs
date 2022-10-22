@@ -148,22 +148,32 @@ direccionCompleta (n,p,dpto,l,d,web,ps,b,tg) =  p ++ ". " ++ dpto ++ ". " ++ l +
 direccionMedia :: Registro -> String
 direccionMedia (n,p,dpto,l,d,web,ps,b,tg) = p ++ ". " ++ dpto ++ ". " ++ l ++ ". "
 
+cPublica :: Base -> String -> Int
+cPublica [] prov = 0
+cPublica (x:xs) prov
+        | provincia x == prov && gestion x == "Pública" = 1 + cPublica xs prov
+        | provincia x == prov && gestion x /= "Pública" = 0 + cPublica xs prov
+        | provincia x /= prov = cPublica xs prov
+
+cPrivada :: Base -> String -> Int
+cPrivada [] prov = 0
+cPrivada (x:xs) prov
+        | provincia x == prov && gestion x == "Privada" = 1 + cPrivada xs prov
+        | provincia x == prov && gestion x /= "Privada" = 0 + cPrivada xs prov
+        | provincia x /= prov = cPrivada xs prov
+
 -- Funciones:
 
 -- Primera Funcion: Dada la base  y un numero Z de butacas te devuelve una lista con los cines con mas de Z butacas.
--- funcion filter.
-
 -- Ejemplo: butacasX base 3500 = ["Cine: Showcase Norte. Buenos Aires. Vicente L\243pez. Munro. 4214 butacas.","Cine: Showcase Cinemas Haedo. Buenos Aires. Mor\243n. Haedo. 3890 butacas."]
 
 butacasX :: Base -> Int ->[String]
 butacasX [] z = []
 butacasX (x:xs) z
-        | butacas x >= z = ("Cine: " ++ nombre x ++ ". " ++ direccionMedia x ++ show(butacas x) ++ "butacas." ) : (butacasX xs z) 
+        | butacas x >= z = ("Cine: " ++ nombre x ++ ". " ++ direccionMedia x ++ show(butacas x) ++ " butacas." ) : (butacasX xs z) 
         | butacas x < z = butacasX xs z 
 
 -- Segunda Funcion: Dada la base y una provincia te devuelve la cantidad de pantallas que tiene esa provincia.
--- funcion filter-fold.
-
 -- Ejemplo: pantallasProv base "Córdoba" = 82
 
 pantallasProv :: Base -> String -> Int
@@ -174,8 +184,6 @@ pantallasProv (x:xs) prov
 
 
 -- Tercera Funcion: Dada la base y una provincia te devuelve una lista de strings con; nombre, direccion y web de cada cine en esa provincia.
--- filter filter-fold.
-
 -- Ejemplo: cinesProv base "Salta"  = ["Cine: Hoyts Nuevo Noa. Salta. Capital. Salta. Virrey Toledo 702. https://www.cinemarkhoyts.com.ar/.","Cine: Cinemark Salta. Salta. Capital. Salta. Av. Monse\241or Tavella 4400. https://www.cinemarkhoyts.com.ar."]
 
 cinesProv :: Base -> String -> [String]
@@ -185,8 +193,6 @@ cinesProv (x:xs) prov
         | provincia x /= prov = (cinesProv xs prov)
 
 -- Cuarta Funcion: Dada la base y una provincia te devuelve las pantallas de los cines duplicadas.
--- Filter filter-map.
-
 -- Ejemplo: duplicarPantallas base "Córdoba" = [24,16,16,14,14,12,12,8,8,8,8,6,6,6,6]
 
 duplicarPantallas :: Base -> String -> [Int]
@@ -195,31 +201,8 @@ duplicarPantallas (x:xs) prov
         | provincia x == prov = (pantallas x * 2) : (duplicarPantallas xs prov) 
         | provincia x /= prov = (duplicarPantallas xs prov) 
 
--- Quinta Función: 
--- Funcion que dada la base y una provincia te devuelve el numero de cines con gestion publica y privada.
--- Funcion filter-fold
-
+-- Quinta Función: Funcion que dada la base y una provincia te devuelve el número de cines con gestion publica y privada.
 -- Ejemplo: tipoGestion base "Buenos Aires" = "En Buenos Aires: 40 cines son de gestion privada y 1 cine es de gestion publica."
-
--- Contadores: 
-
--- Contador de gestion publica.
-cPublica :: Base -> String -> Int
-cPublica [] prov = 0
-cPublica (x:xs) prov
-        | provincia x == prov && gestion x == "Pública" = 1 + cPublica xs prov
-        | provincia x == prov && gestion x /= "Pública" = 0 + cPublica xs prov
-        | provincia x /= prov = cPublica xs prov
-
-
--- Contador de gestion publica.
-cPrivada :: Base -> String -> Int
-cPrivada [] prov = 0
-cPrivada (x:xs) prov
-        | provincia x == prov && gestion x == "Privada" = 1 + cPrivada xs prov
-        | provincia x == prov && gestion x /= "Privada" = 0 + cPrivada xs prov
-        | provincia x /= prov = cPrivada xs prov
-
 
 tipoGestion :: Base -> String -> String
 tipoGestion [] prov = "Ingrese una base con contenido."
