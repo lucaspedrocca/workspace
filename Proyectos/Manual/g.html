@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=scale-width, inhitial-width=1.0">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+      <nav id="navbar">
+        <header id="title">Manual de Python</header>
+        <ul>  
+            <li><a class="nav-link" href="#Introducción">Introducción</a></li>
+            <li><a class="nav-link" href="#Básicos_de_Python">Básicos de Python</a></li>
+            <li><a class="nav-link" href="#Tipos_de_datos">Tipos de datos</a> </li>
+            <li><a class="nav-link" href="#Operadores">Operadores</a></li>
+            <li><a class="nav-link" href="#Cadenas">Cadenas</a></li>
+            <li><a class="nav-link" href="#Booleanos">Booleanos</a></li>
+            <li><a class="nav-link" href="#Números">Números</a></li>
+            <li><a class="nav-link" href="#Constantes">Constantes</a></li>
+            <li><a class="nav-link" href="#Enums">Enums</a></li>
+            <li><a class="nav-link" href="#Entradas_de_usuario">Entradas de usuario</a></li>
+            <li><a class="nav-link" href="#Declaraciones_de_control">Declaraciones de control</a></li>
+            <li><a class="nav-link" href="#Listas">Listas</a></li>
+            <li><a class="nav-link" href="#Tuplas">Tuplas</a></li>
+            <li><a class="nav-link" href="#Diccionarios">Diccionarios</a></li>
+            <li><a class="nav-link" href="#Conjuntos">Conjuntos</a></li>
+            <li><a class="nav-link" href="#Funciones">Funciones</a></li>
+            <li><a class="nav-link" href="#Objetos">Objetos</a></li>
+            <li><a class="nav-link" href="#Bucles">Bucles</a></li>
+            <li><a class="nav-link" href="#Clases">Clases</a></li>
+            <li><a class="nav-link" href="#Módulos">Módulos</a></li>
+            <li><a class="nav-link" href="#Recursión">Recursión</a></li>
+            <li><a class="nav-link" href="#Funciones_anidadas">Funciones anidadas</a></li>
+        </ul>
+        
+    </nav>
+        
+    <main id="main-doc">
+      
+      <section class="main-section" id="Introducción">
+        <header>Introducción</header>
+        <hr class="separator"/>
+
+        <p class="subtitle">¿Qué es Python?</p>
+          <p>Python es un lenguaje de programación popular. Fue creado por Guido van Rossum y lanzado en 1991.</p>
+          <p>Se utiliza para:</p>
+          <ul class="lista">
+            <li>desarrollo web (lado del servidor),</li>
+            <li>desarrollo de software,</li>
+            <li>matemáticas,</li>
+            <li>secuencias de comadnos del sistema.</li>
+          </ul>
+
+        <p class="subtitle">¿Qué puede hacer Python?</p>
+          <ul>
+            <li>Python se puede usar en un servidor para crear aplicaciones web.</li>
+            <li>Python se puede usar junto con el software para crear flujos de trabajo.</li>
+            <li>Python puede conectarse a sistemas de bases de datos. También puede leer y modificar archivos.</li>
+            <li>Python se puede usar para manejar big data y realizar operaciones matemáticas complejas.</li>
+            <li>Python se puede utilizar para la creación rápida de prototipos o para el desarrollo de software listo para la producción.</li>
+          </ul>
+
+        <p class="subtitle">¿Por qué Python?</p>
+        <ul>
+          <li>Python funciona en diferentes plataformas (Windows, Mac, Linux, Raspberry Pi, etc.).</li>
+          <li>Python tiene una sintaxis simple similar al idioma inglés.</li>
+          <li>Python tiene una sintaxis que permite a los desarrolladores escribir programas con menos líneas que otros lenguajes de programación.</li>
+          <li>Python se ejecuta en un sistema de interpretación, lo que significa que el código se puede ejecutar tan pronto como se escribe. Esto significa que la creación de prototipos puede ser muy rápida.</li>
+          <li>Python se puede tratar de forma procesal, orientada a objetos o funcional.</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Básicos_de_Python">
+        <header>Básicos de Python</header>
+        <hr class="separator"/>
+
+        <p class="subtitle">Variables en Python</p>
+        <p>Podemos crear una nueva variable de Python asignando un valor a una etiqueta, usando el operador de asignación <code>=</code>.</p>
+        <p>En este ejemplo asignamos una cadena con el valor "Roger" a <code>nombre</code>:</p><pre><code class="language-python">nombre = "Roger"
+        </code></pre><p>Aquí tienes un ejemplo con un número:</p><pre><code class="language-python">edad = 8
+        </code></pre><p>Un nombre de variable puede estar compuesto por caracteres, números y el carácter de subrayado <code>_</code>. No puede empezar con un número. Todos estos son nombres de variables <strong>válidos</strong>:</p><pre><code class="language-python">nombre1
+        EDAD
+        eDAD
+        a11111
+        mi_nombre
+        _nombre
+        </code></pre><p>Estos son nombres de variables <strong>inválidos</strong>:</p><pre><code class="language-python">123
+        prueba!
+        nombre%
+        </code></pre><p>Aparte de eso, cualquier cosa es válida a menos que sea una <strong>palabra clave de Python.</strong> Hay algunas palabras clave como <code>for</code>, <code>if</code>, <code>while</code>, <code>import</code> y más.</p><p>No es necesario memorizarlos, ya que Python te alertará si usas uno de ellos como variable, y los reconocerás gradualmente como parte de la sintaxis del lenguaje de programación Python.</p><h3 id="expresiones-y-declaraciones-en-python">Expresiones y declaraciones en Python</h3><p>Podemos <em>expresar </em>cualquier tipo de código que devuelva un valor. Por ejemplo</p><pre><code class="language-python">1 + 1
+        "Roger"
+        </code></pre><p>Una declaración, por otro lado, es una operación sobre un valor. Por ejemplo, estas son 2 declaraciones:</p><pre><code class="language-python">nombre = "Roger"
+        print(nombre)
+        </code></pre><p>Un programa está formado por una serie de declaraciones. Cada declaración se coloca en su propia línea, pero puedes usar un punto y coma para tener más de una declaración en una sola línea: </p><pre><code class="language-python">nombre = "Roger"; print(nombre)
+        </code></pre><h3 id="comentar">Comentar</h3><p>En un programa de Python, todo lo que aparece después de una marca <code>#</code> se ignora y se considera un comentario.</p><pre><code class="language-python">#esto es una linea comentada
+        
+        nombre = "Roger" #esto es un comentario en-linea
+        </code></pre><h3 id="indentaci-n-en-python">Indentación en Python</h3><p>La indentación en Python es significativa.</p><p>No puede indentar aleatoriamente así:</p><pre><code class="language-python">nombre = "Flavio"
+            print(nombre)
+        </code></pre><p>Algunos otros lenguajes no tienen espacios en blanco significativos, pero en Python, el indentado es importante.</p><p>En este caso, si intentas ejecutar este programa, obtendrás un error <code>IndentationError: unexpected indent</code>, porque el indentado tiene un significado especial.</p><p>Todo lo indentado pertenece a un bloque, como una declaración de control o un bloque condicional, o una función o cuerpo de clase. Veremos más sobre ellos más adelante.</p> 
+
+      </section>
+      
+      <section class="main-section" id="#Cómo_instalar">
+        <header>Cómo instalar</header>
+      </section>
+      
+      <section class="main-section" id="#Cómo_ejecutar_programas">
+        <header>Cómo ejecutar programas</header>
+      </section>
+
+      <section class="main-section" id="Tipos_de_datos">
+        <header>Tipos de datos</header>
+        <p>Python tiene varios tipos integrados.</p><p>Si creas la variable <code>nombre</code> asignándole el valor "Roger", automáticamente esta variable ahora representa un tipo de datos <strong>String</strong>(cadena)</p><pre><code class="language-python">nombre = "Roger"
+        </code></pre><p>Puedes verificar el tipo de una variable usando la función <code>type()</code>, pasando la variable como un argumento y luego comparando el resultado con <code>str</code></p><pre><code class="language-python">nombre = "Roger"
+        type(nombre) == str #True
+        </code></pre><p>O usando <code>isinstance()</code>:</p><pre><code class="language-python">nombre = "Roger"
+        isinstance(nombre, str) #True
+        </code></pre><blockquote>Ten en cuenta que para ver el valor <code>True</code> (verdadero) en Python, fuera de un REPL, debes envolver este código dentro de <code>print()</code>, pero para mayor claridad, evitamos usarlo</blockquote><p>Usamos la clase <code>str</code> aquí, pero lo mismo funciona para otros tipos de datos.</p><p>Primero, tenemos números. Los números enteros se representan mediante la clase <code>int</code>. Los números flotantes,decimales o fracciones, son de tipo <code>float</code>:</p><pre><code class="language-python">edad = 1
+        type(edad) == int #True
+        </code></pre><pre><code class="language-python">fraccion = 0.1
+        type(fraccion) == float #True
+        </code></pre><p>Viste cómo crear un tipo a partir de un valor literal, como este:</p><pre><code class="language-python">nombre = "Flavio"
+        edad = 20
+        </code></pre><p>Python detecta automáticamente el tipo a partir del tipo de valor.</p><p>También puedes crear una variable de un tipo específico utilizando el constructor de clase, pasando un valor literal o un nombre de variable:</p><pre><code class="language-python">nombre = str("Flavio")
+        otroNombre = str(nombre)
+        </code></pre><p>También puedes convertir de un tipo a otro utilizando el constructor de clases. Python intentará determinar el valor correcto, por ejemplo, extrayendo un número de una cadena:</p><pre><code class="language-python">edad = int("20")
+        print(edad) #20
+        
+        fraccion = 0.1
+        fraccionEntera = int(fraccion)
+        print(fraccionEntera) #0
+        </code></pre><p>A esto se le llama <strong><a href="https://es.wikipedia.org/wiki/Conversi%C3%B3n_de_tipos">casting</a></strong>. Por supuesto, es posible que esta conversión no siempre funcione según el valor pasado. Si escribes <code>prueba</code> en lugar de <code>20</code> en la cadena anterior, obtendrás un<code>ValueError: invalid literal for int() with base 10: 'prueba'</code>.<br>Esos son solo los conceptos básicos de los tipos. Tenemos muchos más tipos en Python:</p><ul><li><code>complex</code> para números complejos</li><li><code>bool</code> para booleanos(verdadero/falso)</li><li><code>list</code> para listas</li><li><code>tuple</code> para tuplas</li><li><code>range</code> para rangos</li><li><code>dict</code> para diccionarios</li><li><code>set</code> para conjuntos(<em>sets</em>)</li></ul><p>¡y más!</p><p>Los exploraremos todos pronto.</p>
+
+
+
+      </section>
+
+      <section class="main-section" id="Operadores">
+        <header>Operadores</header>
+      </section>
+
+      <p>Python tiene varios tipos integrados.</p><p>Si creas la variable <code>nombre</code> asignándole el valor "Roger", automáticamente esta variable ahora representa un tipo de datos <strong>String</strong>(cadena)</p><pre><code class="language-python">nombre = "Roger"
+    </code></pre><p>Puedes verificar el tipo de una variable usando la función <code>type()</code>, pasando la variable como un argumento y luego comparando el resultado con <code>str</code></p><pre><code class="language-python">nombre = "Roger"
+    type(nombre) == str #True
+    </code></pre><p>O usando <code>isinstance()</code>:</p><pre><code class="language-python">nombre = "Roger"
+    isinstance(nombre, str) #True
+    </code></pre><blockquote>Ten en cuenta que para ver el valor <code>True</code> (verdadero) en Python, fuera de un REPL, debes envolver este código dentro de <code>print()</code>, pero para mayor claridad, evitamos usarlo</blockquote><p>Usamos la clase <code>str</code> aquí, pero lo mismo funciona para otros tipos de datos.</p><p>Primero, tenemos números. Los números enteros se representan mediante la clase <code>int</code>. Los números flotantes,decimales o fracciones, son de tipo <code>float</code>:</p><pre><code class="language-python">edad = 1
+    type(edad) == int #True
+    </code></pre><pre><code class="language-python">fraccion = 0.1
+    type(fraccion) == float #True
+    </code></pre><p>Viste cómo crear un tipo a partir de un valor literal, como este:</p><pre><code class="language-python">nombre = "Flavio"
+    edad = 20
+    </code></pre><p>Python detecta automáticamente el tipo a partir del tipo de valor.</p><p>También puedes crear una variable de un tipo específico utilizando el constructor de clase, pasando un valor literal o un nombre de variable:</p><pre><code class="language-python">nombre = str("Flavio")
+    otroNombre = str(nombre)
+    </code></pre><p>También puedes convertir de un tipo a otro utilizando el constructor de clases. Python intentará determinar el valor correcto, por ejemplo, extrayendo un número de una cadena:</p><pre><code class="language-python">edad = int("20")
+    print(edad) #20
+    
+    fraccion = 0.1
+    fraccionEntera = int(fraccion)
+    print(fraccionEntera) #0
+    </code></pre><p>A esto se le llama <strong><a href="https://es.wikipedia.org/wiki/Conversi%C3%B3n_de_tipos">casting</a></strong>. Por supuesto, es posible que esta conversión no siempre funcione según el valor pasado. Si escribes <code>prueba</code> en lugar de <code>20</code> en la cadena anterior, obtendrás un<code>ValueError: invalid literal for int() with base 10: 'prueba'</code>.<br>Esos son solo los conceptos básicos de los tipos. Tenemos muchos más tipos en Python:</p><ul><li><code>complex</code> para números complejos</li><li><code>bool</code> para booleanos(verdadero/falso)</li><li><code>list</code> para listas</li><li><code>tuple</code> para tuplas</li><li><code>range</code> para rangos</li><li><code>dict</code> para diccionarios</li><li><code>set</code> para conjuntos(<em>sets</em>)</li></ul><p>¡y más!</p><p>Los exploraremos todos pronto.</p>
+
+
+      <section class="main-section" id="El_operador_ternario">
+        <header>El operador ternario</header>
+      </section>
+
+      <p>Los operadores de Python son símbolos que usamos para ejecutar operaciones sobre valores y variables.</p><p>Podemos dividir los operadores en función del tipo de operación que realizan:</p><ul><li>Operador de asignación</li><li>Operadores aritméticos</li><li>Operadores de comparación</li><li>Operadores lógicos</li><li>Operadores bit a bit</li></ul><p>además de algunos interesantes como <code>is</code> e <code>in</code>.</p><h3 id="operador-de-asignaci-n-en-python">Operador de asignación en Python</h3><p>El operador de asignación se utiliza para asignar un valor a una variable:</p><pre><code class="language-python">edad = 8
+    </code></pre><p>O para asignar un valor de variable a otra variable:</p><pre><code class="language-python">edad = 8
+    otraVariable = edad
+    </code></pre><p>Desde Python 3.8, el <strong>operador walrus</strong>(<em>morsa</em>) <code>:=</code> &nbsp;se usa para asignar un valor a una variable como parte de otra operación. Por ejemplo, dentro de un <code>if</code> o en la parte condicional de un bucle. Más sobre eso luego.</p><h3 id="operadores-aritm-ticos-en-python">Operadores aritméticos en Python</h3><p>Python tiene varios operadores aritméticos: <code>+</code>,<code>-</code>, <em>, <code>/</code> (división), <code>%</code>(resto), </em><code>**</code>(exponenciación) y <code>//</code> (división de piso):</p><pre><code class="language-python">1 + 1 #2
+    2 - 1 #1
+    2 * 2 #4
+    4 / 2 #2
+    4 % 3 #1
+    4 ** 2 #16
+    4 // 2 #2
+    </code></pre><blockquote>Ten en cuenta que no necesitas un espacio entre los operandos, pero es bueno para la legibilidad.</blockquote><p><code>-</code> también funciona como un operador unario negativo:</p><pre><code class="language-python">print(-4) #-4
+    </code></pre><p><code>+</code> también se usa para concatenar valores de cadena:</p><pre><code class="language-python">"Roger" + " es un buen perro"
+    #Roger es un buen perro
+    </code></pre><p>Podemos combinar el operador de asignación con operadores aritméticos:</p><ul><li><code>+=</code></li><li><code>-=</code></li><li><code>*=</code></li><li><code>/=</code></li><li><code>%=</code></li><li>...y así</li></ul><p>Ejemplo:</p><pre><code class="language-python">edad = 8
+    edad += 1
+    #edad es ahora 9
+    </code></pre><h3 id="operadores-de-comparaci-n-en-python">Operadores de comparación en Python</h3><p>Python define algunos operadores de comparación:</p><ul><li><code>==</code></li><li><code>!=</code></li><li><code>&gt;</code></li><li><code>&lt;</code></li><li><code>&gt;=</code></li><li><code>&lt;=</code></li></ul><p>Puedes usar esos operadores para obtener un valor booleano (<code>True</code> o <code>False</code>) según el resultado:</p><pre><code class="language-python">a = 1
+    b = 2
+    
+    a == b #False
+    a != b #True
+    a &gt; b #False
+    a &lt;= b #True
+    </code></pre><h3 id="operadores-booleanos-en-python">Operadores booleanos en Python</h3><p>Python nos da los siguientes operadores booleanos:</p><ul><li><code>not</code></li><li><code>and</code></li><li><code>or</code></li></ul><p>Cuando se trabaja con atributos <code>True</code> o <code>False</code>, estos funcionan como "Y", "O" y "NO" lógicos, y a menudo se usan en la evaluación de la expresión condicional <code>if</code>:</p><pre><code class="language-python">condicion1 = True
+    condicion2 = False
+    
+    not condicion1 #False
+    condicion1 and condicion2 #False
+    condicion1 or condicion2 #True
+    </code></pre><p>De lo contrario, presta atención a una posible fuente de confusión:</p><p><code>or</code> usado en una expresión devuelve el valor del primer operando que no es un valor falso (<code>False</code>, <code>0</code>, <code>''</code>, <code>[]</code>...). De lo contrario, devuelve el último operando.</p><pre><code class="language-python">print(0 or 1) ## 1
+    print(False or 'hey') ## 'hey'
+    print('hola' or 'hey') ## 'hola'
+    print([] or False) ## 'False'
+    print(False or []) ## '[]'
+    </code></pre><p>Los documentos de Python lo describen como :</p><p><code>si "x" es falso, entonces "y", si no "x"</code>.</p><p><code>and</code> solo evalúa el segundo argumento si el primero es verdadero. Entonces, si el primer argumento es falso (<code>False</code>, <code>0</code>, <code>''</code>, <code>[]</code>...), devuelve ese argumento. De lo contrario, evalúa el segundo argumento:</p><pre><code class="language-python">print(0 and 1) ## 0
+    print(1 and 0) ## 0
+    print(False and 'hey') ## False
+    print('hola' and 'hey') ## 'hey'
+    print([] and False ) ## []
+    print(False and [] ) ## False
+    </code></pre><p>Los documentos de Python lo describen como:</p><p> <code>si "x" es falso, entonces "x", si no "y"</code></p><h3 id="operadores-bit-a-bit-en-python">Operadores bit a bit en Python</h3><p>Algunos operadores se utilizan para trabajar con bits y números binarios:</p><ul><li><code>&amp;</code> realiza el binario AND</li><li><code>|</code> realiza el binario OR</li><li><code>^</code> realiza una operación binaria XOR</li><li><code>~</code> realiza una operación binaria NOT</li><li><code>&lt;&lt;</code> <a href="https://es.wikipedia.org/wiki/Operador_a_nivel_de_bits#Operaciones_de_desplazamiento_y_rotaci%C3%B3n">operación shift left</a></li><li><code>&gt;&gt;</code> <a href="https://es.wikipedia.org/wiki/Operador_a_nivel_de_bits#Operaciones_de_desplazamiento_y_rotaci%C3%B3n">operación shift right</a></li></ul><p>Los operadores bit a bit se utilizan raramente, solo en situaciones muy específicas, pero vale la pena mencionarlos.</p><h3 id="is-e-in-en-python"><code>is</code> e <code>in</code> en Python</h3><p><code>is</code> se llama<strong> el operador de identidad</strong>. Se utiliza para comparar dos objetos y devuelve verdadero si ambos son el mismo objeto. Más sobre <code>objetos</code> luego.</p><p><code>in</code> se llama <strong>el operador de membresía</strong>. Se utiliza para saber si un valor está contenido en una lista o en otra secuencia. Más sobre <code>listas</code> y otras secuencias luego.</p>
+
+
+      <section class="main-section" id="Cadenas">
+        <header>Cadenas</header>
+      </section>
+
+      <p>Una cadena en Python es una serie de caracteres entre comillas o comillas dobles:</p><pre><code class="language-python">"Roger"
+'Roger'
+</code></pre><p>Puedes asignar un valor de cadena a una variable:</p><pre><code class="language-python">nombre = "Roger"
+</code></pre><p>Puedes concatenar dos cadenas usando el operador <code>+</code>:</p><pre><code class="language-python">frase = "Roger" + " es un buen perro"</code></pre><p>Puedes agregar a una cadena usando <code>+=</code>:</p><pre><code class="language-python">nombre = "Roger"
+nombre += " es un buen perro"
+
+print(nombre) #Roger es un buen perro
+</code></pre><p>Puedes convertir un número en una cadena usando el constructor de clase <code>str</code>:</p><pre><code class="language-python">str(8) #"8"
+</code></pre><p>Esto es esencial para concatenar un número a una cadena:</p><pre><code class="language-python">print("Roger tiene " + str(8) + " a_os de edad") 
+#Roger tiene 8 a_os de edad
+</code></pre><p>Una cadena puede ser de varias líneas cuando se define con una sintaxis especial, encerrando la cadena en un conjunto de 3 comillas:</p><pre><code class="language-python">print("""Roger tiene
+
+    8
+
+a_os de edad
+""")
+
+#comillas dobles o simples
+
+print('''
+Roger tiene
+
+    8
+
+a_os de edad
+''')
+</code></pre><p>Una cadena tiene un conjunto de métodos integrados, como:</p><ul><li><code>isalpha()</code> para comprobar si una cadena contiene solo caracteres y no está vacía</li><li><code>isalnum()</code> para comprobar si una cadena contiene caracteres o dígitos y no está vacía</li><li><code>isdecimal()</code> para comprobar si una cadena contiene dígitos y no está vacía</li><li><code>lower()</code> para obtener una versión en minúsculas de una cadena</li><li><code>islower()</code> para comprobar si una cadena está en minúsculas</li><li><code>upper()</code> para obtener una versión en mayúsculas de una cadena</li><li><code>isupper()</code> para comprobar si una cadena está en mayúsculas</li><li><code>title()</code> para obtener una versión capitalizada de una cadena</li><li><code>startsswith()</code> para comprobar si la cadena comienza con una subcadena específica</li><li><code>endswith()</code> para comprobar si la cadena termina con una subcadena específica</li><li><code>replace()</code> para reemplazar una parte de una cadena</li><li><code>split()</code> para dividir una cadena en un separador de caracteres específico</li><li><code>strip()</code> para recortar el espacio en blanco de una cadena</li><li><code>join()</code> para agregar nuevas letras a una cadena</li><li><code>find()</code> para encontrar la posición de una subcadena</li></ul><p>Y muchas mas.</p><p>Ninguno de esos métodos altera la cadena original. En su lugar, devuelven una cadena nueva y modificada. Por ejemplo:</p><pre><code class="language-python">nombre = "Roger"
+print(nombre.lower()) #"roger"
+print(nombre) #"Roger"
+</code></pre><p>También puedes usar algunas funciones globales para trabajar con cadenas.</p><p>En particular, pienso en <code>len()</code>, que te da la longitud de una cadena:</p><pre><code class="language-python">nombre = "Roger"
+print(len(nombre)) #5
+</code></pre><p>El operador <code>in</code> te permite verificar si una cadena contiene una subcadena:</p><pre><code class="language-python">nombre = "Roger"
+print("ger" in nombre) #True
+</code></pre><p>Escapar es una forma de agregar caracteres especiales a una cadena.</p><p>Por ejemplo, ¿cómo agregas una comilla doble en una cadena que está envuelta en comillas dobles?</p><pre><code class="language-python">nombre = "Roger"
+</code></pre><p><code>"Ro"Ger"</code> no funcionará, ya que Python pensará que la cadena termina en <code>"Ro"</code>.</p><p>El camino a seguir es hacer escapar a a las comillas dobles dentro de la cadena, con el carácter <code>\</code> (barra invertida):</p><pre><code class="language-python">nombre = "Ro\"ger"
+#"Ro"ger"</code></pre><p>Esto también se aplica a las comillas simples <code>\'</code> y a los caracteres de formateo especial como <code>\t</code> para tabulación, <code>\n</code> para nueva línea y <code>\\</code> para la barra invertida.</p><p>Dada una cadena, puedes obtener sus caracteres usando corchetes cuadrados para obtener un elemento específico, dado su índice, comenzando desde cero <code>[0]</code>:</p><pre><code class="language-python">nombre = "Roger"
+nombre[0] #'R'
+nombre[1] #'o'
+nombre[2] #'g'
+</code></pre><p>El uso de un número negativo comenzará a contar desde el final:</p><pre><code class="language-python">nombre = "Roger"
+nombre[-1] #"r"
+</code></pre><p>También puedes usar un rango, usando lo que llamamos <strong>rebanar</strong>(slicing):</p><pre><code class="language-python">nombre = "Roger"
+nombre[0:2] #"Ro"
+nombre[:2] #"Ro"
+nombre[2:] #"ger"
+</code></pre>
+
+      <section class="main-section" id="Booleanos">
+        <header>Booleanos</header>
+
+        <p>Python proporciona el tipo <code>bool</code> , que puede tener dos valores: <code>True</code> (Verdadero) y <code>False</code> (Falso) (<em>capitalizado</em>).</p><pre><code class="language-python">hecho = False
+            hecho = True
+            </code></pre><p>Los booleanos son especialmente útiles con estructuras de control condicionales como declaraciones <code>if</code> :</p><pre><code class="language-python">hecho = True
+            
+            if hecho:
+                # Ejecuta algun codigo
+            else:
+                # Ejecuta algun otro codigo
+            </code></pre><p>Al evaluar un valor para <code>True</code> o <code>False</code>, si el valor no es un <code>bool</code> , tenemos algunas reglas dependiendo del tipo que estemos verificando:</p><ul><li>los números son siempre <code>True</code> excepto el número <code>0</code>,</li><li>las cadenas son <code>False</code> solo cuando están vacías <code>''</code>,</li><li>las listas, tuplas, conjuntos y diccionarios son <code>False</code> solo cuando están vacíos.</li></ul><p>Puedes verificar si un valor es booleano de esta manera:</p><pre><code class="language-python">hecho = True
+            type(hecho) == bool #True
+            </code></pre><p>O usando <code>isinstance()</code>, pasando 2 argumentos: la variable y la clase <code>bool</code> :</p><pre><code class="language-python">hecho = True
+            isinstance(hecho, bool) #True
+            </code></pre><p>La función global <code>any()</code> también es muy útil cuando se trabaja con valores booleanos, ya que devuelve <code>True</code> si <strong>alguno de los valores</strong> del iterable (lista, por ejemplo) pasado como argumento es <code>True</code> :</p><pre><code class="language-python">libro_1_leido = True
+            libro_2_leido = False
+            
+            algun_libro_leido = any([libro_1_leido, libro_2_leido])
+            #True</code></pre><p>La función global <code>all()</code> es la misma, pero devuelve <code>True</code> si<strong> todos los valores</strong> que se le pasan son <code>True</code>:</p><pre><code class="language-python">ingredientes_comprados = True
+            comida_preparada = False
+            
+            list_para_servir = all([ingredientes_comprados, comida_preparada])
+            #False</code></pre>
+
+      </section>
+
+        <section class="main-section" id="Números">
+            <header>Números</header>
+            <p>Los números en Python pueden ser de 3 tipos: <code>int</code>, <code>float</code> y <code>complex</code>.</p><h3 id="n-meros-enteros-en-python">Números enteros en Python</h3><p>Los números enteros se representan mediante la clase <code>int</code> . Puedes definir un entero mediante un valor literal:</p><pre><code class="language-python">edad = 8
+            </code></pre><p>También puedes definir un número entero usando el constructor <code>int()</code>:</p><pre><code class="language-python">edad = int(8)
+            </code></pre><p>Para comprobar si una variable es de tipo <code>int</code>, puedes utilizar la función global <code>type()</code>:</p><pre><code class="language-python">type(edad) == int #True
+            </code></pre><h3 id="n-meros-flotantes-en-python">Números flotantes en Python</h3><p><br>Los números flotantes (fracciones, decimales) son de tipo <code>float</code>. Puedes definir un entero usando un valor literal:</p><pre><code class="language-python">fraccion = 0.1
+            </code></pre><p>O usando el constructor <code>float()</code>:</p><pre><code class="language-python">fraccion = float(0.1)
+            </code></pre><p>Para comprobar si una variable es de tipo <code>float</code>, puede utilizar la función global <code>type()</code> :</p><pre><code class="language-python">type(fraccion) == float #True
+            </code></pre><h3 id="n-meros-complejos-en-python">Números complejos en Python</h3><p>Los números complejos son de tipo <code>complex</code>.</p><p>Puedes definirlos usando un valor literal:</p><pre><code class="language-python">numeroComplejo = 2+3j
+            </code></pre><p>o usando el constructor <code>complex()</code>:</p><pre><code class="language-python">numeroComplejo = complex(2, 3)
+            </code></pre><p>Una vez que tengas un número complejo, puedes obtener su parte real e imaginaria:</p><pre><code class="language-python">numeroComplejo.real #2.0
+            numeroComplejo.imag #3.0
+            </code></pre><p>Nuevamente, para verificar si una variable es de tipo <code>complex</code>, puedes usar la función global <code>type()</code>:</p><pre><code class="language-python">type(numeroComplejo) == complex #True
+            </code></pre><h3 id="operaciones-aritm-ticas-con-n-meros-en-python">Operaciones aritméticas con números en Python</h3><p>Puedes realizar operaciones aritméticas con números, utilizando los operadores aritméticos: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>(división),<code>%</code> (resto), <code>**</code> (exponenciación) y <code>//</code> (división de piso):</p><pre><code class="language-python">1 + 1 #2
+            2 - 1 #1
+            2 * 2 #4
+            4 / 2 #2
+            4 % 3 #1
+            4 ** 2 #16
+            4 // 2 #2
+            </code></pre><p>y puedes utilizar los operadores de asignación compuesta</p><ul><li><code>+=</code></li><li><code>-=</code></li><li><code>*=</code></li><li><code>/=</code></li><li><code>%=</code></li><li>y así...</li></ul><p>para realizar rápidamente operaciones en variables, también:</p><pre><code class="language-python">edad = 8
+            edad += 1
+            </code></pre><h3 id="funciones-integradas-en-python">Funciones integradas en Python</h3><p>Hay 2 funciones integradas que ayudan con los números:</p><p><code>abs()</code> devuelve el valor absoluto de un número.</p><p><code>round()</code> dado un número, devuelve su valor redondeado al entero más cercano:</p><pre><code class="language-python">round(0.12) #0
+            </code></pre><p>Puedes especificar un segundo parámetro para establecer la precisión del punto decimal:</p><pre><code class="language-python">round(0.12, 1) #0.1
+            </code></pre><p>Varias otras funciones de utilidad matemática y constantes son proporcionadas por la biblioteca estándar de Python:</p><ul><li>el paquete <code>math</code> proporciona funciones y constantes matemáticas generales.</li><li>el paquete <code>cmath</code> proporciona utilidades para trabajar con números complejos.</li><li>el paquete <code>decimal</code> proporciona utilidades para trabajar con decimales y números decimales.</li><li>el paquete <code>fractions</code> proporciona utilidades para trabajar con números racionales.</li></ul><p>Exploraremos algunos de ellos por separado más adelante.</p>
+    
+        </section>
+
+      <section class="main-section" id="Constantes">
+        <header>Constantes</header>
+        <p>Python no tiene forma de exigir que una variable sea una constante.</p><p>Lo más cercano que puedes obtener es usar una enumeración:</p><pre><code class="language-python">class Constantes(Enum):
+            ANCHURA = 1024
+            ALTURA = 256
+        </code></pre><p>Y obtener cada valor usando, por ejemplo, <code>Constantes.ANCHURA.value</code>.</p><p>Nadie puede reasignar ese valor.</p><p>De lo contrario, si deseas confiar en las convenciones de nomenclatura, puedes adherirte a esta: declara las variables que nunca deben cambiar, <strong>en mayúsculas</strong>:</p><pre><code class="language-python">ANCHURA = 1024
+        </code></pre><p>Nadie evitará que sobrescribas este valor, y Python no lo detendrá.</p><p>Eso es lo que hace la mayoría del código Python que verás.</p>
+
+      </section>
+
+      <section class="main-section" id="Enums">
+        <header>Enums</header>
+        <code>enum</code>:</p><pre><code class="language-python">from enum import Enum
+        </code></pre><p>Luego puedes inicializar un nuevo <code>Enum</code> de esta manera:</p><pre><code class="language-python">class Estado(Enum):
+            INACTIVO = 0
+            ACTIVO = 1
+        </code></pre><p>Una vez que lo hagas, puedes hacer referencia a <code>Estado.INACTIVO</code> y <code>Estado.ACTIVO</code>, y sirven como constantes.</p><p>Ahora, si intentas imprimir <code>Estado.ACTIVO</code>, por ejemplo:</p><pre><code class="language-python">print(Estado.ACTIVO)
+        </code></pre><p>no devolverá <code>1</code>, sino <code>Estado.ACTIVO</code>.</p><p>El mismo valor puede ser alcanzado por el número asignado en el enum: <code>print(Estado(1))</code> devolverá <code>Estado.ACTIVO</code>. Lo mismo para usar la notación de corchetes <code>Estado['ACTIVO']</code>.</p><p>Sin embargo, puedes obtener el valor mediante &nbsp;<code>Estado.ACTIVO.value</code>.</p><p>Puedes enlistar todos los valores posibles de un enum:</p><pre><code class="language-python">list(Estado) # [&lt;Estado.INACTIVO: 0&gt;, &lt;Estado.ACTIVO: 1&gt;]
+        </code></pre><p>Puedes contarlos:</p><pre><code class="language-python">len(Estado) # 2
+        </code></pre>
+      </section>
+
+      <section class="main-section" id="Entradas_de_usuario">
+        <header>Entradas de usuario</header>
+        <p>En una aplicación de línea de comandos de Python, puedes mostrar información al usuario mediante la función <code>print()</code>:</p><pre><code class="language-python">nombre = "Roger"
+            print(nombre)
+            </code></pre><p>También podemos aceptar la entrada del usuario, usando <code>input()</code>:</p><pre><code class="language-python">print('¿Cual es tu edad?')
+            edad = input()
+            print('Tu edad es ' + edad)
+            </code></pre><p>Este enfoque recibe entradas en tiempo de ejecución, lo que significa que el programa detendrá la ejecución y esperará hasta que el usuario escriba algo y presione la tecla <code>Enter</code>.</p><p>También puedes realizar un procesamiento de entradas más complejo y aceptar la entrada en el momento de la invocación del programa, y ​​veremos cómo hacerlo más adelante.</p><p>Esto funciona para aplicaciones de línea de comandos. Otros tipos de aplicaciones necesitarán una forma diferente de aceptar la entrada.</p>
+      </section>
+
+      <section class="main-section" id="Declaraciones_de_control">
+        <header>Declaraciones de control</header>
+        <p>Cuando se trata de valores booleanos y expresiones que devuelven un valor booleano en particular, podemos tomar decisiones y diferentes caminos en función de sus valores <code>True</code> o <code>False</code>.</p><p>En Python lo hacemos usando la declaración <code>if</code>:</p><pre><code class="language-python">condicion = True
+
+            if condicion == True:
+                # Hace algo
+            </code></pre><p>Cuando la prueba de condición se resuelve en <code>True</code>, como en el caso anterior, el bloque se ejecuta.</p><p>¿Qué es un bloque? Un bloque es la parte que tiene una indentación de un nivel (normalmente 4 espacios) a la derecha.</p><pre><code class="language-python">condicion = True
+            
+            if condicion == True:
+                print("La condicion")
+                print("era VERDADERA")
+            </code></pre><p>El bloque puede estar formado por una sola línea, o también por varias líneas, y termina cuando regresa al nivel de indentación anterior:</p><pre><code class="language-python">condicion = True
+            
+            if condicion == True:
+                print("La condicion")
+                print("era VERDADERA")
+            
+            print("Fuera del IF")
+            </code></pre><p>En combinación con <code>if</code>, puedes tener un bloque <code>else</code> que se ejecute si la prueba de condición de <code>if</code> da como resultado <code>False</code>:</p><pre><code class="language-python">condicion = True
+            
+            if condicion == True:
+                print("La condicion")
+                print("era VERDADERA")
+            else:
+                print("La condicion")
+                print("era FALSA")
+            </code></pre><p>Y puedes tener diferentes verificaciones vinculadas <code>if</code> con <code>elif</code> que se ejecutan si la verificación anterior fue falsa:</p><pre><code class="language-python">condicion = True
+            nombre = "Roger"
+            
+            if condicion == True:
+                print("La condicion")
+                print("era VERDADERA")
+            elif nombre == "Roger":
+                print("Hola Roger")
+            else:
+                print("La condicion")
+                print("era FALSA")</code></pre><p>En este caso, el segundo bloque se ejecuta si <code>condicion</code> es <code>False</code> y el valor de la variable <code>nombre</code> es "Roger".</p><p>En una declaración <code>if</code>, puedes tener solo una verificación <code>if</code> y <code>else</code>, pero varias series de verificaciones <code>elif</code>:</p><pre><code class="language-python">condicion = True
+            nombre = "Roger"
+            
+            if condicion == True:
+                print("La condicion")
+                print("era VERDADERA")
+            elif nombre == "Roger":
+                print("Hola Roger")
+            elif nombre == "Syd":
+                print("Hola Syd")
+            elif nombre == "Flavio":
+                print("Hola Flavio")
+            else:
+                print("La condicion")
+                print("era FALSA")</code></pre><p><code>if</code> y <code>else</code> también se pueden usar en un formato en-línea, lo que nos permite devolver un valor u otro en función de una condición.</p><p>Ejemplo:</p><pre><code class="language-python">a = 2
+            resultado = 2 if a == 0 else 3
+            print(resultado) # 3
+            </code></pre>
+      </section>
+
+      <section class="main-section" id="Listas">
+        <header>Listas</header>
+        <p>Las listas son una estructura de datos esencial de Python.</p><p>Te permiten agrupar varios valores y hacer referencia a todos ellos con un nombre común.</p><p>Por ejemplo:</p><pre><code class="language-python">perros = ["Roger", "Syd"]
+        </code></pre><p>Una lista puede contener valores de diferentes tipos:</p><pre><code class="language-python">items = ["Roger", 1, "Syd", True]
+        </code></pre><p>Puedes verificar si un elemento está contenido en una lista con el operador <code>in</code>:</p><pre><code class="language-python">print("Roger" in items) # True
+        </code></pre><p>Una lista también se puede definir como vacía:</p><pre><code class="language-python">items = []
+        </code></pre><p>Puedes hacer referencia a los elementos en una lista por su índice, comenzando desde cero:</p><pre><code class="language-python">items[0] # "Roger"
+        items[1] # 1
+        items[3] # True
+        </code></pre><p>Usando la misma notación, puedes cambiar el valor almacenado en un índice específico:</p><pre><code class="language-python">items[0] = "Roger"
+        </code></pre><p>También puedes utilizar el método <code>index()</code>:</p><pre><code class="language-python">items.index(0) # "Roger"
+        items.index(1) # 1
+        </code></pre><p>Al igual que con las cadenas, el uso de un índice negativo comenzará a buscar desde el final:</p><pre><code class="language-python">items[-1] # True
+        </code></pre><p>También puedes extraer una parte de una lista, utilizando porciones(<em>slices</em>):</p><pre><code class="language-python">items[0:2] # ["Roger", 1]
+        items[2:] # ["Syd", True]
+        </code></pre><p>Obtén el número de elementos contenidos en una lista usando la función global <code>len()</code>, la misma que usamos para obtener la longitud de una cadena:</p><pre><code class="language-python">len(items) #4
+        </code></pre><p>Puedes agregar elementos a la lista mediante el método <code>append()</code>:</p><pre><code class="language-python">items.append("Prueba")
+        </code></pre><p>o el método <code>extend()</code></p><pre><code class="language-python">items.extend(["Prueba"])
+        </code></pre><p>También puedes utilizar el operador <code>+=</code>:</p><pre><code class="language-python">items += ["Prueba"]
+        
+        # los items son ['Roger', 1, 'Syd', True, 'Prueba']
+        </code></pre><blockquote>Consejo: con <code>extend()</code> o <code>+=</code> no olvides los corchetes. No hagas <code>items += "Prueba"</code> or <code>items.extend("Prueba")</code> o Python agregará 6 caracteres individuales a la lista, lo que dará como resultado <code>['Roger', 1, 'Syd', True, 'P', 'r', 'u', 'e', 'b', 'a']</code></blockquote><p>Elimina un elemento usando el método <code>remove()</code>:</p><pre><code class="language-python">items.remove("Prueba")
+        </code></pre><p>Puedes agregar varios elementos usando</p><pre><code class="language-python">items += ["Prueba 1", "Prueba 2"]
+        
+        #o
+        
+        items.extend(["Prueba 1", "Prueba 2"])
+        </code></pre><p>Estos anexan el elemento al final de la lista.</p><p>Para agregar un elemento en el medio de una lista, en un índice específico, usa el método <code>insert()</code>:</p><pre><code class="language-python">items.insert("Prueba", 1) 
+        # agrega "Prueba" en el indice 1
+        </code></pre><p>Para agregar varios elementos en un índice específico, debes usar porciones(<em>slices</em>):</p><pre><code class="language-python">items[1:1] = ["Prueba 1", "Prueba 2"]
+        </code></pre><p>Ordena una lista usando el método <code>sort()</code>:</p><pre><code class="language-python">items.sort()
+        </code></pre><blockquote>Consejo: <code>sort()</code> solo funcionará si la lista contiene valores que se pueden comparar. Las cadenas y los enteros, por ejemplo, no se pueden comparar, y obtendrás un error como <code>TypeError: '&lt;' not supported between instances of 'int' and 'str'</code> si lo intentas.</blockquote><p>El método &nbsp;<code>sort()</code> ordena primero las letras mayúsculas y luego las minúsculas. Para solucionar este problema, utiliza:</p><pre><code class="language-python">items.sort(key=str.lower)
+        </code></pre><p>El orden(<em>sort</em>) modifica el contenido de la lista original. Para evitarlo, puedes copiar el contenido de la lista utilizando</p><pre><code class="language-python">copiaitems = items[:]
+        </code></pre><p>o usa la función global <code>sorted()</code>:</p><pre><code class="language-python">print(sorted(items, key=str.lower))
+        </code></pre><p>que devolverá una nueva lista, ordenada, en lugar de modificar la lista original.</p>
+      </section>
+
+      <section class="main-section" id="Tuplas">
+        <header>Tuplas</header>
+        <p>Las tuplas son otra estructura de datos fundamental de Python.</p><p>Te permiten crear grupos inmutables de objetos. Esto significa que una vez que se crea una tupla, no se puede modificar. No puedes agregar ni quitar elementos.</p><p>Se crean de forma similar a las listas, pero utilizando paréntesis en lugar de corchetes:</p><pre><code class="language-python">nombres = ("Roger", "Syd")</code></pre><p>Una tupla está ordenada, como una lista, por lo que puedes obtener sus valores haciendo referencia a un valor de índice:</p><pre><code class="language-python">nombres[0] # "Roger"
+            nombres[1] # "Syd"</code></pre><p>También puedes usar el método <code>index()</code> :</p><pre><code class="language-python">nombres.index('Roger') # 0
+            nombres.index('Syd')   # 1
+            </code></pre><p>Al igual que con las cadenas y las listas, el uso de un índice negativo comenzará a buscar desde el final:</p><pre><code class="language-python">nombres[-1] # True
+            </code></pre><p>Puedes contar los elementos en una tupla con la función <code>len()</code>:</p><pre><code class="language-python">len(nombres) # 2
+            </code></pre><p>Puedes verificar si un elemento está contenido en una tupla con el operador <code>in</code>:</p><pre><code class="language-python">print("Roger" in nombres) # True
+            </code></pre><p>También puedes extraer una parte de una tupla, utilizando porciones(<em>slices</em>):</p><pre><code class="language-python">nombres[0:2] # ('Roger', 'Syd')
+            nombres[1:] # ('Syd',)
+            </code></pre><p>Puedes crear una versión ordenada de una tupla usando la función global <code>sorted()</code>:</p><pre><code class="language-python">sorted(nombres)
+            </code></pre><p>Puedes crear una nueva tupla a partir de tuplas utilizando el operador <code>+</code>:</p><pre><code class="language-python">nuevaTupla = nombres + ("Vanille", "Tina")
+            </code></pre>
+      </section>
+
+    
+    <section class="main-section" id="Diccionarios">
+        <header>Diccionarios</header>
+        <p>Los diccionarios son una estructura de datos de Python muy importante.</p><p>Mientras que las listas te permiten crear colecciones de valores, los diccionarios permiten crear colecciones de <strong>pares clave/valor</strong>.</p><p>Aquí hay un ejemplo de diccionario con un par clave/valor:</p><pre><code class="language-python">perro = { 'nombre': 'Roger' }
+        </code></pre><p>La clave puede ser cualquier valor inmutable como una cadena, un número o una tupla. El valor puede ser el que desees.</p><p>Un diccionario puede contener varios pares clave/valor:</p><pre><code class="language-python">perro = { 'nombre': 'Roger', 'edad': 8 }
+        </code></pre><p>Puedes acceder a valores de <em>claves </em>individuales utilizando esta notación:</p><pre><code class="language-python">perro['nombre'] # 'Roger'
+        perro['edad']  # 8
+        </code></pre><p>Usando la misma notación, puedes cambiar el valor almacenado en un índice específico:</p><pre><code class="language-python">perro['nombre'] = 'Syd'
+        </code></pre><p>Y otra forma es usar el método <code>get()</code>, que tiene una opción para agregar un valor predeterminado:</p><pre><code class="language-python">perro.get('nombre') # 'Roger'
+        perro.get('prueba', 'predeterminado') # 'predeterminado'
+        </code></pre><p>El método <code>pop()</code> recupera el valor de una clave y, posteriormente, elimina el elemento del diccionario.</p><pre><code class="language-python">perro.pop('nombre') # 'Roger'</code></pre><p>El método <code>popitem()</code> recupera y elimina el último par clave/valor insertado en el diccionario:</p><pre><code class="language-python">perro.popitem()
+        </code></pre><p>Puedes verificar si una clave está contenida en un diccionario con el operador <code>in</code>:</p><pre><code class="language-python">'nombre' in perro # True
+        </code></pre><p>Obtén una lista con las claves en un diccionario usando el método <code>keys()</code>, pasando su resultado al constructor <code>list()</code>:</p><pre><code class="language-python">list(perro.keys()) # ['nombre', 'edad']
+        </code></pre><p>Obtén los valores usando el método <code>values()</code> y las tuplas de pares clave/valor usando el método <code>items()</code>:</p><pre><code class="language-python">print(list(perro.values()))
+        # ['Roger', 8]
+        
+        print(list(perro.items()))
+        # [('nombre', 'Roger'), ('edad', 8)]
+        </code></pre><p>Obtén la longitud de un diccionario usando la función global <code>len()</code>, la misma que usamos para obtener la longitud de una cadena o los elementos de una lista:</p><pre><code class="language-python">len(perro) #2
+        </code></pre><p>Puedes agregar un nuevo par clave/valor al diccionario de esta manera:</p><pre><code class="language-python">perro['comida favorita'] = 'Carne'
+        </code></pre><p>Puedes eliminar un par clave/valor de un diccionario usando la declaración <code>del</code>:</p><pre><code class="language-python">del perro['comida favorita']
+        </code></pre><p>Para copiar un diccionario, use el método <code>copy()</code>:</p><pre><code class="language-python">perroCopia = perro.copy()
+        </code></pre>
+    </section>
+
+      <section class="main-section" id="Conjuntos">
+        <header>Conjuntos</header>
+
+        <p>Los conjuntos(<em>sets</em>) son otra estructura de datos importante de Python.</p><p>Podemos decir que funcionan como tuplas, pero no están ordenadas y son <strong>mutables</strong>.</p><p>O podemos decir que funcionan como diccionarios, pero no tienen claves.</p><p>También tienen una versión inmutable, llamada <code>frozenset</code>.</p><p>Puedes crear un conjunto usando esta sintaxis:</p><pre><code class="language-python">nombres = {"Roger", "Syd"}
+        </code></pre><p>Los conjuntos funcionan bien cuando se los considera conjuntos matemáticos.</p><p>Puedes intersecar dos conjuntos:</p><pre><code class="language-python">conjunto1 = {"Roger", "Syd"}
+        conjunto2 = {"Roger"}
+        
+        interseccion = conjunto1 &amp; conjunto2 #{'Roger'}
+        </code></pre><p>Puedes crear una unión de dos conjuntos:</p><pre><code class="language-python">conjunto1 = {"Roger", "Syd"}
+        conjunto2 = {"Luna"}
+        
+        union = conjunto1 | conjunto2
+        #{'Syd', 'Luna', 'Roger'}
+        </code></pre><p>Puedes obtener la diferencia entre dos conjuntos:</p><pre><code class="language-python">conjunto1 = {"Roger", "Syd"}
+        conjunto2 = {"Roger"}
+        
+        diferencia = conjunto1 - conjunto2 #{'Syd'}</code></pre><p>Puedes comprobar si un conjunto es un superconjunto de otro (y, por supuesto, si un conjunto es un subconjunto de otro):</p><pre><code class="language-python">conjunto1 = {"Roger", "Syd"}
+        conjunto2 = {"Roger"}
+        
+        esSuperconjunto = conjunto1 &gt; conjunto2 # True
+        </code></pre><p>Puedes contar los elementos de un conjunto con la función global <code>len()</code>:</p><pre><code class="language-python">nombres = {"Roger", "Syd"}
+        len(nombres) # 2
+        </code></pre><p>Puedes obtener una lista de los elementos de un conjunto pasando el conjunto al constructor <code>list()</code>:</p><pre><code class="language-python">nombres = {"Roger", "Syd"}
+        list(nombres) #['Syd', 'Roger']
+        </code></pre><p>Puedes verificar si un elemento está contenido en un conjunto con el operador <code>in</code>:</p><pre><code class="language-python">print("Roger" in nombres) # True
+        </code></pre>
+      </section>
+
+      <section class="main-section" id="Funciones">
+        <header>Funciones</header>
+        <p>Una función nos permite crear un conjunto de instrucciones que podemos ejecutar cuando sea necesario.</p><p>Las funciones son esenciales en Python y en muchos otros lenguajes de programación. Nos ayudan a crear programas significativos, porque nos permiten descomponer un programa en partes manejables y promueven la legibilidad y la reutilización del código.</p><p>Aquí hay una función de ejemplo llamada <code>hola</code> que imprime "¡Hola!":</p><pre><code class="language-python">def hola():
+            print('Hola!')
+        </code></pre><p>Esta es la <strong>definición </strong>de la función. Hay un nombre <code>hola</code> y un cuerpo, el conjunto de instrucciones, que es la parte que sigue a los dos puntos. Tiene una indentación de un nivel a la derecha.<br>Para ejecutar esta función, debemos llamarla. Esta es la sintaxis para llamar a la función:</p><pre><code class="language-python">hola()
+        </code></pre><p>Podemos ejecutar esta función una o varias veces.</p><p>El nombre de la función, <code>hola</code>, es muy importante. Debe ser descriptivo, para que cualquiera que lo llame pueda imaginar lo que hace la función.</p><p>Una función puede aceptar uno o más parámetros:</p><pre><code class="language-python">def hola(nombre):
+            print('Hola ' + nombre + '!')
+        </code></pre><p>En este caso llamamos a la función pasando el argumento</p><pre><code class="language-python">hola('Roger')
+        </code></pre><blockquote>Llamamos parámetros a los valores aceptados por la función dentro de la definición de la función, y argumentos a los valores que pasamos a la función cuando la llamamos. Es común confundirse con esta distinción.</blockquote><p>Un argumento puede tener un valor predeterminado que se aplica si no se especifica el argumento:</p><pre><code class="language-python">def hola(nombre='mi amigo'):
+            print('Hola ' + nombre + '!')
+        
+        hola()
+        # Hola mi amigo!
+        </code></pre><p>Así es como podemos aceptar múltiples parámetros:</p><pre><code class="language-python">def hola(nombre, edad):
+            print('Hola ' + nombre + ', tienes ' + str(edad) + ' a_os de edad!')
+        </code></pre><p>En este caso llamamos a la función pasando un conjunto de argumentos:</p><pre><code class="language-python">hola('Roger', 8)
+        </code></pre><p>Los parámetros se pasan por referencia. Todos los tipos en Python son objetos, pero algunos de ellos son inmutables, incluidos enteros, booleanos, flotantes, cadenas y tuplas. Esto significa que si los pasas como parámetros y modificas su valor dentro de la función, el nuevo valor no se refleja fuera de la función:</p><pre><code class="language-python">def cambio(valor):
+            valor = 2
+        
+        val = 1
+        cambio(val)
+        
+        print(val) #1
+        </code></pre><p>Si pasas un objeto que no es inmutable y cambia una de sus propiedades, el cambio se reflejará en el exterior.</p><p>Una función puede devolver un valor mediante la declaración de <code>return</code>. Por ejemplo, en este caso devolvemos el nombre del parámetro <code>nombre</code>:</p><pre><code class="language-python">def hola(nombre):
+            print('Hola ' + nombre + '!')
+            return nombre
+        </code></pre><p>Cuando la función cumple con la declaración <code>return</code>, la función finaliza.</p><p>Podemos omitir el valor:</p><pre><code class="language-python">def hola(nombre):
+            print('Hola ' + nombre + '!')
+            return
+        </code></pre><p>Podemos tener la declaración de retorno dentro de un condicional, que es una forma común de finalizar una función si no se cumple una condición inicial:</p><pre><code class="language-python">def hola(nombre):
+            if not nombre:
+                return
+            print('Hola ' + nombre + '!')
+        </code></pre><p>Si llamamos a la función pasando un valor que se evalúa como <code>False</code>, como una cadena vacía, la función finaliza antes de llegar a la declaración <code>print()</code>.</p><p>Puedes devolver varios valores utilizando valores separados por comas:</p><pre><code class="language-python">def hola(nombre):
+            print('Hola ' + nombre + '!')
+            return nombre, 'Roger', 8
+        </code></pre><p>En este caso, al llamar a <code>hola('Syd')</code>, el valor de retorno es una tupla que contiene esos 3 valores: <code>('Syd', 'Roger', 8)</code>.</p>
+      </section>
+
+      <section class="main-section" id="Objetos">
+        <header>Objetos</header>
+        <p>Todo en Python es un objeto.</p><p>Incluso los valores de tipos primitivos básicos (enteros, cadenas, flotantes...) son objetos. Las listas son objetos, al igual que las tuplas, los diccionarios, todo.</p><p>Los objetos tienen <strong>atributos </strong>y <strong>métodos </strong>a los que se puede acceder mediante la sintaxis de punto.</p><p>Por ejemplo, intenta definir una nueva variable de tipo <code>int</code>:</p><pre><code class="language-python">edad = 8
+        </code></pre><p><code>edad</code> ahora tiene acceso a las propiedades y métodos definidos para todos los objetos <code>int</code>.</p><p>Esto incluye, por ejemplo, el acceso a la parte real e imaginaria de ese número:</p><pre><code class="language-python">print(edad.real) # 8
+        print(edad.imag) # 0
+        
+        print(edad.bit_length()) #4
+        
+        # el metodo bit_length() devuelve el numero de bits necesarios para representar este numero en notación binaria
+        </code></pre><p>Una variable que contiene un valor de lista tiene acceso a un conjunto diferente de métodos:</p><pre><code class="language-python">items = [1, 2]
+        items.append(3)
+        items.pop()
+        </code></pre><p>Los métodos dependen del tipo de valor.</p><p>La función global <code>id()</code> proporcionada por Python permite inspeccionar la ubicación en la memoria de un objeto en particular</p><pre><code class="language-python">id(edad) # 140170065725376
+        </code></pre><blockquote>Tu valor de memoria cambiará, solo lo muestro como un ejemplo.</blockquote><p>Si asignas un valor diferente a la variable, su dirección cambiará, porque el contenido de la variable ha sido reemplazado por otro valor almacenado en otra ubicación de la memoria:</p><pre><code class="language-python">edad = 8
+        
+        print(id(edad)) # 140535918671808
+        
+        edad = 9
+        
+        print(id(edad)) # 140535918671840
+        </code></pre><p>Pero si modificas el objeto usando sus métodos, la dirección permanece igual:</p><pre><code class="language-python">items = [1, 2]
+        
+        print(id(items)) # 140093713593920
+        
+        items.append(3)
+        
+        print(items) # [1, 2, 3]
+        print(id(items)) # 140093713593920
+        </code></pre><p>La dirección solo cambia si reasignas una variable a otro valor.</p><p>Algunos objetos son mutables, mientras que otros son inmutables. Esto depende del objeto en sí.</p><p>Si el objeto proporciona métodos para cambiar su contenido, entonces es mutable. De lo contrario, es inmutable.</p><p>La mayoría de los tipos definidos por Python son inmutables. Por ejemplo, un <code>int</code> es inmutable. No hay métodos para cambiar su valor. Si incrementas el valor usando</p><pre><code class="language-python">edad = 8
+        edad = edad + 1
+        
+        # o 
+        
+        edad += 1
+        </code></pre><p>y verificas con <code>id(edad)</code>, encontrarás que la edad apunta a una ubicación de memoria diferente. El valor original no ha cambiado, simplemente cambiamos a otro valor.</p>
+      </section>
+
+      <section class="main-section" id="Bucles">
+        <header>Bucles</header>
+        <p>Los bucles son una parte esencial de la programación.</p><p>En Python tenemos 2 tipos de bucles: bucles <strong>while </strong>y bucles <strong>for</strong>.</p><h3 id="bucles-while-en-python">Bucles <em>while </em>en Python</h3><p>Bucles <code>while</code> se definen utilizando la palabra clave <code>while</code> y repiten su bloque hasta que la condición se evalúa como <code>False</code>:</p><pre><code class="language-python">condicion = True
+            while condicion == True:
+                print("La condicion es verdadera")
+            </code></pre><p>Este es un <strong>bucle infinito</strong>. Nunca termina.</p><p>Detengamos el ciclo justo después de la primera iteración:</p><pre><code class="language-python">condicion = True
+            while condicion == True:
+                print("La condicion es verdadera")
+                condicion = False
+            
+            print("Despues del bucle")
+            </code></pre><p>En este caso, se ejecuta la primera iteración, ya que la prueba de condición se evalúa como <code>True</code>. En la segunda iteración, la prueba de condición se evalúa como <code>False</code>, por lo que el control pasa a la siguiente instrucción después del ciclo.</p><p>Es común tener un contador para detener la iteración después de algunos ciclos:</p><pre><code class="language-python">contador = 0
+            while contador &lt; 10:
+                print("La condicion es verdadera")
+                contador = contador + 1
+            
+            print("Despues del bucle")
+            </code></pre><h3 id="bucles-for-en-python">Bucles <em>for </em>en Python</h3><p>Usando bucles <code>for</code> podemos decirle a Python que ejecute un bloque por una cantidad predeterminada de veces, por adelantado, y sin la necesidad de una variable separada y condicional para verificar su valor.</p><p>Por ejemplo, podemos iterar los elementos de una lista:</p><pre><code class="language-python">items = [1, 2, 3, 4]
+            for item in items:
+                print(item)
+            </code></pre><p>O puedes iterar una cantidad específica de veces usando la función <code>range()</code>:</p><pre><code class="language-python">for item in range(04):
+                print(item)
+            </code></pre><p><code>range(4)</code>crea una secuencia que comienza desde 0 y contiene 4 elementos: <code>[0, 1, 2, 3]</code>.</p><p>Para obtener el índice, debes ajustar la secuencia en la función <code>enumerate()</code>:</p><pre><code class="language-python">items = [1, 2, 3, 4]
+            for indice, item in enumerate(items):
+                print(indice, item)
+            </code></pre><h3 id="break-y-continue-en-python"><em>Break</em> y <em>continue</em> en Python</h3><p>Tanto los bucles <code>while</code> como <code>for</code> pueden interrumpirse dentro del bloque, utilizando dos palabras clave especiales: &nbsp;<code>break</code> y <code>continue</code>.</p><p><code>continue</code> detiene la iteración actual y le dice a Python que ejecute la siguiente.</p><p><code>break</code> detiene el bucle por completo y continúa con la siguiente instrucción después que termina el bucle.</p><p>El primer ejemplo aquí imprime <code>1, 3, 4</code>. El segundo ejemplo imprime <code>1</code>:</p><pre><code class="language-python">items = [1, 2, 3, 4]
+            for item in items:
+                if item == 2:
+                    continue
+                print(item)
+            </code></pre><pre><code class="language-python">items = [1, 2, 3, 4]
+            for item in items:
+                if item == 2:
+                    break
+                print(item)
+            </code></pre>
+      </section>
+
+      <section class="main-section" id="Clases">
+        <header>Clases</header>
+        <p>Además de usar los tipos proporcionados por Python, podemos declarar nuestras propias clases y, a partir de las clases, podemos crear instancias de objetos.</p><p>Un objeto es una instancia de una clase. Una clase es el tipo de objeto.</p><p>Podemos definir una clase de esta manera:</p><pre><code class="language-python">class &lt;nombre_clase&gt;:
+            # mi clase
+        </code></pre><p>Por ejemplo, definamos una clase <code>Perro</code>:</p><pre><code class="language-python">class Perro:
+            # la clase Perro
+        </code></pre><p>Una clase puede definir métodos:</p><pre><code class="language-python">class Perro:
+            # la clase Perro
+            def ladrido(self):
+                print('Guau!')
+        </code></pre><blockquote><code>self</code> ya que el argumento del método apunta a la instancia del objeto actual y debe especificarse al definir un método.</blockquote><p>Creamos una instancia de una clase, <strong>un objeto</strong>, usando esta sintaxis:</p><pre><code class="language-python">roger = Perro()
+        </code></pre><p>Ahora <code>roger</code> es un nuevo objeto de tipo Perro.</p><p>Si ejecutas:</p><pre><code class="language-python">print(type(roger))
+        </code></pre><p>Obtendrás <code>&lt;class '__main__.Perro'&gt;</code></p><p>Un tipo especial de método, <code>__init__()</code> se llama <strong>constructor</strong>, y podemos usarlo para inicializar una o más propiedades cuando creamos un nuevo objeto de esa clase:</p><pre><code class="language-python">class Perro:
+            # la clase Perro
+            def __init__(self, nombre, edad):
+                self.nombre = nombre
+                self.edad = edad
+        
+            def ladrido(self):
+                print('Guau!')
+        </code></pre><p>La usamos de esta manera:</p><pre><code class="language-python">roger = Perro('Roger', 8)
+        print(roger.nombre) # 'Roger'
+        print(roger.edad)  # 8
+        
+        roger.ladrido() # 'Guau!'
+        </code></pre><p>Una característica importante de las clases es la <strong>herencia</strong>.</p><p>Podemos crear una clase <code>Animal</code> con un método <code>caminar()</code>:</p><pre><code class="language-python">class Animal:
+            def caminar(self):
+                print('Caminando..')
+        </code></pre><p>y la clase Perro puede heredar de Animal:</p><pre><code class="language-python">class Perro(Animal):
+            def ladrido(self):
+                print('Guau!')
+        </code></pre><p>Ahora, la creación de un nuevo objeto de la clase <code>Perro</code> tendrá el método <code>caminar()</code>, ya que se hereda de <code>Animal</code>:</p><pre><code class="language-python">roger = Perro()
+        roger.caminar() # 'Caminando..'
+        roger.ladrido() # 'Guau!'
+        </code></pre>
+      </section>
+
+      <section class="main-section" id="Módulos">
+        <header>Módulos</header>
+        <p>Cada archivo de Python es un módulo.</p><p>Puedes importar un módulo desde otros archivos, y esa es la base de cualquier programa de complejidad moderada, ya que promueve una organización sensata y la reutilización del código.</p><p>En el programa típico de Python, un archivo actúa como punto de entrada. Los otros archivos son módulos y exponen funciones que podemos llamar desde otros archivos.</p><p>El archivo <code>perro.py</code> contiene este código:</p><pre><code class="language-python">def ladrido():
+            print('Guau!')
+        </code></pre><p>Podemos importar esta función desde otro archivo usando <code>import</code>. Y una vez que lo hagamos, podemos hacer referencia a la función usando la notación de puntos, <code>perro.ladrido()</code>:</p><pre><code class="language-python">import perro
+        
+        perro.ladrido()
+        </code></pre><p>O podemos usar la sintaxis <code>from ... import</code> y llamar a la función directamente:</p><pre><code class="language-python">from perro import ladrido
+        
+        ladrido()
+        </code></pre><p>La primera estrategia nos permite cargar todo lo definido en un archivo.</p><p>La segunda estrategia nos permite elegir las cosas que necesitamos.</p><p>Esos módulos son específicos de tu programa y la importación depende de la ubicación del archivo en el sistema de archivos.</p><p>Supongamos que colocas <code>perro.py</code> en una subcarpeta <code>lib</code>.</p><p>En esa carpeta, debes crear un archivo vacío llamado <code>__init__.py</code>. Esto le dice a Python que la carpeta contiene módulos.</p><p>Ahora puedes elegir -puedes importar <code>perro</code> desde <code>lib</code>:</p><pre><code class="language-py">from lib import perro
+        
+        perro.ladrido()
+        </code></pre><p>o puedes hacer referencia a la función específica del módulo de <code>perro</code> que se importa desde <code>lib.perro</code>:</p><pre><code class="language-py">from lib.perro import ladrido
+        
+        ladrido()
+        </code></pre>
+      </section>
+
+      
+      <section class="main-section" id="Recursión">
+        <header>Recursión</header>
+        <p>Una función en Python puede llamarse a sí misma. Eso es la recursividad. Y puede ser bastante útil en muchos escenarios.</p><p>La forma común de explicar la recursividad es mediante el cálculo factorial.</p><p>El factorial de un número es el número <code>n</code> multiplicado por <code>n-1</code>, multiplicado por <code>n-2</code> ... y así sucesivamente, hasta llegar al número <code>1</code>:</p><pre><code>3! = 3 * 2 * 1 = 6
+            4! = 4 * 3 * 2 * 1 = 24
+            5! = 5 * 4 * 3 * 2 * 1 = 120
+            </code></pre><p>Usando la recursividad podemos escribir una función que calcule el factorial de cualquier número:</p><pre><code class="language-python">def factorial(n):
+                if n == 1: return 1
+                return n * factorial(n-1)
+            
+            print(factorial(3)) #   6
+            print(factorial(4)) #  24
+            print(factorial(5)) # 120
+            </code></pre><p>Si dentro de la función <code>factorial()</code> llamas a <code>factorial(n)</code> en lugar de <code>factorial(n-1)</code>, vas a provocar una recursión infinita. Python, de forma predeterminada detendrá las recursiones en 1000 llamadas, y cuando se alcance este límite, obtendrás un error <code>RecursionError</code>.</p><p>La recursividad es útil en muchos lugares y nos ayuda a simplificar nuestro código cuando no hay otra forma óptima de hacerlo, por lo que es bueno conocer esta técnica.</p>
+      </section>
+
+      <section class="main-section" id="Funciones_anidadas">
+        <header>Funciones anidadas</header>
+        <p>Las funciones en Python se pueden anidar dentro de otras funciones.</p><p>Una función definida dentro de una función es visible solo dentro de esa función.</p><p>Esto es conveniente para crear utilidades que sean útiles para una función, pero no útiles fuera de ella.</p><p>Podrías preguntar: ¿por qué debería "ocultar" esta función, si no hace daño?</p><p>Uno, porque siempre es mejor ocultar la funcionalidad que es local a una función y no es útil en otros lugares.</p><p>Además, porque podemos hacer uso de <em><strong>closures</strong></em>(sobre esto más adelante).</p><p>Aquí hay un ejemplo:</p><pre><code class="language-python">def hablar(frase):
+            def decir(palabra):
+                print(palabra)
+        
+            palabras = frase.split(' ')
+            for palabra in palabras:
+                decir(palabra)
+        
+        hablar('Voy a comprar la leche')
+        </code></pre><p>Si deseas acceder a una variable definida en la función externa desde la función interna, primero debes declararla como <code>nonlocal</code>(<em>no local</em>):</p><pre><code class="language-python">def conteo():
+            conteo = 0
+        
+            def incrementar():
+                nonlocal conteo
+                conteo = conteo + 1
+                print(conteo)
+        
+            incrementar()
+        
+        conteo()
+        </code></pre><p>Esto es útil especialmente con <em><strong>closures</strong></em>, como veremos a continuación.</p>
+      </section>
+
+    </main>
+  </body>
+</html>
