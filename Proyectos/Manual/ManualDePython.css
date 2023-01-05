@@ -1,13 +1,9 @@
-*{
-  font-family: 'Open Sans', Arial, sans-serif;
-
-  }
-
 body{
   margin: 0;
   display: block;
-  background-color: #23363a;
-  color: #dbd9d9;
+  background-color: #ffffff;
+  color: #192325;
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 
 *::-webkit-scrollbar {
@@ -29,6 +25,7 @@ body{
   margin: 0;
   padding: 0;
   overflow:hidden;
+
 }
 
 #navbar{
@@ -37,21 +34,19 @@ body{
   width:100%;
   min-width: 170px;
   max-width: 255px;
-  background-color: #152022;  
+  background-color: #81f1a5;  
   overflow: auto;
+  box-shadow: 0 0 5px  #192325;
+
 
 }
 
 code{
-  background-color: #57575c;
-  padding: 0 5px 2px;
+  background-color: #d0d0d5;
+  padding: 0 5px 5px;
+  font-size: 16px;
+
 }
-
-pre code {
-  width: 100%;
-}
-
-
 
 .main-section{
   padding-bottom: 40px;
@@ -59,9 +54,9 @@ pre code {
 
 .nav-link {
   display: block;
-  padding: 3px 17px;
+  padding: 12px 17px 0 17px ;
   font-size: 100%;
-  color: rgb(219, 217, 217);
+  color: #192325;
   text-decoration: none;
   overflow-y: auto;
 }
@@ -70,21 +65,16 @@ pre code {
   background-color: #192325;
 }
 
-.separator{
-  border: solid #202b2e 1px ;
-}
-
 #title{
   display: block;
-  border-bottom: solid #202b2e 2px;
-  padding:10px 17px;
-  font-size: 23px;
+  padding: 12px 17px 0 17px;
+  font-size: 25px;
 }
 
 #main-doc{
-  width:80%;
   margin-left: 255px;
-  padding: 20px;
+
+  padding: 50px 300px 100px 45px;
 }
 
 #main-doc header{
@@ -98,4 +88,12 @@ pre code {
 .kg-img{
   width: 100%;
   height: auto;
+}
+
+.language-python{
+  background-color: #e9e9e9;
+  display: block;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 5px;
 }
