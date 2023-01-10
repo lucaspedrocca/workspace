@@ -50,7 +50,7 @@ body{
   width:100%;
   min-width: 170px;
   max-width: 220px;
-  background-color: #81f1a5;  
+  background-color: #b2fac9;  
   overflow: auto;
 }
 
@@ -86,7 +86,7 @@ code{
 
 #main-doc{
   margin-left: 255px;
-  padding: 0px 300px 100px 45px;
+  padding: 0px 15% 10% 45px;
 }
 
 #main-doc header{
@@ -112,3 +112,14 @@ code{
   border-radius: 5px;
 }
 
+@media (max-width: 800px) {
+  #navbar {
+    height:0;
+  }
+  
+  #main-doc {
+    width:90%;
+    padding: 5% 5%;
+    margin:0;
+  }
+}
