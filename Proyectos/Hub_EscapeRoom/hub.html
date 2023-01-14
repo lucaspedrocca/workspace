@@ -139,65 +139,75 @@
       <section id="el-juego">
         <h2 class="title">SÓLO 60 MINUTOS PARA ESCAPAR...</h2>
         <p class="texto-resaltado">¿Listo para el desafio?</p>
-        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/ipeCGQ_JScQ" title="YouTube video player" frameborder="0" allow="accelerome1r; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+        <div id="el-juego-cont">
+          <div>
+            <iframe id="video" width="600px" height="350px" src="https://www.youtube.com/embed/ipeCGQ_JScQ" title="YouTube video player" frameborder="0" allow="accelerome1r; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div> 
+          <div id="caracteristicas-juego">
+            <div class="caract-juego">
+              <img class="icon-small" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADgUlEQVR4nO2ayWsUQRTGf+7ihh5j3EBcLqIH/wgVFRTBg0uiB40oKHgVJAdRYkiMevDqVUTB9SBoElTEDRH3i0twAVE0EVwCftJOC+ObrslMdWam0+kPCgLz5X3vve569bqqIEOGDBkyZKgqBDMFpwW94TgrWMAwCv6TQGZ8Dn4j7VDuycsxTpF2KPfKuxLwlbRCMFawUtBfJAHBb8sEo0gLBHWC44557xrvBYcEUxmqEIwRNAu+lRG4HR8FTYIRDCUI6gXXYwReUBwFExkKEMwPX+GoQF4KOgQrBHODV1wwTrBQsEpwoshUuS+YRpIhmCF45Qi8UTC6xGK5V9AXYadbMJ4kQjBacDfC6WDdn+SZzDsR9k5WJgIHBEcEawQjB+Dti3C2NU4BCxInuBJhd/kA/zcy9PmIr/ZfBP254Hco+kKwjQgIZgt+RhSu2NU7TMLTiCkVORUCH0NfFfo+L454ixHudPDaDO+NYIK3cKH9RYLvRmOrg9tleAfjCD83xjZEcCZHtLcN3qJuX44ZjQcO3ibDe+IrOMcY+hG1FgtWG97rgepFjN7ih9Fa7HggdjqW/5Up2GKMXHXwOgzvqGeMpfh00WjtdvA6DW+zj1ibMbLfwbtleMs8YivVp11G64yD12x4h33ELhsj6xy8l4ZXsZ0dwVKj9dDBW294F3zEnhojixw8+7Ez2SO2cupAvtYHB2+x4T32EXtrjEx38P5rUjziKrfbzNfrL9JF5vN6fMT6jJFJtU5AqXqCKbF3mpSuBHzxEXpnjNT5OlSDBMy0nWkli6ASmIAlhvfIR+hSictgEhNgl8HzPkKtJTZCSUyAbYRafIQajZFrvg7VIAFdg9EKzzJGfkatBElLQPgx9MvwZviKPTOGNpbrUA0S0BC7AP5DeDiRb6x7CCSg23AOxBGbZ7bEtpfrUA0SsN1sic2NK9guWOva5EhaAvI2RQOf2yvtD0lMQFWhLAFkb4CyKcDwrAEq3Hl5XQXNHqNZX2nNYsFfKGWbejAh2GO/9KqaBJlXMGkjS0CloQQ85ewNoIZTYBCL17ngrCE87Dhf7WJadajI8hWxnJa/i5t0qPAOQbEE9JI2qPAU+e/67egnbpI2CHaWUc2bSBuUu/93r4TgbwfXbEkjlLs4HXWX8N+44zqCSw2Uu0S9Q3AjPIDtC/9uSu2Tz5AhQ4YMJBN/AMEtYzxPRfMNAAAAAElFTkSuQmCC">
+              <p>En cada cuarto dispondrás sólo de 60 minutos, para que vos y tu equipo sorteen todas las pistas para poder escapar en el menor tiempo posible.</p>
+            </div>
+
+            <div class="caract-juego">
+              <img class="icon-small" src="data:image/png;base64,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">
+              <p>El costo de Jugar depende de la cantidad de participantes y del juego seleccionado. Desde $800 por persona podrás disfrutar de una experiencia única.</p>
+            </div>
+
+            <div class="caract-juego">
+              <img class="icon-small" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEb0lEQVR4nO2a3W8WRRTGf4LcQJHQioRyYcKH3JmYWIlKlFaCoImgkvBnGFNLW0tC1EhighcYLviqF4QbEgwf5U4+vTJBwIQQPi6ogiYEqBFpKdTIIZOcxmU6uzs7u/uyDfskc/O+5zxznp3Z2TlnBmrUqFGjxlMGgWaBPoGfBYYEhgXOCXwlMCdi94L+dk5thtTnc4HZTAYIrBa4IyAxzfz3kcDHHnarqTIE1gr8myBivP2nLc3OcK2hihBoEbjhISJru2WmPlWAwAqBfoELAqNWoGMCnfqetgp0CzxwCDK/bVAbY/uZ+kZtRrWP3QLvPAmhSwROpozMBodfj8Ou29Mu2o4LvNQosW8J/JUSkBmRZodvq8O2NWaVv5/Sh1nRl5UtdrGHWDNFP03geMw+wa4z5hWwRS8sU/BPjk4PCywXmCHQJDA9hcNLsNpOV07D3S4w4Oj/ROFCIwuU3VkvGZFFcIx/nyOOjqw8qRDYZY9sIE8uwcphj/SOEJ5ECFy2OlkewDHTMTpNATwdFsfFrBypELhbQKDtDsFvF/Dg/snKkQqBEauT5gCOww7BBwJ4mi2O4awcIVP63Yz+3Qmfl66ABKX0KX3A6uSQh0+Tvm+ukbXbQZ3yqa+Kg29/kUKnCHznCHAkwec9gUEPkXFtMCk1dLxeDwU2CTxThOBvY4I6muDzRw6x4+16Av/RGJ9v8opdqU8vSmry2O0CsxL8rscEdMLx28kAwbPMt9eRU5tYV4aKnSrwm0V4U+BVz0Xlqk49s9h9b95P/e8xYfpbh9pcVh/ju8qjnzbNl6OcxndKiOD3LSKzkW/LTDSRd4LgnHxtjvw5e2lIYJ9FsjtvcGUIVs5+i3dPCMmgRfJGhQUvs3h/CSEZtUhaKiy4xeK9E0JyP+9WsoGCn7N47xUxpd+ssOCl9kpdxKLVX2HB9k5wbxGfpTGB1yr4WXrFUftaV9TG41Ze0T6CBT4RuKbl2JdTxP5pcV4RmNbQrWUewQIvWltGs3huNQ9ai3mmvS6wzTGyJtYPyAOBLVmTB0fW9LfAaVeB3eGzwPGQfdvmXGIj6eHWLOlhlqwpxu/rjELNA9octIcuuAAQlzWlLlp6EnnVU/APVKHEI/9nTZkFq/+zAuvNZ0YXo2FtvzeixDMSuvMSmKdHJxPOiwJjaUgR724BZdquggQ3pEx7yeqkPYBjwulhYCwNKcTvtDoZCOQpQvARi2d7CE/IYVpfowULbHTEkXm2eUHglKOzAZ1iTSUcl44fwY7Xt+2RNe04ZUFgkeeBeGcCh+93uMtRq3IdiC8oTXCknDIUeOVhfoFXHm4XlaP7Xn04lhKQ67JKr8Oux9Mu2n4s9apDHPQsyKze501ZxQpqTKflXB3Z3oRrSz36yZqrV5jsy233tI+dIefSk+1i2s3o/cxKQWBNCVcP8+W3ZcMckWj+GyfC/PehXjBNs0s9bqkEBGbrO/urJh1mH35G4AuB5yN2cwS+FDirNiPq0ztprg/XqFGjRg2KwyPtKl4bRok3UwAAAABJRU5ErkJggg==">
+              <p>
+                El objetivo final es lograr escapar del Juego con la ayuda de tu ingenio, en el menor tiempo posible.
+              </p>
+            </div>
+          </div> 
+        </div>
       </section>
 
-      <section id="rooms"></section>
+      <section id="rooms">
+        <h2 class="title">ROOMS</h2>
+        
+        <h2 class="subtitle">LA CASA DE PAPEL</h2>
+        <ul id="caract-rooms">
+          <li><img  class="icon-rooms" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcklEQVR4nO2WO07DQBRFD0JJBOnSsgX2AXQ0LAEqwgooWQFSlpGKhhXwqUJDR4ORaCKQUChIddFIYymybEj8xuajd6QrWfbc9/GMZwyO4ziO4/whBD3BieBG8B4VrofhWdN+E4ItwZ1AFZqEMU35TcQ391XyxSJ6qf1m4rRrSR2n9psR3K5QwHVqvxnBbIUCZqn9ZlYs4C2138x/WEJD40ds8puJ2+BkyW2wm9qfhHgQTYwHWW1/EsLbCVMc1mn8MIOu4r1u037HcWog2BTsCM4EY8G9YCr4iJrGe+M4Jozd/CZm+Lmr7V+m6I5gX3AhmK9wCOWaR2+I0anIcWjxVxW+JjgQPNQoukqPgiPBekm+c4u/GGwguExYeFEh9qDkhH6u618M1I/rUA0r5OgXcp9a/HmQUQvF5xoVcm9b/HmQ1xYbeCnk3rD48yBqU9b8eAP8vhl4anEJZcYGsrIG9lpqIhPsGhrIyvyO4ziO4/ADfAKQjkgk6FcHPAAAAABJRU5ErkJggg=="><p>2-7 Jugadores</p></li>
+          <li><img class="icon-rooms" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABUklEQVR4nOWVTU4CQRCFn2uB5RzAv6XCVk3U6GX0CKD3EI2uBa9A/IlHIBK8gRD/Agd4ppI3oTJxuhtdqZNUMjP1+n3T1dU9wL+6CNDidwEI7BK4JDDIAbq/ILDzE+M1AvfOtCzuCKzOa75N4F0GzwSaBDYILCrqBFrKmeaNwGaq+TKBDw28IlAJaKsEOtLaBy2lAB6c+UJskU1DoJuXK2Z+4MpSSe0izWSk/F4IcC5Rc942JXCsfDsEeJJo/RuAuvLDEGAq0ZcLy1lrZiVlstw0BJhEAH3l+0WIA0xCgGGkRFkZxJVoEAKcSdQKaDIHOXLvT/TuNATYd21ajUAO3XONwDjaphLfStgpbrQSvW20a43pIWHACoFXDehGZlJz5i9JR4U77HLISJuoYd2laKjmY2e+lWRemMlNwnHdS/7ywMK39ZOxjWjxaN0SXdA/cX0CD0Ey+MZ8rN0AAAAASUVORK5CYII="><p> 60 Minutos</p></li>
+          <li><img class="icon-rooms" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7klEQVR4nO2SPWoCURSFP4WZJmAT0NpCOxvdgZVuYTYhpLF1C+4ha7CKrSl0AxamUrAVbSySEwav8DJMMm+cSAh64Dbvnfvdn/fgpiR4iuMa4JJgJJDFWFD+LXgoeDbw0UJ2FhaFPwgmBtwLeoKuYGdnU0HlUvij4NVAW0HbuWsJ1na3ENTywuuCpQFWgkaG503Q9IXH3W0scS6oZkw5c6bsZMHd/b747DfxTgdB/ztj5PyQOAKvkU+5gZMXM6KkYSB4d0zyhZ/l5go+BEPSVLQAlxj1tbvUKf9HAXJ47gVUeEU/Pao8PH9X4C4S+gSkyjOHQa9PqQAAAABJRU5ErkJggg=="><p>Patio Olmos Shopping</p></li>
+          <li><p>Dificulty <strong class="texto-resaltado icon-rooms">★ ★ ★ ★ ☆</strong></p></li>
+        </ul>
+        <div class="video-descripcion">
+          <iframe width="1100px" height="650px" src="https://www.youtube.com/embed/r9oghMO0Hvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <br>
+          <br>
+          <p>La Oficina del Banquero presenta su edición especial, La Casa de Papel, por TIEMPO LIMITADO.
+            Nos ponemos en rol de atracadores, y debemos robar el dinero de la Fábrica de moneda y timbre en menos de 60 minutos.
+            Con la ayuda del profesor como Game Master, tenemos que resolver las pistas y acertijos utilizando todo nuestro ingenio para evitar que la policía nos atrape.</p>
+        </div>
 
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+        <h2 class="subtitle">SAW: EL JUEGO DEL MIEDO</h2>
+        <ul id="caract-rooms">
+          <li><img class="icon-rooms" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcklEQVR4nO2WO07DQBRFD0JJBOnSsgX2AXQ0LAEqwgooWQFSlpGKhhXwqUJDR4ORaCKQUChIddFIYymybEj8xuajd6QrWfbc9/GMZwyO4ziO4/whBD3BieBG8B4VrofhWdN+E4ItwZ1AFZqEMU35TcQ391XyxSJ6qf1m4rRrSR2n9psR3K5QwHVqvxnBbIUCZqn9ZlYs4C2138x/WEJD40ds8puJ2+BkyW2wm9qfhHgQTYwHWW1/EsLbCVMc1mn8MIOu4r1u037HcWog2BTsCM4EY8G9YCr4iJrGe+M4Jozd/CZm+Lmr7V+m6I5gX3AhmK9wCOWaR2+I0anIcWjxVxW+JjgQPNQoukqPgiPBekm+c4u/GGwguExYeFEh9qDkhH6u618M1I/rUA0r5OgXcp9a/HmQUQvF5xoVcm9b/HmQ1xYbeCnk3rD48yBqU9b8eAP8vhl4anEJZcYGsrIG9lpqIhPsGhrIyvyO4ziO4/ADfAKQjkgk6FcHPAAAAABJRU5ErkJggg=="><p>3-10 Jugadores</p></li>
+          <li><img class="icon-rooms" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABUklEQVR4nOWVTU4CQRCFn2uB5RzAv6XCVk3U6GX0CKD3EI2uBa9A/IlHIBK8gRD/Agd4ppI3oTJxuhtdqZNUMjP1+n3T1dU9wL+6CNDidwEI7BK4JDDIAbq/ILDzE+M1AvfOtCzuCKzOa75N4F0GzwSaBDYILCrqBFrKmeaNwGaq+TKBDw28IlAJaKsEOtLaBy2lAB6c+UJskU1DoJuXK2Z+4MpSSe0izWSk/F4IcC5Rc942JXCsfDsEeJJo/RuAuvLDEGAq0ZcLy1lrZiVlstw0BJhEAH3l+0WIA0xCgGGkRFkZxJVoEAKcSdQKaDIHOXLvT/TuNATYd21ajUAO3XONwDjaphLfStgpbrQSvW20a43pIWHACoFXDehGZlJz5i9JR4U77HLISJuoYd2laKjmY2e+lWRemMlNwnHdS/7ywMK39ZOxjWjxaN0SXdA/cX0CD0Ey+MZ8rN0AAAAASUVORK5CYII="><p> 60 Minutos</p></li>
+          <li><img class="icon-rooms" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7klEQVR4nO2SPWoCURSFP4WZJmAT0NpCOxvdgZVuYTYhpLF1C+4ha7CKrSl0AxamUrAVbSySEwav8DJMMm+cSAh64Dbvnfvdn/fgpiR4iuMa4JJgJJDFWFD+LXgoeDbw0UJ2FhaFPwgmBtwLeoKuYGdnU0HlUvij4NVAW0HbuWsJ1na3ENTywuuCpQFWgkaG503Q9IXH3W0scS6oZkw5c6bsZMHd/b747DfxTgdB/ztj5PyQOAKvkU+5gZMXM6KkYSB4d0zyhZ/l5go+BEPSVLQAlxj1tbvUKf9HAXJ47gVUeEU/Pao8PH9X4C4S+gSkyjOHQa9PqQAAAABJRU5ErkJggg=="><p>Patio Olmos Shopping</p></li>
+          <li><p>Dificulty <strong class="texto-resaltado icon-rooms">★ ★ ★ ★ ★</strong></p></li>
+        </ul>
+        <div class="video-descripcion">
+          <iframe width="1100px" height="650px" src="https://www.youtube.com/embed/ipeCGQ_JScQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <br>
+          <br>
+          <p>
+            Una noche típica de invierno, donde muy poca gente sale pero vos con tus amigos deciden terminar en un Bar del Barrio Güemes para cerrar la semana y disfrutar del finde.
+            
+            En el lugar sólo tu grupo de amigos y el Barman que con el mejor servicio atiende sus pedidos, se va dando cuenta que su plan va teniendo efecto. Tus amigos y vos entre tragos y tragos, se les empieza a nublar la vista, y casi sin entendimiento ni reacción, son secuestrados, encapuchados y encerrados en el sucio baño de una abandonada casa vieja de Güemes.
+            
+            Sin noción del tiempo transcurrido, todos despiertan con una bolsa en la cabeza y al quitársela descubren que están encerrados entre macabras trampas con sangrientas pruebas a superar. Luego de mirarse unos a otros a los ojos, se dan cuenta que la ficción se volvió realidad y que Jigsaw ahora quiere jugar con ustedes. Repentinamente se activa un reloj de luces rojas marcando una implacable cuenta regresiva, casi al mismo tiempo que una voz tenebrosa emerge desde un viejo grabador, indicando que el juego comienza…60 minutos para escapar.</p>
+        </div>
+      </section>
+
+      <footer id="footer">
+        
+
+      </footer>
 
     </main>
 

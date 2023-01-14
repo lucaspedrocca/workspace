@@ -177,3 +177,41 @@ p{
     cursor: pointer;
 }
 
+
+#el-juego-cont{
+    display: flex;
+    align-items: center;
+
+}
+
+.caract-juego{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.icon-small{
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+}
+
+#caract-rooms{
+    display: flex;
+    list-style: none;
+}
+#caract-rooms li{
+    padding: 20px;
+    display: flex;
+}
+
+.video-descripcion{
+    padding-bottom: 50px;
+}
+
+.icon-rooms{
+    width: 21px;
+    padding: 0 5px;
+}
+
