@@ -2,41 +2,205 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8"/>
-    <meta reel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Roboto/tester">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title></title>
+    <link rel="shortcut icon" href="https://cordobaescaperoom.com/wp-content/uploads/2017/11/footer-logo-1.png">
+    <title>Escape Room Córdoba</title>
   </head>
   <body>
 
     <header id="header">
-      <img id="header-img" src="" alt="icono "/>
+      <img id="header-img" src="https://cordobaescaperoom.com/wp-content/uploads/2018/06/Logo-Header-Escape-Room-Co%CC%81rdoba-1.png" alt="icono "/>
       
       <nav id="nav-bar">
         <ul>
-          <li><a class="nav-link" href="#">a</a></li>
-          <li><a class="nav-link" href="video">video</a></li>
-          <li><a class="nav-link" href="#">c</a></li>
+          <li><a class="nav-link" href="#inicio">INICIO</a></li>
+          <li><a class="nav-link" href="#reservas">RESERVAS</a></li>
+          <li><a class="nav-link" href="#el-juego">EL JUEGO</a></li>
+          <li><a class="nav-link" href="#rooms">ROOMS</a></li>
         </ul>
       </nav>
-    </header>
-    
-    <main id="main-doc">
+    </header>  
 
-      <section>
+    <div id="banner">
+      <video autoplay muted loop>
+        <source src="banner.mp4">
+      </video>
+
+    </div>
+    <main id="main-doc">
+      <section id="inicio">
+        <h2 class="first">¿QUÉ ES UN <strong class="texto-resaltado">ESCAPE ROOM</strong>?</h2>
+        <p>
+        Escape Room Córdoba es una nueva, divertida y única experiencia de entretenimiento en la ciudad!
+        Escoge el cuarto temático que más te guste y tendrás 60 minutos para completar la
+        misión y escapar!
+        Cada cuarto es una aventura en vida real diseñada y creada para un 
+        grupo de amigos, familia, parejas o empresas.
+        <br>
+        <br>
+        Vas a necesitar creatividad, ingenio, imaginación y trabajo en equipo para poder resolver los problemas de lógica y enigmas dentro de la aventura que escojas.
+        </p>
+
+        <h2 class="subtitle">NUESTRAS ACTIVIDADES SON PERFECTAS PARA</h2>
+        <div id="actividades">
+          <div>
+            <h3 class="subtitle_actividades"><strong class="texto-resaltado">AMIGOS Y FAMILIAS</strong></h3>
+            <p>Compartí una experiencia única y atrapante junto a ellos, donde podrán desafiarse de una forma diferente!</p>
+          </div>
+
+          <div>
+            <h3 class="subtitle_actividades"><strong class="texto-resaltado">PAREJAS</strong></h3>
+            <p>Disfrutá una cita distinta, donde se pondrá a prueba su verdadera conexión!</p>
+          </div>
+
+          <div>
+            <h3 class="subtitle_actividades"><strong class="texto-resaltado">EMPRESAS</strong></h3>
+            <p>Conocé de verdad a tus compañeros de equipo, y podrás saber cómo mejorar los retos que se les presenten en el día a día de una manera divertida y diferente.</p>
+          </div>
+
+          <div>
+            <h3 class="subtitle_actividades"><strong class="texto-resaltado">EVENTOS</strong></h3>
+            <p>¡Un regalo de cumpleaños perfecto, de los que se recuerdan! ¡Mucho mejor que ir al cine!</p>
+          </div>
+        </div>
+
+        <h2 class="subtitle">LIDERAZGO - <strong class="texto-resaltado">TEAMBUILDING</strong> - GAMIFICACIÓN</h2>
+        <p>
+          Su utilidad radica en el concepto básico del trabajo de personas que integran una organización. Sirve para trabajar sobre las características que hacen al liderazgo, la comunicación, el trabajo en equipo y otros aspectos tanto “relacionales” como “personales”, que complementan a los conocimientos profesionales.
+          <br>
+          <br>
+          Un equipo de alto rendimiento es aquel equipo que consigue un elevado nivel de resultados con una elevada satisfacción y motivación de sus integrantes. Conseguir tener equipos, integrados, motivados hacia un objetivo común y productivos es una de las principales prioridades que tienen las empresas.</p>      
+      </section>
+
+      <section id="reservas">
+        <h2 class="title">¿CÓMO RESERVAR?</h2>
+        <div id="actividades">
+          <div>
+            <img class="icon" src="data:image/png;base64,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">
+            <h3 class="subtitle_actividades">ELEGÍ UN <a class="link" href="#rooms"><strong class="texto-resaltado">CUARTO</strong></a></h3>
+            <p>Cada cuarto tiene su objetivo, y sus desafíos.</p>
+          </div>
+
+          <div>
+            <img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACXklEQVR4nO2dy24aQRRE6zvsddb8dryI8FeFRJGlOMLrskYaR+IxQ/MYuro5R7oboNHtOn0bgReWFsDSN0s/LP2z5L0aHnux9KxQ3Hj/xzbzdmQj+/UncVNuvP8DxpPlwvquMNx4/wdMjPlU/VUYbrz/A/abPvf52rTef3cbcuP9d7chN95/dxtyYv+WVpZeLf064wPuaJ3aUHrp9v1vxmxX58jYBm/IjQv5qm2RlNFeCxty40KGWpcIufqaQohK8/ldImQ20GvXX/v+S7N0/2evR4gQkoQRkoU7FPLe8o9zXrj/GkJeWv752gv3X0PI8/jHm1ObGV7zpDC8cP93FzK+x9NweibG/318Lk7GPfqvIgSmQUgYCAkDIWEgJAyE9CaE0qIZIERZhwwhqi8BIepIyE0+yeA/CAkDIWEgJAyEhIGQMBASBkIeXUjtL1pO+2KHECGECSmHK0tcWRfdsb2vi5kQ1u2CkAmYkAefrC+YkAkQ0slJNxMyD0I6CchMSFZARkhWQH5UIb2XEKLqEhCi+sEjRPXD7lII63ZBSMjBuXg9EzIPQjq5Ii9ez4TMg5ATMCGdBGSurKyAjJCsgIyQrID8qEJ6LyFE1SUgRPWDR4jqh92lENbtgpCQg3PxeiZkHoR0ckVevJ4JmQchJ2BCOgnIXFlZARkhWQEZIVkB+VGF9F5CiKpLQIjqB48Q1Q+7CyEwD0LCQEgYCAkDIWEgJAyEhIGQDoTc9B/cU5rL4GeJkFdC1L0O0rpEyMrSFilaWsbHkHXpPTdIWVvaIEa3FrEZsy2TAQAAoDI+Ae37fwvqjJKkAAAAAElFTkSuQmCC">
+            <h3 class="subtitle_actividades">ELEGÍ <strong class="texto-resaltado">FECHA Y HORA</strong></h3>
+            <p>Cada turno dura 1 hs. Elegí el horario que puedas venir.</p>
+          </div>
+
+          <div>
+            <img class="icon" src="data:image/png;base64,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">
+            <h3 class="subtitle_actividades">NÚMERO DE <strong class="texto-resaltado">JUGADORES</strong></h3>
+            <p>Rellená los campos con el número de jugadores y tu teléfono para confirmar los datos de reserva.</p>
+          </div>
+
+          <div>
+            <img class="icon" src="data:image/png;base64,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">
+            <h3 class="subtitle_actividades">CONFIRMACIÓN DE <strong class="texto-resaltado">RESERVA</strong></h3>
+            <p>Una vez realizada la reserva nos pondremos en contacto para confirmar tus datos.</p>
+          </div>
+        </div>
 
         <form id="form" method="get" action="https://www.freecodecamp.com/email-submit"/>
-        <input id="email" type="email" placeholder="Ingrese su email" name="email"/>
-        <input id="submit" type="submit"/>
+        <div id="form-title">
+        <h2 class="title_secundario">RESERVAR</h2>
+        </div>
 
+        <div id="form-subtitle">
+          <p class="subtitle_actividades">Ingrese los datos para reservar!</p>
+        </div>
+        
+        
+        <div id="form-nombre">
+        <label>NOMBRE</label><input id="nombre" type="text" placeholder="Nombre*" name="nombre"/>
+        </div>
+
+        <div id="form-apellido">
+        <label>APELLIDO</label><input id="apellido" type="text" placeholder="Apellido*" name="apellido"/>
+        </div>
+
+        <div id="form-email">
+          <label>EMAIL</label><input id="email" type="email" placeholder="Email*" name="email"/>
+        </div>
+
+        <div id="form-telefono">
+        <label>TELEFONO</label><input id="telefono" type="tel" placeholder="Teléfono*" name="telefono"/>
+        </div>
+        
+        <div id="form-comentarios">
+        <label>COMENTARIOS</label><input id="comentarios" type="text" placeholder="Comentario*" name="comentario"/>
+        </div>
+        
+        <div id="form-submit"><input id="submit" type="submit"/></div>
         </form>
+        <div id="barra_contacto">
+          <div id="direccion"><img id="direcion-logo" scr=""/></div>
+        </div>
       </section>
     
-      <seciton>
-        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/ZWM_igksjbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <section id="el-juego">
+        <h2 class="title">SÓLO 60 MINUTOS PARA ESCAPAR...</h2>
+        <p class="texto-resaltado">¿Listo para el desafio?</p>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/ipeCGQ_JScQ" title="YouTube video player" frameborder="0" allow="accelerome1r; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </section>
 
+      <section id="rooms"></section>
 
-
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
 
     </main>
 
