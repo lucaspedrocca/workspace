@@ -24,6 +24,10 @@ a{
     text-decoration: none;
 }
 
+a:hover{
+    cursor: pointer;
+}
+
 #header{
     background-color: #0b0a08;
     display: flex;
