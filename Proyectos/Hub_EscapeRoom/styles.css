@@ -197,8 +197,7 @@ p{
 .caract-juego{
     display: flex;
     padding: 10px;
-    align-items: center;
-    width: 50vh;
+    width: 100%;
 }
 
 .icon-small{
@@ -215,12 +214,13 @@ p{
     display: flex;
 }
 
+#video-div{
+    width: 100%;
+}
+
 #video{
     display: flex;
     width: 100%;
-    height: 100%;
-
-    
 }
 
 
@@ -285,6 +285,10 @@ p{
 @media  only screen and (max-width: 1000px) {
 #el-juego-cont{
     display: block;
+}
+
+.icon-small{
+    padding-left: 0;
 }
     
 }
