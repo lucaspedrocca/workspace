@@ -57,6 +57,8 @@ a:hover{
 
 .icon{
     display: flex;
+    width: 80px;
+    height: 80px;
     margin: 0 auto 20px auto;
 }
 
@@ -118,6 +120,7 @@ p{
 
 #actividades{
     display: flex;
+    overflow:hidden;
 }
 
 #actividades div{
@@ -195,7 +198,7 @@ p{
     display: flex;
     padding: 10px;
     align-items: center;
-    width: 100%;
+    width: 50vh;
 }
 
 .icon-small{
@@ -211,6 +214,15 @@ p{
     padding: 20px;
     display: flex;
 }
+
+#video{
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    
+}
+
 
 .video-descripcion{
     display: flex;
@@ -277,6 +289,28 @@ p{
     
 }
 
-@media  only screen and (max-width: 1000px) {
+@media  only screen and (max-width: 800px) {
+    .subtitle_actividades{
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
 
+    p {
+        font-size: 14px;
+        
+    }
+
+    #actividades div p {
+        font-size: 14px;
+    }
+
+    .icon{
+        width: 60px;
+        height: 60px;
+    }
+
+    .subtitle, .first{
+    
+        font-size: 25px ;
+    }
 }
