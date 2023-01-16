@@ -84,6 +84,8 @@ a:hover{
     flex-direction: column;
     width: 70%;
     margin: 0 auto;
+    align-items: center;
+
 }
 
 .subtitle{
@@ -316,5 +318,103 @@ p{
     .subtitle, .first{
     
         font-size: 25px ;
+    }
+
+    .nav-link{
+        font-size: 14px;
+        padding: 10px;
+
+    }
+}
+
+@media  only screen and (max-width: 530px) {
+    .nav-link{
+        font-size: 12px;
+        padding: 5px;
+
+    }
+}
+
+@media  only screen and (max-width: 440px) {
+    
+    
+    #main-doc{
+        align-items: center;
+        width: 80%;
+    }
+    
+    .nav-link{
+        display: none;
+    }
+    #header{
+        justify-content: center;
+    }
+
+    .subtitle_actividades{
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    #actividades div p {
+        font-size: 12px;
+    }
+
+    .icon{
+        width: 60px;
+        height: 60px;
+    }
+
+    .subtitle, .first{
+        font-size: 20px;
+        padding-top: 20px;
+    }
+
+    #caract-rooms li{
+        padding: 5px;
+    }
+
+    .title{
+        font-size: 25px;
+        padding-top: 25px;
+    }
+
+    #form-submit #submit{
+        font-size: 15px;
+    }
+
+    .icon-rooms{
+        width: 14px;
+        height: 14px;
+        padding: 0 3px;
+    }
+
+    .video-descripcion iframe{
+        height: 200px;
+    }
+
+    .video-descripcion{
+        padding-bottom: 20px;
+    }
+
+    #footer-content li a, #footer-content li{
+    font-size: 10px;
+    margin-right: 10px;
+    
+    }
+
+    .footer-subtitle{
+    font-size: 12px;
+    margin-right: 10px;
+
+    }
+
+    #footer-logo{
+        width: 85px;
+        height: 67.5px;
+
     }
 }
