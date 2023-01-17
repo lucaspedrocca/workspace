@@ -5,8 +5,8 @@ body {
     padding: 0;
 }
   
-  header, .footer{
-    background-color:#d39d9d;
+  header, footer{
+    background: linear-gradient(rgb(255, 0, 0), rgba(110, 38, 38, 0.897));
     display:flex;
     text-align: center;
     align-items: center;
@@ -19,14 +19,7 @@ body {
     height:160px;
     margin: 32px auto;
   }
-  
-  
-  .footer{
-    height: 60px;
-    font-size:25px;
-    margin: 0 0;
-    padding:0 0;
-  }
+
   #img-div{
     margin: 0 auto;
     width:80%;
@@ -100,6 +93,15 @@ body {
   .espaciador{
     margin:60px 0px 8px -40px;
   }
+
+
+.author-ref{
+    text-decoration: none;
+    color: #949292;
+    background-color: #2c2b2b;
+    width: 100%;
+    font-size: 16px;
+}
 
 @media  only screen and (max-width: 1000px) {
     .disco{
