@@ -1,0 +1,41 @@
+Sabado:
+    TIER S (5):
+    - Rels B
+    - Trueno
+    - Divididos
+    - Skay
+    - Guasones
+
+    TIER A (4):
+    - No te va a gustar
+    - Conociendo rusia
+    - Aleman
+    - Zeballos
+
+    TIER B (3):
+    - Catupecu Machu
+    - Bresh
+    - Muerejoven
+
+Domingo:
+
+    TIER S (9):
+    - TIËSTO
+    - Fito Paez
+    - Babasónicos
+    - Ciro y los persas
+    - Las pastillas del abuelo
+    - Dillom
+    - La vela Puerca
+    - Ca7triel y paco amoroso
+
+    TIER A (3):
+    - Las pelotas
+    - Airbag
+    - Santoz
+
+    TIER B (3):
+    - Taichu 
+    - El plan de la mariposa
+    - Ronpe 99
+
