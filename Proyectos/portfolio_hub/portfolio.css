@@ -113,6 +113,9 @@ header {
     color: var(--secondary-color);
     animation: rgb 1.5s linear infinite;
     border-bottom: 2px solid var(--secondary-color);
+    border-left: 0 !important; 
+    border-right: 0 !important; 
+    border-top: 0 !important; 
     background-color:#13120f;
 
 }
@@ -141,6 +144,30 @@ header {
 }
 
 /* ABOUT ME */
+
+#personal-info {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#personal-info p{
+    width: 50%;
+    padding-left: 20px;
+    margin: auto 0;
+}
+
+#foto-perfil{
+    min-width: 300px;
+    min-height: 300px;
+    max-height: 300px;
+    background-color: white;
+    border-radius: 50%;
+    margin: auto 0;
+    border: 1px solid var(--secondary-color);
+    animation: rgb 30s linear infinite;
+}
+
+
 #box-tools{
     margin-top: 20px;
     display: flex;
@@ -243,6 +270,36 @@ header {
     font-size: 20px;
 }
 
+/* PROJECTS */
+
+.grid-projects{
+    display: grid;
+    grid-auto-flow: row;
+    height: 100%;
+    grid-gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: repeat(auto-fit,300px);
+    margin: 0 auto;
+}
+
+.project{
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* CONTACT */
 .networks{
     display: flex;
@@ -250,6 +307,10 @@ header {
 
 #contact{
     align-items: center;
+}
+
+.title-medium.contact{
+    display: none;
 }
 
 #title-contact{
@@ -262,7 +323,7 @@ header {
 .icon-media{
     width: 40px;
     height: 40px;
-    padding: 5px;
+    padding-right: 5px;
 }
 
 .social-media{
@@ -270,7 +331,8 @@ header {
     width: 100%;
     font-size: 20px;
     justify-items: center;
-    margin: 20px;
+    margin: 15px;
+    padding: 5px;
 }
 
 .profile-link{
@@ -278,12 +340,11 @@ header {
     margin: auto;
 }
 
-.profile-link:hover{
-    animation: lower 3s 0.5s linear 1;
-    border: 0;
-
-
-
+.social-media:hover{
+    transform: translate(0px, 10px);
+    transition: transform 0.5s linear 0ms;
+    background-color: #ffffff21;
+    border-radius: 50px;
 }
 
 #contact-box{
@@ -324,6 +385,21 @@ header {
     #frontend-tools, #backend-tools {
         width: 100%;
     }
+
+    #personal-info {
+        flex-direction: column;
+    }
+
+    #personal-info p{
+        width: 100%;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    #foto-perfil{
+        margin:auto;
+    }
+
 }
 
 
@@ -338,78 +414,69 @@ header {
 
 
 /* ANIMATIONS */
-
-@keyframes lower {
-    0%{
-        position: relative;
-        top: 15px;
-    }
-    
-}
-
 @keyframes rgb {
     0% {
-        border-bottom: 2px solid rgb(255, 0, 0);
+        border: 2px solid rgb(255, 0, 0);
         color: rgb(255, 0, 0);
     }
 
     9% {
-        border-bottom: 2px solid rgb(255, 130, 0);
+        border: 2px solid rgb(255, 130, 0);
         color: rgb(255, 130, 0);
     }
 
     18% {
-        border-bottom: 2px solid rgb(255, 255, 0);
+        border: 2px solid rgb(255, 255, 0);
         color: rgb(255, 255, 0);
     }
 
     27% {
-        border-bottom: 2px solid rgb(130, 255, 0);
+        border: 2px solid rgb(130, 255, 0);
         color: rgb(130, 255, 0);
     }
 
     36% {
-        border-bottom: 2px solid rgb(0, 255, 0);
+        border: 2px solid rgb(0, 255, 0);
         color: rgb(0, 255, 0);
     }
 
     45% {
-        border-bottom: 2px solid rgb(0, 255, 130);
+        border: 2px solid rgb(0, 255, 130);
         color: rgb(0, 255, 130);
     }
 
     54% {
-        border-bottom: 2px solid rgb(0, 255, 255);
+        border: 2px solid rgb(0, 255, 255);
         color: rgb(0, 255, 255);
     }
 
     63% {
-        border-bottom: 2px solid rgb(0, 130, 255);
+        border: 2px solid rgb(0, 130, 255);
         color: rgb(0, 130, 255);
     }
 
     72% {
-        border-bottom: 2px solid rgb(0, 0, 255);
+        border: 2px solid rgb(0, 0, 255);
         color: rgb(0, 0, 255);
     }
 
     81% {
-        border-bottom: 2px solid rgb(130, 0, 255);
+        border: 2px solid rgb(130, 0, 255);
         color: rgb(130, 0, 255);
     }
 
     90% {
-        border-bottom: 2px solid rgb(255, 0, 255);
+        border: 2px solid rgb(255, 0, 255);
         color: rgb(255, 0, 255);
     }
 
     99% {
-        border-bottom: 2px solid rgb(255, 0, 130);
+        border: 2px solid rgb(255, 0, 130);
         color: rgb(255, 0, 130);
     }
 
     100% {
-        border-bottom: 2px solid rgb(255, 0, 0);
+        border: 2px solid rgb(255, 0, 0);
         color: rgb(255, 0, 0);
     }
 }
