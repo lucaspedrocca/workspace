@@ -11,7 +11,6 @@ html{
     width: 100%;
     height: 100%;
     scroll-behavior: smooth;
-
 }
 
 :root{
@@ -34,21 +33,20 @@ p {
 
 *::-webkit-scrollbar {
     width: 8px;              
-  }
+}
   
-  *::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: transparent;        
-  }
+}
   
-  *::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background-color: #ffffff;
     border-radius: 20px;      
-  }
+}
 
-  *::-webkit-scrollbar-thumb:active {
+*::-webkit-scrollbar-thumb:active {
     background-color: #bbbbbb;
-
-  }
+}
 
 /* TEXTS */
 
@@ -78,7 +76,6 @@ p {
 .title-tools{
     font-size: 30px;
     padding-bottom: 10px;
-
 }
 
 /* HEADER */
@@ -117,7 +114,6 @@ header {
     border-right: 0 !important; 
     border-top: 0 !important; 
     background-color:#13120f;
-
 }
 
 /* WELCOME SECTION */
@@ -181,14 +177,12 @@ header {
     display: flex;
     padding: 10px ;
     justify-content: center;
-
 }
 
 .icon-tool{
     margin-right: 10px;
     width: 40px;
     height: 40px;
-    
 }
 
 .full-tool-bar{
@@ -200,7 +194,6 @@ header {
     background-color: black;
     border: 2px white solid;
     border-radius: 30px;
-
 }
 .level-tool-bar{
     width: 50%;
@@ -285,34 +278,27 @@ header {
     background-color: #333;
     align-items: center;
     border-radius: 5px;
-
-
 }
 
 .project-image{
     height: calc(100% - 60px);
     width: 100%;
     object-fit: cover;
-
 }
 
 .project-image-description {
     padding: 15px;
     font-size: 20px;
     text-align: center;
-
 }
 
 .light-title{
-    color: #333;
-    
+    color: #333;  
 }
 
 .project:hover .light-title{
     color: var(--secondary-color);
     transition: color 0.4s ease-in;
-
-
 }
 
 .moreprojects-button{
@@ -396,7 +382,6 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
 }
 
 /* FOOTER */
@@ -409,7 +394,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .author{
