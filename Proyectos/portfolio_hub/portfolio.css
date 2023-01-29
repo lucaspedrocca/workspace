@@ -278,29 +278,70 @@ header {
     height: 100%;
     grid-gap: 4rem;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-template-rows: repeat(auto-fit,300px);
     margin: 0 auto;
 }
 
 .project{
-    background-color: white;
+    background-color: #333;
+    align-items: center;
+    border-radius: 5px;
+
+
+}
+
+.project-image{
+    height: calc(100% - 60px);
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.project-image-description {
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.light-title{
+    color: #333;
+    
+}
+
+.project:hover .light-title{
+    color: var(--secondary-color);
+    transition: color 0.4s ease-in;
+
+
+}
+
+.moreprojects-button{
+    display: flex;
+    align-items: center;
+    margin: 30px;
 }
 
 
+.show-all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    font-size: 20px;
+    margin: 0 auto;
+    width: 160px;
+    height: 50px;
+    border-radius: 5px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.show-all:hover{
+    background-color: var(--secondary-color);
+    transition: background-color 0.4s ease-in;
+    cursor: pointer;
+}
 
 /* CONTACT */
+
 .networks{
     display: flex;
 }
