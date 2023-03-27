@@ -19,3 +19,6 @@ while True:
         break
     print(data.decode(),end='')
 mysock.close()
+
+# get the max number from an array
+
