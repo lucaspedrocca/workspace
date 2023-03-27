@@ -146,5 +146,79 @@ primIgualesA x = takeWhile (== x)
 
 -- Ejercicio 11
 
+-- Usando recursión
+
+primIguales :: Eq a => [a] -> [a]
+primIguales [] = []
+primIguales [x] = [x]
+primIguales (x:y:xs)
+  | x == y = x : primIguales (y:xs)
+  | otherwise = [x]
+
+-- Usando prinIgualesA
+
+primIguales :: Eq a => [a] -> [a]
+primIguales [] = []
+primIguales xs = maximumBy (comparing length) [primIgualesA x xs | x <- xs]
 
 
+-- Ejercicio 12
+
+paratodo'' :: [a] -> (a -> Bool) -> Bool
+paratodo'' xs t = cuantGen (&&) True xs t
+
+existe'' :: [a] -> (a -> Bool) -> Bool
+existe'' xs t = cuantGen (||) False xs t
+
+sumatoria'' :: Num b => [a] -> (a -> b) -> b
+sumatoria'' xs t = cuantGen (+) 0 xs t
+
+productoria'' :: Num b => [a] -> (a -> b) -> b
+productoria'' xs t = cuantGen (*) 1 xs t
+
+-- Ejercicio 13
+
+-- a) Está bien tipado. El tipo de x es a y el tipo de y es b. El patrón no cubre todos los 
+-- casos de definición, ya que solo se corresponde con tuplas de dos elementos.
+
+-- b) No está bien tipado. En el patrón, a y b son variables, pero en la expresión se 
+-- utiliza a y b como patrones en sí mismos. Debería ser f [(x, y)] = ... o f [(a, b)] = ....
+
+-- c) Está bien tipado. El tipo de x es (a, b) y el tipo de xs es [(a, b)]. El patrón no 
+-- cubre todos los casos de definición, ya que solo se corresponde con listas que tengan al 
+-- menos un elemento.
+
+-- d) Está bien tipado. El tipo de x es (a, b) y el tipo de xs es [(a, b)]. El patrón cubre 
+-- solamente los casos en los que la lista tenga al menos dos elementos y el primer elemento 
+-- sea una tupla de dos elementos.
+
+-- e) Está bien tipado. El tipo de a es arbitrario y el tipo de la lista es [(Int, a)]. El 
+-- patrón cubre solamente los casos en los que la lista tenga un solo elemento, cuyo primer 
+-- elemento sea 0 y cuyo segundo elemento tenga un tipo arbitrario a.
+
+-- Ejercicio 14
+
+-- a) f (x,y) = y
+
+-- b) No se puede dar una definicion para esta funcion ya que el retorno de la funcion es 
+-- completamente abstracto. La funcion recibe una tupla de dos elementos y devuelve un 
+-- valor desconocido.
+
+-- c) f = id
+
+-- Otra definición posible es:
+
+-- f g x = g x
+
+-- d) f _ [] = []
+-- f g (x:xs) = g x : f g xs
+
+-- Otra definición posible es:
+
+-- f g xs = map g xs
+
+-- e) f g h x = h (g x)
+
+-- Otra definición posible es:
+
+-- f g h = (.) h g
