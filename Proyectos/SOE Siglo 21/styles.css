@@ -1,0 +1,491 @@
+* ,::after ,::before{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+
+
+}
+
+:root {
+    --primary-color: #f2f1f7;
+    --secondary-color: #197e68;
+
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+.texto-resaltado{
+    color: var(--secondary-color);
+}
+
+ul{
+    list-style-type: none;
+}
+
+.lista-descarga{
+    list-style-type: disc;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    cursor: pointer;
+    
+}
+
+#header{
+    background-color: #edf8f6;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 65px;
+    box-shadow: 1px 1px 4px #a7a7a7;
+    position: fixed;
+    z-index: 10;
+}
+
+#nav-bar {
+    width: 100%;
+    height: 100%;
+
+}
+
+#nav-bar ul{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items:center;
+
+
+
+}
+#banner{
+    width: 100%;
+    position: relative;
+
+}
+
+#img-banner{
+    width: 100%;
+}
+
+#banner::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(var(--primary-color), #f2f1f7af, transparent);
+}
+
+#logo-soe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    
+}
+
+.icon-campus{
+    position: relative;
+    top: 4px;
+    right: 8px;
+}
+
+.icon{
+    display: flex;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px auto;
+}
+
+.nav-link{
+    padding:25px;
+    align-items: center;
+    justify-content: center;
+    color: #42423f;
+
+
+}
+
+.nav-link:hover{
+    border-bottom: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: #d8f8f3;
+
+}
+
+#header-img{
+    width: auto;
+    height: 40px;
+    padding: 12.5px;
+}
+
+#main-doc{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    align-items: center;
+
+}
+
+.subtitle{
+    text-align: justify;
+    padding: 50px 0 20px;
+}
+
+.title{
+    text-align: justify;
+    padding: 80px 0 20px;
+    font-size: 35px;
+
+}
+
+.title_secundario{
+    text-align: justify;
+    font-size: 35px;
+
+}
+
+.subtitle, .first{
+    font-size: 30px;
+}
+
+.subtitle_actividades{
+    font-size: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+p{
+    font-size: 16px;
+
+}
+
+#actividades{
+    display: flex;
+    overflow:hidden;
+}
+
+#actividades div{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffffff26;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+#actividades div ul{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20%;
+}
+
+#actividades div p{
+    text-align: center;
+
+}
+
+.first{
+    padding: 100px 0 20px;
+}
+
+#form, #subtitle_reservas {
+    width: 80%;
+    border: 1px solid #ffffff26;
+    height: 700px;
+    display: grid;
+    padding: 30px;
+    row-gap: 20px;
+    column-gap: 20px;
+    overflow: hidden;
+    margin: 50px auto 0 auto;
+}
+
+#form input{
+    background-color: #252420;
+}
+
+.campus-virtual{
+    position: relative;
+    margin: 0 0 0 auto;
+    bottom: 3px;
+}
+
+
+
+#form label, #form input {
+    display: block;
+    font-size: 16px;
+    width: 90%;
+    height: 30px;
+    border: 0;
+    margin: 0;
+    padding: 10px;
+}
+
+#form-apellido, #form-telefono{
+  grid-column: 2 / 3;
+}
+
+#form-comentarios,#form-submit, #form-title, #form-subtitle{
+  grid-column: 1/ 3;
+
+}
+
+#form-comentarios #comentarios{
+    padding-bottom: 150px;
+    width: 95%;
+
+}
+#form-submit #submit{
+    background-color: #ff0202c5;
+    color:#ffffff;
+    font-size: 20px;
+    width: 100px;
+    height: 100%;
+}
+
+#submit:hover{
+    cursor: pointer;
+}
+
+
+#el-juego-cont{
+    display: flex;
+    align-items: center;
+
+}
+
+.caract-juego{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+}
+
+.icon-small{
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+}
+
+#caract-rooms{
+    display: flex;
+}
+#caract-rooms li{
+    padding: 20px;
+    display: flex;
+}
+
+#video-div{
+    width: 100%;
+}
+
+#video{
+    display: flex;
+    width: 100%;
+}
+
+
+.video-descripcion{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+    justify-content: center;
+
+
+}
+
+.video-descripcion iframe{
+    width: 100%;
+}
+
+
+.icon-rooms{
+    width: 21px;
+    height: 21px;
+    padding: 0 5px;
+}
+
+#footer-logo{
+    scale: 0.7;
+}
+
+#footer-content{
+    display: flex;
+    background-color: #197e68;
+    width: 100%;
+    height: 100px;
+    padding: 50px 0;
+    justify-content: space-evenly;
+    
+}
+.footer-subtitle{
+    font-size: 20px;
+}
+
+#footer-content li a, #footer-content li{
+    color: #969494;
+    font-size: 14px;
+}
+
+
+#footer-content li a:hover{
+    color: var(--secondary-color);
+}
+
+.author-ref{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+html body div#___gatsby div#gatsby-focus-wrapper div.layout.layout-on footer.footer
+
+
+@media  only screen and (max-width: 1000px) {
+#el-juego-cont{
+    display: block;
+}
+
+.icon-small{
+    padding-left: 0;
+}
+    
+}
+
+@media  only screen and (max-width: 800px) {
+    .subtitle_actividades{
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+
+    p {
+        font-size: 14px;
+        
+    }
+
+    #actividades div p {
+        font-size: 14px;
+    }
+
+    .icon{
+        width: 60px;
+        height: 60px;
+    }
+
+    .subtitle, .first{
+    
+        font-size: 25px ;
+    }
+
+    .nav-link{
+        font-size: 14px;
+        padding: 10px;
+
+    }
+}
+
+@media  only screen and (max-width: 530px) {
+    .nav-link{
+        font-size: 12px;
+        padding: 5px;
+
+    }
+}
+
+@media  only screen and (max-width: 440px) {
+    
+    
+    #main-doc{
+        align-items: center;
+        width: 80%;
+    }
+    
+    .nav-link{
+        display: none;
+    }
+    #header{
+        justify-content: center;
+    }
+
+    .subtitle_actividades{
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    #actividades div p {
+        font-size: 12px;
+    }
+
+    .icon{
+        width: 60px;
+        height: 60px;
+    }
+
+    .subtitle, .first{
+        font-size: 20px;
+        padding-top: 20px;
+    }
+
+    #caract-rooms li{
+        padding: 5px;
+    }
+
+    .title{
+        font-size: 25px;
+        padding-top: 25px;
+    }
+
+    #form-submit #submit{
+        font-size: 15px;
+    }
+
+    .icon-rooms{
+        width: 14px;
+        height: 14px;
+        padding: 0 3px;
+    }
+
+    .video-descripcion iframe{
+        height: 200px;
+    }
+
+    .video-descripcion{
+        padding-bottom: 20px;
+    }
+
+    #footer-content li a, #footer-content li{
+    font-size: 10px;
+    margin-right: 10px;
+    }
+
+    .footer-subtitle{
+    font-size: 12px;
+    margin-right: 10px;
+    }
+
+    #footer-logo{
+        scale:0.5;
+    }
+}
