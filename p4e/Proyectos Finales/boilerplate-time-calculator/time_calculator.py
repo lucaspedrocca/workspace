@@ -16,8 +16,6 @@ def add_time(start, duration, day=""):
   listDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 
-
-
   # funcion para convertir a 24 horas
   def convertFormat24(hour,period):
     if period == "PM":
@@ -28,7 +26,8 @@ def add_time(start, duration, day=""):
   
   # funcion para convertir a 12 horas
   def convertFormat12(hour):
-    period = "AM" if hour <= 12  else "PM"
+    period = "AM" if hour in range(0, 12) else "PM"
+
     if hour == 0:
       hour = 12
 
@@ -69,7 +68,7 @@ def add_time(start, duration, day=""):
 
   # Caso 1: No se define day ni pasan dias
 
-  new_time = f"Returns: {startHour}:{startMinutes} {startAmPm}"
+  new_time = f"{startHour}:{startMinutes} {startAmPm}"
 
   # Caso 2: Se definio day
   if dayFormated in listDays:
@@ -87,9 +86,6 @@ def add_time(start, duration, day=""):
     # Se suma ", dayFormated" a new time
     new_time += f", {dayFormated}" 
 
-  # print(f'pasaron {days} dias y estoy en {day}.')
-
-
   # Caso 3: Pasaron n cantidad de dias
 
   if days > 0:
@@ -100,10 +96,23 @@ def add_time(start, duration, day=""):
 
   return new_time
 
+#! Ejemplos de testeo 
 
-print(add_time("3:00 PM", "3:10"))
-print(add_time("11:30 AM", "2:32", "Monday"))
-print(add_time("11:43 AM", "00:20"))
-print(add_time("10:10 PM", "3:30"))
-print(add_time("11:43 PM", "24:20", "tueSday"))
-print(add_time("6:30 PM", "205:12"))
+# print(add_time("3:00 PM", "3:10"))
+# print(add_time("11:30 AM", "2:32", "Monday"))
+# print(add_time("11:43 AM", "00:20"))
+# print(add_time("10:10 PM", "3:30"))
+# print(add_time("11:43 PM", "24:20", "tueSday"))
+# print(add_time("6:30 PM", "205:12"))
+# print(add_time("3:30 PM", "2:12"))
+# print(add_time("11:55 AM", "3:12"))
+# print(add_time("9:15 PM", "5:30"))
+# print(add_time("11:40 AM", "0:25"))
+# print(add_time("2:59 AM", "24:00"))
+# print(add_time("11:59 PM", "24:05"))
+# print( add_time("8:16 PM", "466:02"))
+# print(add_time("5:01 AM", "0:00"))
+# print(add_time("3:30 PM", "2:12", "Monday"))
+# print(add_time("2:59 AM", "24:00", "saturDay"))
+# print(add_time("11:59 PM", "24:05", "Wednesday"))
+# print(add_time("8:16 PM", "466:02", "tuesday"))
