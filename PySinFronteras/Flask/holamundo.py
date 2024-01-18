@@ -86,23 +86,6 @@ def crear():
 
     return render_template('crear.html')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Inicia la aplicación Flask
 if __name__ == '__main__':
     app.run()
