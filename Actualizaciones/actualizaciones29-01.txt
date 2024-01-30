@@ -1,0 +1,19 @@
+EMVAFSPREM.emv.com.ar           - Actualizado - Reiniciado - Listo
+emvrs01.emv.com.ar              - Actualizado - Reiniciado - Listo
+EMVTS01.emv.com.ar              - Actualizado - Reiniciado - Listo
+EMVTSAPP.emv.com.ar             - Actualizado - Reiniciado - Listo
+EMVTSAPP02.emv.com.ar           - Actualizado - Reiniciado - Listo
+EMVTSCOM.emv.com.ar             - Actualizado - Reiniciado - Listo 
+EMVTSERP01.emv.com.ar           - Actualizado - Reiniciado - Listo
+EMVTSIIS.emv.com.ar             - Actualizado - Reiniciado - Listo
+EMVTSPectra.emv.com.ar          - Actualizado - Reiniciado - Listo
+BRHSP03.usuarios.local          - Actualizado - Reiniciado - Listo
+EMVSQL02.emv.com.ar             - Actualizado - Reiniciado - Listo
+EMVTS02.emv.com.ar              - Actualizado - Reiniciado - Listo
+BRTERP02.brt.com.ar             - Actualizado - Reiniciado - Listo
+MTVBL102.metrovias.com.ar       - Actualizado - Reiniciado - Listo
+MTVPECTRA01.metrovias.com.ar    - Actualizado - Reiniciado - Listo
+MTVPOWERBI.metrovias.com.ar     - Actualizado - Reiniciado - Listo
+MTVRDP01.metrovias.com.ar       - Actualizado - Reiniciado - Listo
+
+- Actualizado - Reiniciado - Listo

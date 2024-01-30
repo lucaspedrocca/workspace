@@ -1,0 +1,9 @@
+- Actualizado - Reiniciado - Listo
+
+HAUGAD01.haug.local             - Actualizado - Reiniciado - Listo
+PromiPremts05.usuarios.local    - Error - Inaccesible
+HAUGTS100.haug.local            - Actualizado - Reiniciado - Listo
+PROMIPREMTS06.usuarios.local    - Actualizado - Reiniciado - Listo
+Haugts101.haug.local            - Actualizado - Reiniciado - Listo
+HAUGTSW102.haug.local           - Actualizado - Reiniciado - Listo
+MTVAD11.metrovias.com.ar        - Reiniciado - Listo

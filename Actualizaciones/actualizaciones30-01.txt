@@ -1,0 +1,22 @@
+EMVTS03.emv.com.ar                  - Actualizado - Reiniciado - Listo
+BRTERP01.brt.com.ar                 - Actualizado - Reiniciado - Listo
+MTVBL115.metrovias.com.ar(Core)     - Sin actualizaciones - Reiniciado - Listo
+MTVDMZSUBE03.metrovias.com.ar       - Inaccesible
+MTVGT03.metrovias.com.ar            - Actualizado - Reiniciado - Listo
+MTVGT04.metrovias.com.ar            - Actualizado - Reiniciado - Listo
+MTVIIS100.metrovias.com.ar          - Actualizado - Reiniciado - Listo
+MTVMONReca.metrovias.com.ar         - Actualizado - Reiniciado - Listo
+
+Sergio:
+MTVRPT02.metrovias.com.ar           - Actualizado -
+MTVSAT02.metrovias.com.ar           - Actualizado -
+MTVSHAREPOINT02.Metrovias.com.ar    - Actualizado -
+MTVTS03.metrovias.com.ar            - Actualizado -
+MTVTS101.metrovias.com.ar           - Actualizado - Reiniciado - Listo
+MTVUDP02.metrovias.com.ar           - Actualizado -
+MTVWEB03.metrovias.com.ar           - Actualizado -
+MTVWEBWP03.metrovias.com.ar         - Actualizado -
+MTVWSBRINKS01.metrovias.com.ar      - Actualizado -
+
+
+- Actualizado - Reiniciado - Listo
