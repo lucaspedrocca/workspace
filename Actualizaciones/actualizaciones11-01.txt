@@ -1,0 +1,17 @@
+- Actualizado - Reiniciado - Listo
+
+CLIBAGIMTMB.cliba.com.ar           - Actualizado - Reiniciado - Listo
+PROMIAppGw01.prominente.com.ar     - Actualizado - Reiniciado - Listo
+
+RoggioSP02.usuarios.local          - Error - Sin respuesta de ping - 281936
+BRHDFS01.usuarios.local            - Error al al instalar actualizaciones - Reiniciado - Listo
+BRHSQL05.usuarios.local            - Actualizado - Reiniciado - Listo
+PROMISQL104.prominente.com.ar      - Actualizado - Reiniciado - Listo
+Mr-BuboPectra01.prominente.com.ar  - Actualizado - Reiniciado - Listo
+Mr-BuboSQL01.prominente.com.ar     - Actualizado - Reiniciado - Listo
+RoggioPectra01.usuarios.local      - Actualizado - Reiniciado - Listo
+PROMISQL102.prominente.com.ar      - Actualizado - Reiniciado - Listo
+PromiSQL12.prominente.com.ar       - Actualizado - Reiniciado - Listo
+PromiSQL14.prominente.com.ar       - Actualizado - Reiniciado - Listo
+PROMIGCDS01.prominente.com.ar      - Error - Sin respuesta por ping - 281936
+PromiPerfTS.prominente.com.ar      - Actualizado - Reiniciado - Listo
