@@ -31,3 +31,6 @@ if __name__ == "__main__":
     # Espera un momento para que se cargue la página y luego cierra el navegador
     input("Presiona Enter para cerrar el navegador...")
     driver.quit()
+
+
+#comentario 
