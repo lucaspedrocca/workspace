@@ -1,0 +1,82 @@
+body {
+    background: url("https://fondosmil.com/fondo/23392.jpg") no-repeat fixed;
+    font-family: sans-serif;
+    width: 100%;
+    margin: 2rem auto;
+    color: #ffffff;
+  }
+  
+  #survey-form{
+    background-color: #003c528a;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    border-radius: 0.2rem;
+  
+  }
+  
+  #title{
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  #description{
+    text-align: center;
+    margin-top: 1px;
+    font-style: italic;
+  }
+  
+  #name-label{
+    padding: 0;
+  }
+  label{
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 0.2rem;
+    font-size: 1.1rem;
+  }
+  
+  .selection-label{
+    display: flex;
+    padding-top: 1rem;
+  }
+  
+  #name, #email, #number, #dropdown{
+    width:100%;
+    height:2rem;
+    background-color: #ffffff;
+    border: #ffffff;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+  }
+  
+  textarea{
+    width:100%;
+    height:6rem;
+    background-color: #ffffff;
+    border: #ffffff;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+  }
+  
+  #submit{  
+    width:100%;
+    height:3rem;
+    background-color: #37af65;
+    color: #ffffff;
+    border: #ffffff;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+    margin-top: 2rem;
+  }
+  
+  @media  only screen and (max-width: 440px) {
+    #survey-form {
+      padding: 1rem;
+  
+    }
+  }
+  

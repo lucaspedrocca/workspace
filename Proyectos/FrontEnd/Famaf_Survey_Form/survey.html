@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form FAMAF</title>
+    <link rel="stylesheet" href="survey.css"/>
+    <link rel="shortcut icon" href="https://www.famaf.unc.edu.ar/static/assets/logoFaMAF.svg">
+</head>
+<body>  
+    <header>
+        <h1 id="title">FAMAF Survey Form</h1>
+        <p id="description">Thank you for taking the time to help us improve our platforms</p>
+    </header>
+    
+    <form id="survey-form">
+
+        <div class="form-part">
+            <label id="name-label">Name</label>
+            <input id="name" type="text" placeholder="Enter your name..." required/>
+        </div>
+
+        <div class="form-part">
+            <label id="email-label">Email</label>
+            <input id="email" type="email" placeholder="Enter your email..." required/>
+        </div>
+        
+        <div class="form-part">
+             <label id="number-label">Age</label>
+            <input id="number" type="number" min="18" max="120" placeholder="Enter your age..." required/>
+        </div>
+
+        <div class="form-part">
+            <label id="dropdown-label">What is your current role in FAMAF?</label>  
+                <select id="dropdown">
+                    <option disabled value="" >Select currect role</option>
+                    <option value="1">Student</option>
+                    <option value="2">Professor</option>
+                    <option value="3">Executive</option>
+                    <option value="4">Other</Option>
+                </select>          
+        </div>
+
+        <div class="form-part">
+            <label id="recomended-label">Would you recommend FAMAF to a friend?</label>
+            <label class="selection-label">
+                <input name="recommend" type="radio" value="Definitely"/> Definitely
+            </label>
+
+            <label class="selection-label">
+                <input name="recommend" type="radio" value="Maybe"/> Maybe
+            </label>
+
+            <label class="selection-label">
+                <input name="recommend" type="radio" value="Not sure"/> Not sure
+            </label>
+        </div>
+
+        <div class="checkbox">
+            <label>What would you like to see improved?</label>
+            <label class="selection-label"><input name="to-improve" type="checkbox" value="Classroom"/>Virtual Classroom</label>
+            <label class="selection-label"><input name="to-improve" type="checkbox" value="Mobile-app"/> Mobile App</label>
+            <label class="selection-label"><input name="to-improve" type="checkbox" value="Web-Page"/> Web Page</label>
+            <label class="selection-label"><input name="to-improve" type="checkbox" value="News-Portal"/>News Portal</label>
+        </div>       
+                    
+        <div class="form-part">
+            <label>Any comments or suggestions?</label>
+            <textarea placeholder="Enter your suggestions here..."></textarea>
+        </div>
+        
+        <div>
+            <input name="Submit" type="submit" id="submit"/>
+        </div>
+    </form>
+</body>
+</html>

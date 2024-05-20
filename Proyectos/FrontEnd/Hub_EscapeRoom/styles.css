@@ -1,0 +1,417 @@
+* ,::after ,::before{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family:'fira code',sans-serif;
+
+
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #0b0a08;
+}
+
+.texto-resaltado{
+    color: #ff0000;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+#header{
+    background-color: #0b0a08;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 64px;
+    border-bottom: 1px solid #ffffff26;
+    position: fixed;
+}
+
+#nav-bar ul{
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+}
+#banner{
+    width: 100%;
+    height: auto;
+}
+
+#img-banner{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.icon{
+    display: flex;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px auto;
+}
+
+.nav-link{
+    padding: 20px;
+    justify-content: center;
+}
+
+.nav-link:hover{
+    border-bottom: 1px solid #ff0000;
+    color: #ff0000;
+
+}
+
+#header-img{
+    width: auto;
+    height: 40px;
+    padding: 12.5px;
+}
+
+#main-doc{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    align-items: center;
+
+}
+
+.subtitle{
+    text-align: justify;
+    padding: 50px 0 20px;
+}
+
+.title{
+    text-align: justify;
+    padding: 80px 0 20px;
+    font-size: 35px;
+
+}
+
+.title_secundario{
+    text-align: justify;
+    font-size: 35px;
+
+}
+
+.subtitle, .first{
+    font-size: 30px;
+}
+
+.subtitle_actividades{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+p{
+    font-size: 16px;
+
+}
+
+#actividades{
+    display: flex;
+    overflow:hidden;
+}
+
+#actividades div{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffffff26;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.first{
+    padding: 100px 0 20px;
+}
+
+#form, #subtitle_reservas {
+    width: 80%;
+    border: 1px solid #ffffff26;
+    height: 700px;
+    display: grid;
+    padding: 30px;
+    row-gap: 20px;
+    column-gap: 20px;
+    overflow: hidden;
+    margin: 50px auto 0 auto;
+}
+
+#form input{
+    background-color: #252420;
+}
+
+#form label, #form input {
+    display: block;
+    font-size: 16px;
+    width: 90%;
+    height: 30px;
+    border: 0;
+    margin: 0;
+    padding: 10px;
+}
+
+#form-apellido, #form-telefono{
+  grid-column: 2 / 3;
+}
+
+#form-comentarios,#form-submit, #form-title, #form-subtitle{
+  grid-column: 1/ 3;
+
+}
+
+#form-comentarios #comentarios{
+    padding-bottom: 150px;
+    width: 95%;
+
+}
+#form-submit #submit{
+    background-color: #ff0202c5;
+    color:#ffffff;
+    font-size: 20px;
+    width: 100px;
+    height: 100%;
+}
+
+#submit:hover{
+    cursor: pointer;
+}
+
+
+#el-juego-cont{
+    display: flex;
+    align-items: center;
+
+}
+
+.caract-juego{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+}
+
+.icon-small{
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+}
+
+#caract-rooms{
+    display: flex;
+}
+#caract-rooms li{
+    padding: 20px;
+    display: flex;
+}
+
+#video-div{
+    width: 100%;
+}
+
+#video{
+    display: flex;
+    width: 100%;
+}
+
+
+.video-descripcion{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+    justify-content: center;
+
+
+}
+
+.video-descripcion iframe{
+    width: 100%;
+}
+
+
+.icon-rooms{
+    width: 21px;
+    height: 21px;
+    padding: 0 5px;
+}
+
+#footer-logo{
+    width: 170px;
+    height: 135px;
+}
+
+#footer-content{
+    display: flex;
+    background-image:url('https://cordobaescaperoom.com/wp-content/uploads/2017/11/fondo-fotter.jpg?id=1004') ;
+    width: 100%;
+    height: 100px;
+    padding: 50px 0;
+    justify-content: space-evenly;
+    
+}
+.footer-subtitle{
+    font-size: 20px;
+}
+
+#footer-content li a, #footer-content li{
+    color: #969494;
+    font-size: 14px;
+}
+
+
+#footer-content li a:hover{
+    color: #ff0000;
+}
+
+.author-ref{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media  only screen and (max-width: 1000px) {
+#el-juego-cont{
+    display: block;
+}
+
+.icon-small{
+    padding-left: 0;
+}
+    
+}
+
+@media  only screen and (max-width: 800px) {
+    .subtitle_actividades{
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+
+    p {
+        font-size: 14px;
+        
+    }
+
+    #actividades div p {
+        font-size: 14px;
+    }
+
+    .icon{
+        width: 60px;
+        height: 60px;
+    }
+
+    .subtitle, .first{
+    
+        font-size: 25px ;
+    }
+
+    .nav-link{
+        font-size: 14px;
+        padding: 10px;
+
+    }
+}
+
+@media  only screen and (max-width: 530px) {
+    .nav-link{
+        font-size: 12px;
+        padding: 5px;
+
+    }
+}
+
+@media  only screen and (max-width: 440px) {
+    
+    
+    #main-doc{
+        align-items: center;
+        width: 80%;
+    }
+    
+    .nav-link{
+        display: none;
+    }
+    #header{
+        justify-content: center;
+    }
+
+    .subtitle_actividades{
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    #actividades div p {
+        font-size: 12px;
+    }
+
+    .icon{
+        width: 60px;
+        height: 60px;
+    }
+
+    .subtitle, .first{
+        font-size: 20px;
+        padding-top: 20px;
+    }
+
+    #caract-rooms li{
+        padding: 5px;
+    }
+
+    .title{
+        font-size: 25px;
+        padding-top: 25px;
+    }
+
+    #form-submit #submit{
+        font-size: 15px;
+    }
+
+    .icon-rooms{
+        width: 14px;
+        height: 14px;
+        padding: 0 3px;
+    }
+
+    .video-descripcion iframe{
+        height: 200px;
+    }
+
+    .video-descripcion{
+        padding-bottom: 20px;
+    }
+
+    #footer-content li a, #footer-content li{
+    font-size: 10px;
+    margin-right: 10px;
+    }
+
+    .footer-subtitle{
+    font-size: 12px;
+    margin-right: 10px;
+    }
+
+    #footer-logo{
+        width: 85px;
+        height: 67.5px;
+    }
+}
