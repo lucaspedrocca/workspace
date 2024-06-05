@@ -1,0 +1,41 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "StefanScherer/windows_2019"
+
+  # Configura la red
+  config.vm.network "public_network", ip: "192.168.8.51"
+
+  # Configura el nombre de host
+  config.vm.hostname = "sccmserver"
+
+  # Configura WinRM
+  config.vm.communicator = "winrm"
+  config.winrm.username = "vagrant"
+  config.winrm.password = "vagrant"
+  config.winrm.transport = :plaintext
+  config.winrm.basic_auth_only = true
+  config.winrm.retry_limit = 20
+  config.winrm.retry_delay = 10
+
+  # Configura el proveedor VirtualBox
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "4096"
+    vb.cpus = 2
+  end
+
+  # Habilita Escritorio Remoto y las reglas del firewall
+  config.vm.provision "shell", inline: <<-SHELL
+    Set-ItemProperty -Path 'HKLM:\\System\\CurrentControlSet\\Control\\Terminal Server' -Name 'fDenyTSConnections' -Value 0
+    Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+    Add-LocalGroupMember -Group "Administrators" -Member "vagrant"
+  SHELL
+
+  # Instala funciones y características necesarias para SCCM
+  config.vm.provision "shell", inline: <<-SHELL
+    Install-WindowsFeature -Name Web-Server -IncludeManagementTools
+    Install-WindowsFeature -Name Web-ASP,Web-Asp-Net45,Web-ISAPI-Ext,Web-ISAPI-Filter
+    Install-WindowsFeature -Name NET-Framework-Features,RSAT-ADDS
+  SHELL
+end
