@@ -1,10 +1,26 @@
 import requests
 import subprocess
 import json
+import sqlite3
 
+# Crear una base de datos SQLite y una tabla
+def create_database():
+    conn = sqlite3.connect('servers.db')
+    c = conn.cursor()
+    
+    # Crear tabla
+    c.execute('''CREATE TABLE IF NOT EXISTS hostnames (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    empresa TEXT NOT NULL,
+                    hostname TEXT NOT NULL)''')
+    
+    conn.commit()
+    conn.close()
+
+create_database()
 
 # URL del archivo JSON
-config_url = 'https://prominentesa.sharepoint.com/sites/ContingenciaDataCenter%2DPrueba%2FDocumentos%20compartidos%2Fhostnames%2Ejson'
+config_url = 'https://raw.githubusercontent.com/lucaspedrocca/workspace/main/CerrarSesiones/hostnames.json'
 
 # Descargar el archivo JSON
 response = requests.get(config_url)

@@ -1,31 +1,34 @@
+import mysql.connector
 import subprocess
-import json
-import pkg_resources
+
+# Conectar a la base de datos
+db_config = {
+    'user': 'cerrarSesiones',
+    'password': '10SesionesCerradas.',
+    'host': 'PCA1195.prominente.com.ar',
+    'database': 'servidores_db',
+}
+
+conn = mysql.connector.connect(**db_config)
+cursor = conn.cursor()
+
+# Función para obtener los hostnames de los servidores
+def get_hostnames(empresa):
+    query = "SELECT hostname FROM servidores WHERE empresa = %s"
+    cursor.execute(query, (empresa,))
+    return [row[0] for row in cursor.fetchall()]
 
 # Opciones generales
 consulta_amplia = False
-if consulta_amplia:
-    consulta_amplia_text = "Activado."
-else:
-    consulta_amplia_text = "Desactivado."
+consulta_amplia_text = "Activado." if consulta_amplia else "Desactivado."
 
-# Cargar hostnames.json desde el paquete
-hostnames_path = pkg_resources.resource_filename(__name__, 'hostnames.json')
-with open(hostnames_path, 'r') as file:
-    hostnames_empresas = json.load(file)
-
-empresas = list(hostnames_empresas.keys())
-
+empresas = ['BRH', 'CLIBA', 'EMV', 'HAUG', 'MTV', 'BRT']
 opcion_seleccionada = True
 
 while opcion_seleccionada != 8:
-    # Menú de opciones
     print("Seleccione una opción: \n")
-    
-    for empresa in empresas:
-        posicion = empresas.index(empresa) + 1
-        print(f"{posicion}- {empresa}")
-    
+    for idx, empresa in enumerate(empresas, 1):
+        print(f"{idx}- {empresa}")
     print(f"7- Consulta Amplia - {consulta_amplia_text}\n8- Salir")
 
     opcion_seleccionada = input("Ingrese una opción: ")
@@ -38,70 +41,50 @@ while opcion_seleccionada != 8:
 
     if opcion_seleccionada in range(1, 7):
         empresa_seleccionada = empresas[opcion_seleccionada - 1]
-        
-        # Usuario el cual se va a realizar la consulta
         usuario_ingresado = str(input("Ingrese el nombre del usuario: "))
-
-        # Lista de servidores donde se va a realizar la consulta
-        servidores_consulta = hostnames_empresas[empresa_seleccionada]
-        # print(servidores_consulta)
-
+        servidores_consulta = get_hostnames(empresa_seleccionada)
         print(f"\nRealizando consultas en los servidores de {empresa_seleccionada} para el usuario {usuario_ingresado}.\n")
 
-        # Ciclo donde se realiza la consulta
         for servidor in servidores_consulta:
             consulta_sesion_powershell = f"query session /server:{servidor} | findstr /i '{usuario_ingresado}'"
             consulta_sesion_powershell_completo = f"query session /server:{servidor}"
             resultado = subprocess.run(['powershell', '-Command', consulta_sesion_powershell], capture_output=True, text=True)
 
-            # Declaración de sesiones
             sesion_encontrada = resultado.stdout
             list_sesion_encontrada = sesion_encontrada.split()
 
-            if len(list_sesion_encontrada) >= 2:
-                id_sesion_encontrada = int(list_sesion_encontrada[2])
-            else:
-                id_sesion_encontrada = 99999
-            
-            # Verificar salida de errores
+            id_sesion_encontrada = int(list_sesion_encontrada[2]) if len(list_sesion_encontrada) >= 2 else 99999
+
             if resultado.returncode != 1:
                 print(f"{servidor}: Hubo un error en la ejecución {resultado.stderr}.\n")
-            
             elif resultado.stdout == "":
-                print(f"{servidor}: El usuario no está logueado.")
+                print(f"{servidor}: El usuario no esta logueado.")
                 if consulta_amplia:
                     resultado_completo = subprocess.run(['powershell', '-Command', consulta_sesion_powershell_completo], capture_output=True, text=True)
                     print(f"{servidor}{resultado_completo.stdout}\n")
-            
             else:
-                # Se imprime todo el resultado de la sesión encontrada
                 print(f"{servidor}:{sesion_encontrada}")
-
-                # Se consulta si quiere realizar el reinicio de la sesión
-                cerrar_sesion = int(input("¿Quiere cerrar la sesión encontrada?(1- Cerrar, 2- No cerrar): "))
-                
-                # Se realiza el cierre de sesión en el servidor 
+                cerrar_sesion = int(input("¿Quiere cerrar la sesion encontrada?(1- Cerrar, 2- No cerrar): "))
                 if cerrar_sesion == 1:
-                    # Bucle para cerrar sesión
                     while resultado.stdout != "":
                         cierre_sesion_powershell = f"reset session {id_sesion_encontrada} /server:{servidor}"
-                        ejecucion_cierre = subprocess.run(['powershell', '-Command', cierre_sesion_powershell], capture_output=True, text=True)
+                        subprocess.run(['powershell', '-Command', cierre_sesion_powershell], capture_output=True, text=True)
                         resultado_completo = subprocess.run(['powershell', '-Command', consulta_sesion_powershell_completo], capture_output=True, text=True)
                         resultado = subprocess.run(['powershell', '-Command', consulta_sesion_powershell], capture_output=True, text=True)
-
-                        print(f"{servidor}: Se cerró la sesión de {usuario_ingresado}.")
+                        print(f"{servidor}: Se cerro la sesion de {usuario_ingresado}.")
                         if consulta_amplia:
                             print(f"{servidor}{resultado_completo.stdout}\n")
                 else:
                     print("...")
-    
     elif opcion_seleccionada == 7:
         consulta_amplia = not consulta_amplia
         consulta_amplia_text = "Activado" if consulta_amplia else "Desactivado"
         print(f"Consulta Amplia - {consulta_amplia_text}")
-
     elif opcion_seleccionada == 8:
         break
     else:
-        print("Ingrese una opción válida.")
+        print("Ingrese una opción valida.")
         continue
+
+cursor.close()
+conn.close()
