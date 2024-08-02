@@ -31,6 +31,7 @@ def cambiar_turno(jugador):
     else:
         return "X"
 
+
 # Verifica si hay un ganador
 def hay_ganador():
     # Comprobar filas

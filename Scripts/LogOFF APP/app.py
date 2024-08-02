@@ -6,7 +6,7 @@ import subprocess
 
 print("""
 ----------------------------------------
-        LogOFF by Lucas Pedrocca                
+        LogOFF by Lucas Pedrocca        
 ----------------------------------------
 """)
 
