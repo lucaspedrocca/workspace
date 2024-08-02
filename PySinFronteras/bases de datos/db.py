@@ -38,7 +38,7 @@ midb.commit()
 print(cursor.rowcount)
 
 
-#* Actualizar datos
+# * Actualizar datos
 
 # sql = 'update usuario set email = %s where id = %s'
 
