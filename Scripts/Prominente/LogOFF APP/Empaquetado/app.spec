@@ -32,6 +32,6 @@ exe = EXE(
     upx_exclude=[],
     runtime_tmpdir=None,
     console=True,
-    icon='icon.png'
+    icon='icon.ico'
     
 )
