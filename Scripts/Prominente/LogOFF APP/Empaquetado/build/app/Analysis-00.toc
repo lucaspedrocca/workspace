@@ -1,8 +1,9 @@
-(['E:\\workspace\\CerrarSesiones\\app.py'],
- ['E:\\workspace\\CerrarSesiones',
-  'E:\\workspace\\CerrarSesiones\\Empaquetado'],
+(['E:\\workspace\\Scripts\\Prominente\\LogOFF APP\\app.py'],
+ ['E:\\workspace\\Scripts\\Prominente\\LogOFF APP',
+  'E:\\workspace\\Scripts\\Prominente\\LogOFF APP\\Empaquetado'],
  [],
- ['C:\\Users\\Lucas\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\hooks\\stdhooks',
+ ['C:\\Users\\Lucas\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\numpy\\_pyinstaller',
+  'C:\\Users\\Lucas\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\hooks\\stdhooks',
   'C:\\Users\\Lucas\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\hooks'],
  {},
  [],
@@ -11,13 +12,17 @@
  {},
  0,
  [],
- [('hostnames.json', 'E:\\workspace\\CerrarSesiones\\hostnames.json', 'DATA')],
+ [('hostnames.json',
+   'E:\\workspace\\Scripts\\Prominente\\LogOFF APP\\hostnames.json',
+   'DATA')],
  '3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit '
  '(AMD64)]',
  [('pyi_rth_inspect',
    'C:\\Users\\Lucas\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
    'PYSOURCE'),
-  ('app', 'E:\\workspace\\CerrarSesiones\\app.py', 'PYSOURCE')],
+  ('app',
+   'E:\\workspace\\Scripts\\Prominente\\LogOFF APP\\app.py',
+   'PYSOURCE')],
  [('inspect',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\\Lib\\inspect.py',
@@ -410,13 +415,13 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\\Lib\\ast.py',
    'PYMODULE'),
-  ('stringprep',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\\Lib\\stringprep.py',
-   'PYMODULE'),
   ('tracemalloc',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\\Lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('stringprep',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\\Lib\\stringprep.py',
    'PYMODULE'),
   ('_py_abc',
    'C:\\Program '
@@ -488,7 +493,10 @@
    'BINARY')],
  [],
  [],
- [('hostnames.json', 'E:\\workspace\\CerrarSesiones\\hostnames.json', 'DATA'),
+ [('hostnames.json',
+   'E:\\workspace\\Scripts\\Prominente\\LogOFF APP\\hostnames.json',
+   'DATA'),
   ('base_library.zip',
-   'E:\\workspace\\CerrarSesiones\\Empaquetado\\build\\app\\base_library.zip',
+   'E:\\workspace\\Scripts\\Prominente\\LogOFF '
+   'APP\\Empaquetado\\build\\app\\base_library.zip',
    'DATA')])

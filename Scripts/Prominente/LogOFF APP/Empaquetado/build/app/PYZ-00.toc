@@ -1,4 +1,5 @@
-('E:\\workspace\\CerrarSesiones\\Empaquetado\\build\\app\\PYZ-00.pyz',
+('E:\\workspace\\Scripts\\Prominente\\LogOFF '
+ 'APP\\Empaquetado\\build\\app\\PYZ-00.pyz',
  [('_compat_pickle',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\\Lib\\_compat_pickle.py',
