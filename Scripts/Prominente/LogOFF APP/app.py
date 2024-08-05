@@ -10,17 +10,32 @@ print("""
 ----------------------------------------
 """)
 
+# Obtener la ruta del archivo JSON
+base_path = os.path.dirname(os.path.abspath(__file__))
+json_path = os.path.join(base_path, 'hostnames.json')
+
+
 # Funciones para leer y escribir el archivo JSON
 def load_hostnames():
-    with open('Scripts\Prominente\LogOFF APP\hostnames.json', 'r') as file:
-        data = json.load(file)
-        # Normalizar nombres de empresas a mayúsculas
-        normalized_data = {k.upper(): v for k, v in data.items()}
-        return normalized_data
+    try:
+        with open(json_path, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+            # Normalizar nombres de empresas a mayúsculas
+            normalized_data = {k.upper(): v for k, v in data.items()}
+            return normalized_data
+    except FileNotFoundError:
+        print(f"El archivo '{json_path}' no se encontró.")
+        return {}
+    except json.JSONDecodeError:
+        print("Error al decodificar el archivo JSON.")
+        return {}
+    except Exception as e:
+        print(f"Se produjo un error al leer el archivo JSON: {e}")
+        return {}
 
 def save_hostnames(hostnames_empresas):
     try:
-        with open('hostnames.json', 'w') as file:
+        with open(json_path, 'w', encoding='utf-8') as file:
             # Normalizar nombres de empresas a mayúsculas
             normalized_data = {k.upper(): v for k, v in hostnames_empresas.items()}
             json.dump(normalized_data, file, indent=4)
@@ -40,23 +55,31 @@ def show_servers_for_company(company_name):
 
 def display_hostnames_json():
     """Muestra el contenido completo del archivo JSON."""
-    print("\nContenido del archivo hostnames.json:")
-    with open('hostnames.json', 'r') as file:
-        content = json.load(file)
-        # Normalizar nombres de empresas a mayúsculas para la visualización
-        for company, servers in content.items():
-            print(f"\n{company.upper()}:")
-            for server in servers:
-                print(f" - {server}")
+    try:
+        print("\nContenido del archivo hostnames.json:")
+        with open(json_path, 'r', encoding='utf-8') as file:
+            content = json.load(file)
+            # Normalizar nombres de empresas a mayúsculas para la visualización
+            for company, servers in content.items():
+                print(f"\n{company.upper()}:")
+                for server in servers:
+                    print(f" - {server}")
+    except FileNotFoundError:
+        print(f"El archivo '{json_path}' no se encontró.")
+    except json.JSONDecodeError:
+        print("Error al decodificar el archivo JSON.")
+    except Exception as e:
+        print(f"Se produjo un error al leer el archivo JSON: {e}")
 
 def handle_company_query(empresa_consultar):
-    #Maneja la consulta de una empresa específica o muestra el contenido completo del archivo JSON.
+    """Maneja la consulta de una empresa específica o muestra el contenido completo del archivo JSON."""
+    empresa_consultar = empresa_consultar.upper()
     if empresa_consultar in hostnames_empresas:
         show_servers_for_company(empresa_consultar)
     elif empresa_consultar == "ALL":
         display_hostnames_json()  # Mostrar el contenido del archivo JSON
     else:
-        print("Ingrese un valor valido.")
+        print("Ingrese un valor válido.")
 
 # Inicializar hostnames desde el archivo JSON
 hostnames_empresas = load_hostnames()
@@ -100,7 +123,7 @@ while opcion_seleccionada != 9:
             consulta_sesion_powershell_completo = f"query session /server:{servidor}"
             resultado = subprocess.run(['powershell', '-Command', consulta_sesion_powershell], capture_output=True, text=True)
 
-            print(resultado)
+            # print("Resultado completo:" + resultado)
 
             sesion_encontrada = resultado.stdout
             list_sesion_encontrada = sesion_encontrada.split()
@@ -111,7 +134,7 @@ while opcion_seleccionada != 9:
                 id_sesion_encontrada = 99999
 
             if resultado.returncode != 1 or resultado.stderr != "":
-                print(f"{servidor}: Hubo un error en la ejecución {resultado.stderr}.\n")
+                print(f"{servidor}: Hubo un error en la ejecución {resultado.stderr}\n")
             
             elif resultado.stdout == "":
                 print(f"{servidor}: El usuario no está logueado.")
