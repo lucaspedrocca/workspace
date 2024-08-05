@@ -50,8 +50,10 @@ Para actualizar la base de datos de servidores:
 
 El programa utiliza comandos de PowerShell para consultar y gestionar sesiones en los servidores, incluyendo:
 
-- **Consultar Sesiones**: `query session /server:{servidor}`
+- **Consultar Sesiones**: `query session /server:{servidor} | findstr /i "{usuario}"`
+  *Ejemplo: `query session /server:servidor3.dominio.com | findstr /i "usuario"`*
 - **Cerrar Sesiones**: `reset session {id_sesion_encontrada} /server:{servidor}`
+  *Ejemplo: `reset session 2 /server:servidor3.dominio.com`*
 
 ## Funcionalidades
 
