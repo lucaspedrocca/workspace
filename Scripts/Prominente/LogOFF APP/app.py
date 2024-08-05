@@ -12,7 +12,7 @@ print("""
 
 # Funciones para leer y escribir el archivo JSON
 def load_hostnames():
-    with open('hostnames.json', 'r') as file:
+    with open('Scripts\Prominente\LogOFF APP\hostnames.json', 'r') as file:
         data = json.load(file)
         # Normalizar nombres de empresas a mayúsculas
         normalized_data = {k.upper(): v for k, v in data.items()}
@@ -100,6 +100,8 @@ while opcion_seleccionada != 9:
             consulta_sesion_powershell_completo = f"query session /server:{servidor}"
             resultado = subprocess.run(['powershell', '-Command', consulta_sesion_powershell], capture_output=True, text=True)
 
+            print(resultado)
+
             sesion_encontrada = resultado.stdout
             list_sesion_encontrada = sesion_encontrada.split()
 
@@ -108,7 +110,7 @@ while opcion_seleccionada != 9:
             else:
                 id_sesion_encontrada = 99999
 
-            if resultado.returncode != 1:
+            if resultado.returncode != 1 or resultado.stderr != "":
                 print(f"{servidor}: Hubo un error en la ejecución {resultado.stderr}.\n")
             
             elif resultado.stdout == "":
