@@ -2,6 +2,18 @@ import json
 import os
 import subprocess
 
+# Función para limpiar la pantalla
+
+def clear_screen():
+    # Limpiar la pantalla en CMD
+    if os.name == 'nt':
+        os.system('cls')
+    # Limpiar la pantalla en PowerShell
+    os.system('powershell -Command "Clear-Host"')
+
+# Llamar a la función para limpiar la pantalla
+clear_screen()
+
 #Firma creador
 
 print("""
@@ -136,11 +148,13 @@ while opcion_seleccionada != 9:
             if resultado.returncode != 1 or resultado.stderr != "":
                 print(f"{servidor}: Hubo un error en la ejecución {resultado.stderr}\n")
             
-            elif resultado.stdout == "":
-                print(f"{servidor}: El usuario no está logueado.")
+            elif resultado.stdout == "":                
                 if consulta_amplia:
                     resultado_completo = subprocess.run(['powershell', '-Command', consulta_sesion_powershell_completo], capture_output=True, text=True)
                     print(f"{servidor}{resultado_completo.stdout}\n")
+                
+                print(f"{servidor}: El usuario {usuario_ingresado} no está logueado.")
+            
             
             else:
                 print(f"{servidor}: {sesion_encontrada}")
