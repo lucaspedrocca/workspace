@@ -123,15 +123,15 @@ while opcion_seleccionada != 9:
             consulta_sesion_powershell_completo = f"query session /server:{servidor}"
             resultado = subprocess.run(['powershell', '-Command', consulta_sesion_powershell], capture_output=True, text=True)
 
-            # print("Resultado completo:" + resultado)
-
             sesion_encontrada = resultado.stdout
             list_sesion_encontrada = sesion_encontrada.split()
 
-            if len(list_sesion_encontrada) >= 2:
-                id_sesion_encontrada = int(list_sesion_encontrada[2])
-            else:
-                id_sesion_encontrada = 99999
+            if len(list_sesion_encontrada) >= 3:
+                try:
+                    id_sesion_encontrada = int(list_sesion_encontrada[2])
+                except ValueError:
+                    print(f"No se pudo convertir el valor '{list_sesion_encontrada[2]}' a un número entero.")
+                    id_sesion_encontrada = None
 
             if resultado.returncode != 1 or resultado.stderr != "":
                 print(f"{servidor}: Hubo un error en la ejecución {resultado.stderr}\n")
@@ -144,20 +144,29 @@ while opcion_seleccionada != 9:
             
             else:
                 print(f"{servidor}: {sesion_encontrada}")
-                cerrar_sesion = int(input("¿Quiere cerrar la sesión encontrada? (1- Cerrar, 2- No cerrar): "))
+                if id_sesion_encontrada is not None:
+                    while True:
+                        cerrar_sesion = input("¿Quiere cerrar la sesión encontrada? (1- Cerrar, 2- No cerrar): ")
+                        if cerrar_sesion in ["1", "2"]:
+                            cerrar_sesion = int(cerrar_sesion)
+                            break
+                        else:
+                            print("Entrada no válida. Por favor ingrese 1 para cerrar o 2 para no cerrar.")
                 
-                if cerrar_sesion == 1:
-                    while resultado.stdout != "":
-                        cierre_sesion_powershell = f"reset session {id_sesion_encontrada} /server:{servidor}"
-                        ejecucion_cierre = subprocess.run(['powershell', '-Command', cierre_sesion_powershell], capture_output=True, text=True)
-                        resultado_completo = subprocess.run(['powershell', '-Command', consulta_sesion_powershell_completo], capture_output=True, text=True)
-                        resultado = subprocess.run(['powershell', '-Command', consulta_sesion_powershell], capture_output=True, text=True)
+                    if cerrar_sesion == 1:
+                        while resultado.stdout != "":
+                            cierre_sesion_powershell = f"reset session {id_sesion_encontrada} /server:{servidor}"
+                            ejecucion_cierre = subprocess.run(['powershell', '-Command', cierre_sesion_powershell], capture_output=True, text=True)
+                            resultado_completo = subprocess.run(['powershell', '-Command', consulta_sesion_powershell_completo], capture_output=True, text=True)
+                            resultado = subprocess.run(['powershell', '-Command', consulta_sesion_powershell], capture_output=True, text=True)
 
-                        print(f"{servidor}: Se cerró la sesión de {usuario_ingresado}.")
-                        if consulta_amplia:
-                            print(f"{servidor}{resultado_completo.stdout}\n")
+                            print(f"{servidor}: Se cerró la sesión de {usuario_ingresado}.")
+                            if consulta_amplia:
+                                print(f"{servidor}{resultado_completo.stdout}\n")
+                    else:
+                        print("...")
                 else:
-                    print("...")
+                    print("No se encontró un ID de sesión válido.")
 
     elif opcion_seleccionada == (conteo_empresas + 1):
         consulta_amplia = not consulta_amplia
