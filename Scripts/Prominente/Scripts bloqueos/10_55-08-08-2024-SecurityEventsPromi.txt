@@ -1,0 +1,1728 @@
+Event[0]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-08-08T10:33:48.254
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		galeo
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRA000676
+	Source Network Address:	172.19.119.65
+	Source Port:		50611
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[1]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-08-05T10:51:57.857
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		51958
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[2]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-08-05T10:50:07.625
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		51958
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[3]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-08-05T10:50:06.244
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		51958
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[4]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-08-01T06:46:37.321
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		58025
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[5]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-08-01T06:46:27.724
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		58025
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[6]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-20T09:22:24.863
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		55810
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[7]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-19T09:06:25.426
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		galeo
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRA000676
+	Source Network Address:	172.19.119.25
+	Source Port:		50870
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[8]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-19T09:06:23.970
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		galeo
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRA000676
+	Source Network Address:	172.19.119.25
+	Source Port:		50870
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[9]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-19T09:06:18.371
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		galeo
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRA000676
+	Source Network Address:	172.19.119.25
+	Source Port:		50870
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[10]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-18T15:00:25.686
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		CLIBABACKEND104$
+	Account Domain:		CLIBA
+	Logon ID:		0x3E7
+
+Logon Type:			5
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		svc_checklist
+	Account Domain:		cliba
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x388
+	Caller Process Name:	C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	CLIBABACKEND104
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[11]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-18T14:57:31.834
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		CLIBABACKEND104$
+	Account Domain:		CLIBA
+	Logon ID:		0x3E7
+
+Logon Type:			5
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		svc_checklist
+	Account Domain:		CLIBA
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x388
+	Caller Process Name:	C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	CLIBABACKEND104
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[12]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-18T14:55:37.637
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		CLIBABACKEND104$
+	Account Domain:		CLIBA
+	Logon ID:		0x3E7
+
+Logon Type:			5
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		svc_checklist
+	Account Domain:		CLIBA
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x388
+	Caller Process Name:	C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	CLIBABACKEND104
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[13]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-18T14:54:31.793
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		CLIBABACKEND104$
+	Account Domain:		CLIBA
+	Logon ID:		0x3E7
+
+Logon Type:			5
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		svc_checklist
+	Account Domain:		CLIBA
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x388
+	Caller Process Name:	C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	CLIBABACKEND104
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[14]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-18T14:53:58.805
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		CLIBABACKEND104$
+	Account Domain:		CLIBA
+	Logon ID:		0x3E7
+
+Logon Type:			5
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		svc_checklist
+	Account Domain:		CLIBA
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x388
+	Caller Process Name:	C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	CLIBABACKEND104
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[15]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-18T14:48:23.311
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		CLIBABACKEND104$
+	Account Domain:		CLIBA
+	Logon ID:		0x3E7
+
+Logon Type:			5
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		svc_checklist
+	Account Domain:		CLIBA
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x388
+	Caller Process Name:	C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	CLIBABACKEND104
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[16]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-12T07:34:17.476
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		59874
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[17]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-12T07:34:10.392
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		59874
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[18]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-10T14:39:27.269
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		64378
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[19]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-09T06:57:36.603
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		58749
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[20]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-04T10:47:06.380
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		59791
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[21]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-04T10:47:04.834
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		59791
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[22]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-01T10:03:55.874
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		59227
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[23]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-07-01T10:03:53.764
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		59227
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[24]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-06-28T06:46:59.874
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		58507
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[25]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-06-26T07:49:05.344
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		61695
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+Event[26]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2024-06-26T07:49:04.104
+  Event ID: 4625
+  Task: Logon
+  Level: Information
+  Opcode: Info
+  Keyword: Audit Failure
+  User: N/A
+  User Name: N/A
+  Computer: CLIBABACKEND104.cliba.com.ar
+  Description: 
+An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		ndemaria@cliba.com.ar
+	Account Domain:		
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	BRAA000116
+	Source Network Address:	172.19.12.26
+	Source Port:		61695
+
+Detailed Authentication Information:
+	Logon Process:		NtLmSsp 
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
