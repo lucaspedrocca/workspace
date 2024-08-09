@@ -1,7 +1,7 @@
 Clear-Host
 
-$dominio = Read-Host "Por favor, introduce un valor:"
-Write-Host "El valor que has introducido es: $dominio"
+$dominio = Read-Host "Por favor, introduce el dominio"
+Write-Host "El dominio que has introducido es: $dominio"
 
 $domainController = Get-ADDomainController -DomainName $dominio -Discover
 

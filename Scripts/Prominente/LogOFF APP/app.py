@@ -84,7 +84,7 @@ def handle_company_query(empresa_consultar):
 # Inicializar hostnames desde el archivo JSON
 hostnames_empresas = load_hostnames()
 
-consulta_amplia = False
+consulta_amplia = True
 opcion_seleccionada = True
 
 while opcion_seleccionada != 9:
