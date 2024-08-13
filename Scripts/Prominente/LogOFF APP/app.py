@@ -139,7 +139,7 @@ while opcion_seleccionada != 9:
             list_sesion_encontrada = sesion_encontrada.split()
 
             if len(list_sesion_encontrada) >= 3:
-                if list_sesion_encontrada[-1] != "Activo":
+                if not "Activo" in list_sesion_encontrada:
                     try:
                         id_sesion_encontrada = int(list_sesion_encontrada[1])
                     except ValueError:
