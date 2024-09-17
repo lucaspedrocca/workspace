@@ -25,9 +25,17 @@ foreach ($dc in $domainControllers) {
 
 # Determinar la ruta del archivo basado en la ubicación del script
 $currentDate = Get-Date
-$formattedDate = $currentDate.ToString("HH_mm-dd-MM-yyyy")
+$formattedDate = $currentDate.ToString("yyyy-MM-dd_HH-mm")
 
-$filePath = Join-Path -Path $PSScriptRoot -ChildPath "$formattedDate-SecurityEventsPromi.txt"
+
+# Obtiene la ruta de la carpeta de Documentos del usuario
+$documentsPath = [environment]::GetFolderPath('MyDocuments')
+
+# Crea la ruta para la carpeta "logs bloqueos"
+$logsPath = Join-Path -Path $documentsPath -ChildPath "Logs bloqueos"
+
+# Crea la ruta completa con el archivo
+$filePath = Join-Path -Path $logsPath -ChildPath "$formattedDate-SecurityEventsPromi.txt"
 
 # Guardar todos los eventos en el archivo
 $allEvents | Out-File -FilePath $filePath
