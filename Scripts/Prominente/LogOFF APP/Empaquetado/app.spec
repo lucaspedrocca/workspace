@@ -24,7 +24,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='logOFF-1.1',
+    name='logOFF-1.2',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
