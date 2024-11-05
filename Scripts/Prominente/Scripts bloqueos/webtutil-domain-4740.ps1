@@ -11,7 +11,7 @@ $formattedDate = $currentDate.ToString("yyyyMMddHHmm")
 
 # Definir la ruta del archivo de salida con la fecha y hora en el nombre del archivo
 $DefaultFolder = [Environment]::GetFolderPath("MyDocuments")
-$Destination = "$formattedDate-4625-4771-4776-$dominio.txt"
+$Destination = "$formattedDate-4740.txt"
 $filePath = $DefaultFolder + "\" + $Destination
 
 Invoke-Command -ComputerName $domainController -ScriptBlock {

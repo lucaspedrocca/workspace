@@ -105,7 +105,7 @@ while opcion_seleccionada != 9:
     empresas = list(hostnames_empresas.keys())
     conteo_empresas = len(empresas)
     consulta_amplia_text = "Activado." if consulta_amplia else "Desactivado." 
-    consultas_extras = [f'Consulta amplia - {consulta_amplia_text}', 'Editar servidores', 'Salir']
+    consultas_extras = ['Todos',f'Consulta amplia - {consulta_amplia_text}', 'Editar servidores', 'Salir']
 
     print("\nSeleccione una opción: \n")
     for empresa in empresas:

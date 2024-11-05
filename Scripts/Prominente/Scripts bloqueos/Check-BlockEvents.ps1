@@ -10,7 +10,7 @@ $credenciales = Get-Credential
 
 # Comando remoto que se ejecutará en cada controlador de dominio
 $remoteCommand = {
-    wevtutil qe Security /rd:true /c:5000 /f:text /q:"*[System[(EventID=4740 or EventID=4625 or EventID=4771 or EventID=4776)]]"
+    wevtutil qe Security /rd:true /c:15000 /f:text /q:"*[System[(EventID=4740 or EventID=4625 or EventID=4771 or EventID=4776)]]"
 }
 
 # Crear una lista para almacenar los resultados de cada controlador de dominio
