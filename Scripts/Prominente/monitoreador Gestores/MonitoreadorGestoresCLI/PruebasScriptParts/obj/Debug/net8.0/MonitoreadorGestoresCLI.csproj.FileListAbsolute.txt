@@ -1,0 +1,15 @@
+D:\workspace\Scripts\Prominente\monitoreador Gestores\MonitoreadorGestoresCLI\bin\Debug\net8.0\MonitoreadorGestoresCLI.exe
+D:\workspace\Scripts\Prominente\monitoreador Gestores\MonitoreadorGestoresCLI\bin\Debug\net8.0\MonitoreadorGestoresCLI.deps.json
+D:\workspace\Scripts\Prominente\monitoreador Gestores\MonitoreadorGestoresCLI\bin\Debug\net8.0\MonitoreadorGestoresCLI.runtimeconfig.json
+D:\workspace\Scripts\Prominente\monitoreador Gestores\MonitoreadorGestoresCLI\bin\Debug\net8.0\MonitoreadorGestoresCLI.dll
+D:\workspace\Scripts\Prominente\monitoreador Gestores\MonitoreadorGestoresCLI\bin\Debug\net8.0\MonitoreadorGestoresCLI.pdb
+D:\workspace\Scripts\Prominente\monitoreador Gestores\MonitoreadorGestoresCLI\obj\Debug\net8.0\MonitoreadorGestoresCLI.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\Scripts\Prominente\monitoreador Gestores\MonitoreadorGestoresCLI\obj\Debug\net8.0\MonitoreadorGestoresCLI.AssemblyInfoInputs.cache
+D:\workspace\Scripts\Prominente\monitoreador Gestores\MonitoreadorGestoresCLI\obj\Debug\net8.0\MonitoreadorGestoresCLI.AssemblyInfo.cs
+D:\workspace\Scripts\Prominente\monitoreador Gestores\MonitoreadorGestoresCLI\obj\Debug\net8.0\MonitoreadorGestoresCLI.csproj.CoreCompileInputs.cache
+D:\workspace\Scripts\Prominente\monitoreador Gestores\MonitoreadorGestoresCLI\obj\Debug\net8.0\MonitoreadorGestoresCLI.sourcelink.json
+D:\workspace\Scripts\Prominente\monitoreador Gestores\MonitoreadorGestoresCLI\obj\Debug\net8.0\MonitoreadorGestoresCLI.dll
+D:\workspace\Scripts\Prominente\monitoreador Gestores\MonitoreadorGestoresCLI\obj\Debug\net8.0\refint\MonitoreadorGestoresCLI.dll
+D:\workspace\Scripts\Prominente\monitoreador Gestores\MonitoreadorGestoresCLI\obj\Debug\net8.0\MonitoreadorGestoresCLI.pdb
+D:\workspace\Scripts\Prominente\monitoreador Gestores\MonitoreadorGestoresCLI\obj\Debug\net8.0\MonitoreadorGestoresCLI.genruntimeconfig.cache
+D:\workspace\Scripts\Prominente\monitoreador Gestores\MonitoreadorGestoresCLI\obj\Debug\net8.0\ref\MonitoreadorGestoresCLI.dll

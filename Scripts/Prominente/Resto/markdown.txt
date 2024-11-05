@@ -1,0 +1,65 @@
+Detección del Incidente
+    - Monitoreo y alertas desde herramientas como Nagios y Zabbix
+    - Servidores
+    - Webs
+    - Aplicaciones
+    - Networking
+    - Reporte de usuarios y clientes
+    - Comunicación telefónica o por correo
+
+2. Clasificación del Incidente
+    Identificación del tipo de incidente
+        - Alta
+        - Media
+        - Breve detalle de lo identificado
+    
+    Identificación de componentes afectados
+        - Enlace
+        - Servidor
+        - Servicio
+        - Aplicación
+        - Correo
+        - Base de Datos
+        - Telefonía
+
+3.Escalamiento y Notificación
+    Escalamiento según nivel de incidente
+        - Activación de guardia
+            - Servidores
+            - Base de Datos
+            - Redes
+   - Aplicaciones
+ - [ ] Reclamo al Proveedor del Servicio Alertado
+-[ ] Notificación Corporativa en el portal de SharePoint
+-[ ] Comunicación al Servicio de Mesa de Ayuda
+ - Carga del incidente en Ticketing y Push Alert
+ - Feedback con el Gerente de Tecnología
+ - Definición del alcance de la comunicación
+   - VIP
+   - Usuarios
+   - Otros (Listas de Distribución)
+
+**4.Seguimiento y Actualización #seguimiento**
+
+-[ ] Contacto con Proveedor del Servicio
+ - Cada 30 minutos hasta obtener un estado de situación
+ - Cada 1 hora después de disponer de un tiempo definido de resolución
+-[ ] Contacto con Servicio de Guardia Activa
+ - Cada 30 minutos hasta detectar la causa del incidente
+ - Cada 1 hora después de disponer del tiempo definido de resolución
+-[ ] Actualización continua de comunicativos abiertos hasta resolución
+
+**5.Resolución y Cierre #resolución**
+
+-[ ] Validación de la solución con el usuario final o mediante mecanismos propios del Servicio de Monitoreo
+-[ ] Comunicación telefónica o por WhatsApp al Gerente de Tecnología
+-[ ] Finalización del cierre de Notificaciones iniciadas en Push Alert
+
+**6.Informe Final #informe**
+
+-[ ] Generación de un informe desde el equipo de Gestión de Problemas
+ - Síntoma
+ - Causa
+ - Resolución
+ - Plan de Acción de próximo accionar
+-[ ] El informe estará bajo la órbita de Gustavo Ceres
