@@ -3,7 +3,7 @@ $smtpServer = "smtp.office365.com"
 $smtpPort = 587
 $smtpUser = "Tes365Promi@grupoprominente.com"
 $smtpPass = "Qu9y70wr!"   
-$toEmail = "lpedrocca@grupoprominente.com"
+$toEmail = "testRoblicencias@grupoprominente.com"
 $subject = "Robinson: Estado de licencia"
 $fromEmail = $smtpUser
 
