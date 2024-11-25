@@ -4,7 +4,7 @@ $smtpPort = 587
 $smtpUser = "Tes365Promi@grupoprominente.com"
 $smtpPass = "Qu9y70wr!"   
 $toEmail = "lpedrocca@grupoprominente.com"
-$subject = "Robinson: Estado de activación Windows"
+$subject = "Robinson: Estado de licencia"
 $fromEmail = $smtpUser
 
 # Ejecuta slmgr /dlv y captura la salida
