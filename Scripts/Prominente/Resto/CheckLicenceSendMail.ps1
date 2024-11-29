@@ -2,44 +2,74 @@
 $smtpServer = "smtp.office365.com"
 $smtpPort = 587
 $smtpUser = "Tes365Promi@grupoprominente.com"
-$smtpPass = ""   
-$toEmail = "testRoblicencias@grupoprominente.com"
+$smtpPass = "Qu9y70wr!"   
+$toEmail = "testRoblicencias@grupoprominente.com" #testRoblicencias@grupoprominente.com
 $subject = "Robinson: Estado de licencia"
 $fromEmail = $smtpUser
-
-# Ejecuta slmgr /dlv y captura la salida
-$output = & cscript //Nologo "C:\Windows\System32\slmgr.vbs" /dlv
-# Write-Host "Valor de output:"
-# $output
-
-# Divide la salida en líneas
-$lines = $output -split "`n"
-# Write-Host "Valor de lines:"
-# $lines
-
-# Procesa la salida y extrae los valores basados en posiciones específicas
-$data = @{
-    DateCaptured             = (Get-Date -Format "yyyy-MM-ddTHH:mm:ss")
-    Hostname                 = $env:COMPUTERNAME
-    OS                       = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").ProductName
-    CurrentBuild             = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").CurrentBuild
-    SoftwareLicensingVersion = if ($lines[0] -like "*:*") { ($lines[0] -split ":")[1].Trim() } else { $lines[0] }
-    Name                     = if ($lines[2] -like "*:*") { ($lines[2] -split ":")[1].Trim() } else { $lines[2] }
-    Description              = if ($lines[3] -like "*:*") { ($lines[3] -split ":")[1].Trim() } else { $lines[3] }
-    ActivationID             = if ($lines[4] -like "*:*") { ($lines[4] -split ":")[1].Trim() } else { $lines[4] }
-    ApplicationID            = if ($lines[5] -like "*:*") { ($lines[5] -split ":")[1].Trim() } else { $lines[5] }
-    ExtendedPID              = if ($lines[6] -like "*:*") { ($lines[6] -split ":")[1].Trim() } else { $lines[6] }
-    ProductKeyChannel        = if ($lines[7] -like "*:*") { ($lines[7] -split ":")[1].Trim() } else { $lines[7] }
-    InstallationID           = if ($lines[8] -like "*:*") { ($lines[8] -split ":")[1].Trim() } else { $lines[8] }
-    PartialProductKey        = if ($lines[11] -like "*:*") { ($lines[11] -split ":")[1].Trim() } else { $lines[11] }
-    LicenseStatus            = if ($lines[12] -like "*:*") { ($lines[12] -split ":")[1].Trim() } else { $lines[12] }
-    RemainingWindowsRearm    = if ($lines[13] -like "*:*") { ($lines[13] -split ":")[1].Trim() } else { $lines[13] }
-    RemainingSKURearm        = if ($lines[14] -like "*:*") { ($lines[14] -split ":")[1].Trim() } else { $lines[14] }
-    TrustedTime              = if ($lines[15] -like "*:*") { ($lines[15] -split ":")[1].Trim() } else { $lines[15] }
+# Función para normalizar las claves a inglés
+function Normalize-Keys($data, $translationDictionary) {
+    $normalizedData = @{}
+    foreach ($key in $data.Keys) {
+        # Si la clave está en el diccionario, reemplazarla
+        if ($translationDictionary.ContainsKey($key)) {
+            $normalizedData[$translationDictionary[$key]] = $data[$key]
+        } else {
+            # Si no está en el diccionario, mantener la clave original
+            $normalizedData[$key] = $data[$key]
+        }
+    }
+    return $normalizedData
 }
 
-# Convierte el hash a JSON
-$jsonData = $data | ConvertTo-Json -Depth 10 -Compress
+# Diccionario de mapeo de claves (español a inglés)
+$translationDictionary = @{
+    "Software licensing service version" = "Versión del Servicio de licencias de software"
+    "Description" = "Descripción"
+    "Validation URL" = "URL de validación"
+    "Activation ID" = "Id. de activación"
+    "Installation ID" = "Id. de instalación"
+    "Product Key Channel" = "Canal de clave de producto"
+    "Name" = "Nombre"
+    "Remaining SKU rearm count" = "Recuento de rearmados de SKU restantes"
+    "Trusted time" = "Hora de confianza"
+    "Partial Product Key" = "Clave de producto parcial"
+    "License Status" = "Estado de la licencia"
+    "Reason for notification" = "Razón de la notificación"
+    "License URL" = "URL de la licencia de uso"
+    "Application ID" = "Id. de aplicación"
+    "Remaining Windows rearm count" = "Recuento de rearmado de Windows restante"
+    "Extended PID" = "PID extendido"
+}
+
+# Ejecutar el comando para obtener la salida en inglés
+$output = & cscript //Nologo "C:\Windows\System32\slmgr.vbs" /dlv
+
+# Divide la salida en líneas
+$lines = $output -split "`n" | Where-Object { $_.Trim() -ne "" }
+
+# Inicializar un objeto vacío para almacenar los resultados
+$outputObject = @{
+    "Hora de captura" = (Get-Date -Format "yyyy-MM-ddTHH:mm:ss")
+    "Current build" = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").CurrentBuild
+    Hostname = $env:COMPUTERNAME
+    OS = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").ProductName
+    
+}
+
+# Procesar cada línea
+foreach ($line in $lines) {
+    # Dividir la línea en clave y valor
+    $parts = $line -split ":", 2
+
+    # Asignar la clave y el valor
+    $key = $parts[0].Trim()
+    $value = $parts[1].Trim()
+
+    # Agregar el par clave-valor al objeto de salida
+    $outputObject[$key] = $value
+}
+
+$jsonData = Normalize-Keys $outputObject $translationDictionary | ConvertTo-Json -Depth 3
 
 # Crear el mensaje de correo
 $message = New-Object System.Net.Mail.MailMessage
