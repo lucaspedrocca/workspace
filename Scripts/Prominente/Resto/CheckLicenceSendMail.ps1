@@ -1,13 +1,15 @@
-$hostname = $env:COMPUTERNAME
 # Configuración del correo
+$hostname = $env:COMPUTERNAME
 $smtpServer = "smtp.office365.com"
 $smtpPort = 587
 $smtpUser = "Tes365Promi@grupoprominente.com"
-$smtpPass = ""   
+$smtpPass = "" #Qu9y70wr!   
 $toEmail = "testRoblicencias@grupoprominente.com" #testRoblicencias@grupoprominente.com
-$subject = "Robinson: Estado de licencia " + $hostname
+$subject = "Robinson: Estado de licencia $hostname"
 $fromEmail = $smtpUser
-# Función para normalizar las claves a inglés
+
+
+# Función para normalizar las claves de JSON
 function Normalize-Keys($data, $translationDictionary) {
     $normalizedData = @{}
     foreach ($key in $data.Keys) {
@@ -22,7 +24,7 @@ function Normalize-Keys($data, $translationDictionary) {
     return $normalizedData
 }
 
-# Diccionario de mapeo de claves (español a inglés)
+# Diccionario de mapeo de claves
 $translationDictionary = @{
     "Software licensing service version" = "Versión del Servicio de licencias de software"
     "Description" = "Descripción"
@@ -43,7 +45,7 @@ $translationDictionary = @{
     "Extended PID" = "PID extendido"
 }
 
-# Ejecutar el comando para obtener la salida en inglés
+# Ejecutar el comando para obtener la salida
 $output = & cscript //Nologo "C:\Windows\System32\slmgr.vbs" /dlv
 
 # Divide la salida en líneas
@@ -51,7 +53,7 @@ $lines = $output -split "`n" | Where-Object { $_.Trim() -ne "" }
 
 # Inicializar un objeto vacío para almacenar los resultados
 $outputObject = @{
-    "Hora de captura" = (Get-Date -Format "yyyy-MM-ddTHH:mm:ss")
+    "Hora de captura" = (Get-Date -Format "dd/MM/yyyy HH:mm:ss")
     "Current build" = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").CurrentBuild
     Hostname = $hostname
     OS = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").ProductName
