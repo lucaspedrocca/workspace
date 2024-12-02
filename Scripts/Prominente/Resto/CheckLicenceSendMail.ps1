@@ -1,10 +1,11 @@
+$hostname = $env:COMPUTERNAME
 # Configuración del correo
 $smtpServer = "smtp.office365.com"
 $smtpPort = 587
 $smtpUser = "Tes365Promi@grupoprominente.com"
-$smtpPass = "Qu9y70wr!"   
+$smtpPass = ""   
 $toEmail = "testRoblicencias@grupoprominente.com" #testRoblicencias@grupoprominente.com
-$subject = "Robinson: Estado de licencia"
+$subject = "Robinson: Estado de licencia " + $hostname
 $fromEmail = $smtpUser
 # Función para normalizar las claves a inglés
 function Normalize-Keys($data, $translationDictionary) {
@@ -34,6 +35,7 @@ $translationDictionary = @{
     "Trusted time" = "Hora de confianza"
     "Partial Product Key" = "Clave de producto parcial"
     "License Status" = "Estado de la licencia"
+    "Estado de licencia" = "Estado de la licencia"
     "Reason for notification" = "Razón de la notificación"
     "License URL" = "URL de la licencia de uso"
     "Application ID" = "Id. de aplicación"
@@ -51,7 +53,7 @@ $lines = $output -split "`n" | Where-Object { $_.Trim() -ne "" }
 $outputObject = @{
     "Hora de captura" = (Get-Date -Format "yyyy-MM-ddTHH:mm:ss")
     "Current build" = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").CurrentBuild
-    Hostname = $env:COMPUTERNAME
+    Hostname = $hostname
     OS = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").ProductName
     
 }
