@@ -1,3 +1,6 @@
+# Iniciar el temporizador
+$stopwatch = [System.Diagnostics.Stopwatch]::StartNew()
+
 # Pedir al usuario que introduzca el dominio
 $dominio = Read-Host "Por favor, introduce el dominio"
 Write-Host "El dominio que has introducido es: $dominio"
@@ -46,3 +49,10 @@ if (Test-Path $filePath) {
 } else {
     Write-Host "Fallo al escribir los eventos"
 }
+
+
+# Finalizar el temporizador
+$stopwatch.Stop()
+
+# Mostrar el tiempo transcurrido
+Write-Host "Tiempo transcurrido: $($stopwatch.Elapsed.TotalSeconds) segundos"

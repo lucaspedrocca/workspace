@@ -54,5 +54,25 @@
         "brterp02.brt.com.ar",
         "brtts101.brt.com.ar",
         "brtts102.brt.com.ar"
+    ],
+    "CLIBA-TESTING": [
+        "CLIBATST001.cliba.com.ar",
+        "CLIBATST002.cliba.com.ar",
+        "CLIBATST003.cliba.com.ar",
+        "CLIBATST004.cliba.com.ar",
+        "CLIBATST005.cliba.com.ar",
+        "CLIBATST006.cliba.com.ar",
+        "CLIBATST007.cliba.com.ar",
+        "CLIBATST008.cliba.com.ar",
+        "CLIBATST009.cliba.com.ar",
+        "CLIBATST010.cliba.com.ar",
+        "CLIBATST011.cliba.com.ar",
+        "CLIBATST012.cliba.com.ar",
+        "CLIBATST013.cliba.com.ar",
+        "CLIBATST016.cliba.com.ar",
+        "CLIBATST017.cliba.com.ar",
+        "CLIBATST018.cliba.com.ar",
+        "CLIBATST022.cliba.com.ar",
+        "CLIBATST023.cliba.com.ar"
     ]
 }
