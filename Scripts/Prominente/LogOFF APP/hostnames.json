@@ -4,14 +4,24 @@
         "promipremts100.prominente.com.ar",
         "promits02.prominente.com.ar",
         "promitsw01.prominente.com.ar",
-        "promitsw02.prominente.com.ar"
+        "promitsw02.prominente.com.ar",
+        "promipremapp01.prominente.com.ar",
+        "promipremts102.prominente.com.ar"
     ],
     "BRH": [
         "brhts100.usuarios.local",
         "brhts101.usuarios.local",
         "brhts102.usuarios.local",
         "brhts05.usuarios.local",
-        "brhts06.usuarios.local"
+        "brhts06.usuarios.local",
+        "promiprempectra01.usuarios.local",
+        "promipremts02.usuarios.local",
+        "promipremts06.usuarios.local",
+        "promipremts101.usuarios.local",
+        "promipremtsg03.usuarios.local"
+
+
+
     ],
     "CLIBA": [
         "clibats100.cliba.com.ar",
@@ -54,25 +64,5 @@
         "brterp02.brt.com.ar",
         "brtts101.brt.com.ar",
         "brtts102.brt.com.ar"
-    ],
-    "CLIBA-TESTING": [
-        "CLIBATST001.cliba.com.ar",
-        "CLIBATST002.cliba.com.ar",
-        "CLIBATST003.cliba.com.ar",
-        "CLIBATST004.cliba.com.ar",
-        "CLIBATST005.cliba.com.ar",
-        "CLIBATST006.cliba.com.ar",
-        "CLIBATST007.cliba.com.ar",
-        "CLIBATST008.cliba.com.ar",
-        "CLIBATST009.cliba.com.ar",
-        "CLIBATST010.cliba.com.ar",
-        "CLIBATST011.cliba.com.ar",
-        "CLIBATST012.cliba.com.ar",
-        "CLIBATST013.cliba.com.ar",
-        "CLIBATST016.cliba.com.ar",
-        "CLIBATST017.cliba.com.ar",
-        "CLIBATST018.cliba.com.ar",
-        "CLIBATST022.cliba.com.ar",
-        "CLIBATST023.cliba.com.ar"
     ]
 }

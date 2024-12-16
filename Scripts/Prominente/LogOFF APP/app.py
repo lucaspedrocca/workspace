@@ -101,7 +101,7 @@ hostnames_empresas = load_hostnames()
 consulta_amplia = True
 opcion_seleccionada = True
 
-while opcion_seleccionada != 9:
+while opcion_seleccionada != 12:
     empresas = list(hostnames_empresas.keys())
     conteo_empresas = len(empresas)
     consulta_amplia_text = "Activado." if consulta_amplia else "Desactivado." 
@@ -124,11 +124,17 @@ while opcion_seleccionada != 9:
     except:
         print("\nIngrese una opción valida.\n")
         continue
-
-    if opcion_seleccionada in range(1, conteo_empresas + 1):
-        empresa_seleccionada = empresas[opcion_seleccionada - 1]
+    
+    if opcion_seleccionada in range(1, conteo_empresas + 1) or opcion_seleccionada == (conteo_empresas + 1):
         usuario_ingresado = str(input("Ingrese el nombre del usuario: "))
-        servidores_consulta = hostnames_empresas[empresa_seleccionada]
+        
+        if opcion_seleccionada == (conteo_empresas + 1):
+            empresa_seleccionada = "Todos"
+            servidores_consulta = [item for items in hostnames_empresas.values() for item in items]
+        else:
+            empresa_seleccionada = empresas[opcion_seleccionada - 1]
+            servidores_consulta = hostnames_empresas[empresa_seleccionada]
+            
 
         print(f"\nRealizando consultas en los servidores de {empresa_seleccionada} para el usuario {usuario_ingresado}.\n")
 
@@ -190,11 +196,14 @@ while opcion_seleccionada != 9:
                 else:
                     print("No se encontró un ID de sesión válido.")
 
-    elif opcion_seleccionada == (conteo_empresas + 1):
+    # elif opcion_seleccionada == (conteo_empresas + 1):
+    #    print("todos")
+        
+    elif opcion_seleccionada == (conteo_empresas + 2):
         consulta_amplia = not consulta_amplia
         consulta_amplia_text = "Activado" if consulta_amplia else "Desactivado"
 
-    elif opcion_seleccionada == (conteo_empresas + 2):
+    elif opcion_seleccionada == (conteo_empresas + 3):
         print("\n1- Añadir Servidor\n2- Eliminar Servidor\n3- Consultar hostnames\n4- Volver")
         sub_opcion = input("Seleccione una opción: ")
 
