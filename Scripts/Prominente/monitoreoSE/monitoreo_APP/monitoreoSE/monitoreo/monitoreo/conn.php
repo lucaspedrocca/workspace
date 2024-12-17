@@ -1,5 +1,5 @@
 <?php
-$serverName = "emvalwayson.emv.com.ar";
+$serverName = "emvlabsql01.emvlab.com.ar";
 $connectionOptions = array("Database"=>"ServicioEfectuado20", "Authentication"=>"WindowsAuthentication");
 
 try {

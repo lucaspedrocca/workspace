@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'emvalwayson.emv.com.ar',
+	'hostname' => 'emvlabsql01.emvlab.com.ar',
 	'username' => '',
 	'password' => '',
 	'database' => 'Emova_CV',
@@ -97,7 +97,7 @@ $db['default'] = array(
 
 $db['SE20'] = array(
 	'dsn'	=> '',
-	'hostname' => 'emvalwayson.emv.com.ar',
+	'hostname' => 'emvlabsql01.emvlab.com.ar',
 	'database' => 'ServicioEfectuado20',
 	'dbdriver' => 'sqlsrv',
 	'dbprefix' => '',
@@ -117,7 +117,7 @@ $db['SE20'] = array(
 
 $db['DWH_TYF'] = array(
 	'dsn'	=> '',
-	'hostname' => 'emvalwayson.emv.com.ar',
+	'hostname' => 'emvlabsql01.emvlab.com.ar',
 	'database' => 'DWH_TurnosFichadas',
 	'dbdriver' => 'sqlsrv',
 	'dbprefix' => '',
@@ -137,7 +137,7 @@ $db['DWH_TYF'] = array(
 
 $db['DWH_SE20'] = array(
 	'dsn'	=> '',
-	'hostname' => 'emvalwayson.emv.com.ar',
+	'hostname' => 'emvlabsql01.emvlab.com.ar',
 	'database' => 'DWH_SE20',
 	'dbdriver' => 'sqlsrv',
 	'dbprefix' => '',
