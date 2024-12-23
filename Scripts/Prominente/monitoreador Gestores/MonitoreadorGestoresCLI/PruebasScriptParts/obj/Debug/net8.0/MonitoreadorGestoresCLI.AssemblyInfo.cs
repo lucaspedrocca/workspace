@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MonitoreadorGestoresCLI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a0d5df4109aad7721bf072928903ef65a87bd38f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29c218f2b43212a5d89b3d7097cda7b577eb9e97")]
 [assembly: System.Reflection.AssemblyProductAttribute("MonitoreadorGestoresCLI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MonitoreadorGestoresCLI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
