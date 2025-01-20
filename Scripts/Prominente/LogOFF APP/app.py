@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import json
 import os
 import subprocess
@@ -66,6 +67,7 @@ def show_servers_for_company(company_name):
             print(f"- {server}")
     else:
         print(f"\nNo hay servidores registrados para {company_name}.")
+        
 
 def display_hostnames_json():
     """Muestra el contenido completo del archivo JSON."""
@@ -104,20 +106,47 @@ opcion_seleccionada = True
 while opcion_seleccionada != 12:
     empresas = list(hostnames_empresas.keys())
     conteo_empresas = len(empresas)
-    consulta_amplia_text = "Activado." if consulta_amplia else "Desactivado." 
-    consultas_extras = ['Todos',f'Consulta amplia - {consulta_amplia_text}', 'Editar servidores', 'Salir']
+    
+    #Normalizacion de consultas extras a las empresas
+    consulta_amplia_text = "Activado" if consulta_amplia else "Desactivado" 
+    diccionario_consultas_extras = {'A':'Todos',
+                                    'C':f'Consulta amplia - {consulta_amplia_text}',
+                                    'E':'Editar servidores',
+                                    'Z':'Salir'}
+    
+    # consultas_extras = ['E':'Todos','C':f'Consulta amplia - {consulta_amplia_text}', 'Editar servidores', 'Salir']
 
     print("\nSeleccione una opción: \n")
+    
+    # Listado empresas
+    list_empresas_menu = []
     for empresa in empresas:
         posicion = empresas.index(empresa) + 1
-        print(f"{posicion}- {empresa}")
+        # print(f"{posicion}- {empresa}")
+        list_empresas_menu += (f"{posicion}- {empresa}")
+    print(list_empresas_menu)
     
-    for consulta in consultas_extras:
-        posicion_consulta = consultas_extras.index(consulta) + 1
-        print(f"{posicion_consulta + conteo_empresas}- {consulta}")
         
-
+    
+    print("")
+    
+    # Listado opciones extra
+    for key, value in diccionario_consultas_extras.items():
+        print(f"{key}- {value}")
+        
     opcion_seleccionada = input("Ingrese una opción: ")
+    
+    
+    # Menu de opciones
+    menu_opciones = f"""
+    Seleccione una opción:
+    {"\n".join(list_empresas_menu)}
+    
+    
+    """
+
+    print(f"menu de opciones{menu_opciones}")
+
 
     try:
         opcion_seleccionada = int(opcion_seleccionada)
@@ -230,21 +259,26 @@ while opcion_seleccionada != 12:
             empresa_eliminar = input("Ingrese el nombre de la empresa: ").upper()
             handle_company_query(empresa_eliminar)
             hostname_eliminar = input("Ingrese el hostname del servidor: ")
+            
             if empresa_eliminar in hostnames_empresas and hostname_eliminar in hostnames_empresas[empresa_eliminar]:
                 hostnames_empresas[empresa_eliminar].remove(hostname_eliminar)
+            
                 if not hostnames_empresas[empresa_eliminar]:
                     del hostnames_empresas[empresa_eliminar]
                 save_hostnames(hostnames_empresas)
                 print(f"Servidor {hostname_eliminar} eliminado de {empresa_eliminar}.")
                 show_servers_for_company(empresa_eliminar)  # Mostrar la lista actualizada
+                continue
+            
             else:
                 print(f"Servidor {hostname_eliminar} no encontrado en {empresa_eliminar}.")
+                continue
 
         elif sub_opcion == 3:
             empresa_consultar = input("Ingrese el nombre de la empresa(ALL): ").upper()
             handle_company_query(empresa_consultar)
 
-    elif opcion_seleccionada == (conteo_empresas + 3):
+    elif opcion_seleccionada == (conteo_empresas + 4):
         break
 
     else:

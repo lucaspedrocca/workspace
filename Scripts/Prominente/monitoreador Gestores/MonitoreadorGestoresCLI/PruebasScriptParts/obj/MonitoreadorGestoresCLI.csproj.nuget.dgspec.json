@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\Scripts\\Prominente\\monitoreador Gestores\\MonitoreadorGestoresCLI\\PruebasScriptParts\\MonitoreadorGestoresCLI.csproj": {}
+    "C:\\projects\\workspace\\Scripts\\Prominente\\monitoreador Gestores\\MonitoreadorGestoresCLI\\PruebasScriptParts\\MonitoreadorGestoresCLI.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\Scripts\\Prominente\\monitoreador Gestores\\MonitoreadorGestoresCLI\\PruebasScriptParts\\MonitoreadorGestoresCLI.csproj": {
+    "C:\\projects\\workspace\\Scripts\\Prominente\\monitoreador Gestores\\MonitoreadorGestoresCLI\\PruebasScriptParts\\MonitoreadorGestoresCLI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\Scripts\\Prominente\\monitoreador Gestores\\MonitoreadorGestoresCLI\\PruebasScriptParts\\MonitoreadorGestoresCLI.csproj",
+        "projectUniqueName": "C:\\projects\\workspace\\Scripts\\Prominente\\monitoreador Gestores\\MonitoreadorGestoresCLI\\PruebasScriptParts\\MonitoreadorGestoresCLI.csproj",
         "projectName": "MonitoreadorGestoresCLI",
-        "projectPath": "D:\\workspace\\Scripts\\Prominente\\monitoreador Gestores\\MonitoreadorGestoresCLI\\PruebasScriptParts\\MonitoreadorGestoresCLI.csproj",
+        "projectPath": "C:\\projects\\workspace\\Scripts\\Prominente\\monitoreador Gestores\\MonitoreadorGestoresCLI\\PruebasScriptParts\\MonitoreadorGestoresCLI.csproj",
         "packagesPath": "C:\\Users\\lpedrocca\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\Scripts\\Prominente\\monitoreador Gestores\\MonitoreadorGestoresCLI\\PruebasScriptParts\\obj\\",
+        "outputPath": "C:\\projects\\workspace\\Scripts\\Prominente\\monitoreador Gestores\\MonitoreadorGestoresCLI\\PruebasScriptParts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lpedrocca\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -6,11 +6,17 @@
         "promitsw01.prominente.com.ar",
         "promitsw02.prominente.com.ar",
         "promipremapp01.prominente.com.ar",
-        "promipremts102.prominente.com.ar"
+        "promipremts102.prominente.com.ar",
+        "PROMITST001.prominente.com.ar",
+        "PROMITST002.prominente.com.ar",
+        "PROMITST003.prominente.com.ar",
+        "PROMITST004.prominente.com.ar"
     ],
     "BRH": [
         "brhts100.usuarios.local",
+        "brhtsw100.usuarios.local",
         "brhts101.usuarios.local",
+        "brhtsw101.usuarios.local",
         "brhts102.usuarios.local",
         "brhts05.usuarios.local",
         "brhts06.usuarios.local",
@@ -19,19 +25,42 @@
         "promipremts06.usuarios.local",
         "promipremts101.usuarios.local",
         "promipremtsg03.usuarios.local"
-
-
-
     ],
     "CLIBA": [
         "clibats100.cliba.com.ar",
+        "clibatsw100.cliba.com.ar",
         "clibats101.cliba.com.ar",
-        "clibats102.cliba.com.ar"
+        "clibats102.cliba.com.ar",
+        "CLIBATSTSHP01.cliba.com.ar",
+        "clibatst001.cliba.com.ar",
+        "clibatst002.cliba.com.ar",
+        "clibatst003.cliba.com.ar",
+        "clibatst004.cliba.com.ar",
+        "clibatst005.cliba.com.ar",
+        "clibatst006.cliba.com.ar",
+        "clibatst007.cliba.com.ar",
+        "clibatst008.cliba.com.ar",
+        "clibatst009.cliba.com.ar",
+        "clibatst010.cliba.com.ar",
+        "clibatst011.cliba.com.ar",
+        "clibatst012.cliba.com.ar",
+        "clibatst013.cliba.com.ar",
+        "clibatst017.cliba.com.ar",
+        "clibatst016.cliba.com.ar",
+        "clibatst018.cliba.com.ar",
+        "clibatst019.cliba.com.ar",
+        "clibatst020.cliba.com.ar",
+        "clibatst021.cliba.com.ar",
+        "clibatst022.cliba.com.ar",
+        "clibatst01.cliba.com.ar"
     ],
     "HAUG": [
         "haugts98.haug.local",
         "haugts99.haug.local",
-        "haugts100.haug.local"
+        "haugts100.haug.local",
+        "haugts101.haug.local",
+        "haugts102.haug.local",
+        "haugtsw102.haug.local"
     ],
     "EMV": [
         "emvts01.emv.com.ar",
@@ -64,5 +93,9 @@
         "brterp02.brt.com.ar",
         "brtts101.brt.com.ar",
         "brtts102.brt.com.ar"
+    ],
+    "BRF": [
+        "BRFTS101.brf.com.ar",
+        "BRFTSW101.brf.com.ar"
     ]
 }
