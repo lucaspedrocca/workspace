@@ -122,9 +122,9 @@ while opcion_seleccionada != 12:
     list_empresas_menu = []
     for empresa in empresas:
         posicion = empresas.index(empresa) + 1
-        # print(f"{posicion}- {empresa}")
-        list_empresas_menu += (f"{posicion}- {empresa}")
-    print(list_empresas_menu)
+        print(f"{posicion}- {empresa}")
+        # list_empresas_menu += (f"{posicion}- {empresa}")
+    # print(list_empresas_menu)
     
         
     
@@ -145,11 +145,15 @@ while opcion_seleccionada != 12:
     
     """
 
-    print(f"menu de opciones{menu_opciones}")
+    # print(f"menu de opciones{menu_opciones}")
 
 
     try:
-        opcion_seleccionada = int(opcion_seleccionada)
+        if int(opcion_seleccionada):
+            opcion_seleccionada = int(opcion_seleccionada)
+        elif opcion_seleccionada in diccionario_consultas_extras.keys():
+            print(opcion_seleccionada)
+            
     except:
         print("\nIngrese una opción valida.\n")
         continue
