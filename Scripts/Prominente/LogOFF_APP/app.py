@@ -125,9 +125,7 @@ while opcion_seleccionada != 12:
         print(f"{posicion}- {empresa}")
         # list_empresas_menu += (f"{posicion}- {empresa}")
     # print(list_empresas_menu)
-    
         
-    
     print("")
     
     # Listado opciones extra
@@ -137,33 +135,37 @@ while opcion_seleccionada != 12:
     opcion_seleccionada = input("Ingrese una opción: ")
     
     
-    # Menu de opciones
-    menu_opciones = f"""
-    Seleccione una opción:
-    {"\n".join(list_empresas_menu)}
-    
-    
-    """
+    # # Menu de opciones
+    # menu_opciones = f"""
+    # Seleccione una opción:
+    # {"\n".join(list_empresas_menu)}    
+    # """
 
-    # print(f"menu de opciones{menu_opciones}")
+    # # print(f"menu de opciones{menu_opciones}")
 
 
     try:
-        if int(opcion_seleccionada):
-            opcion_seleccionada = int(opcion_seleccionada)
-        elif opcion_seleccionada in diccionario_consultas_extras.keys():
-            print(opcion_seleccionada)
+        opcion_seleccionada = int(opcion_seleccionada)
             
     except:
-        print("\nIngrese una opción valida.\n")
-        continue
+        opcion_seleccionada = opcion_seleccionada.upper()
+        if opcion_seleccionada not in diccionario_consultas_extras.keys():
+            print("\nIngrese una opción valida.\n")
+            continue
+
+        # else:
+        #     print("\nIngrese una opción valida.\n")
+        #     continue
     
-    if opcion_seleccionada in range(1, conteo_empresas + 1) or opcion_seleccionada == (conteo_empresas + 1):
+    if opcion_seleccionada in range(1, conteo_empresas + 1) or opcion_seleccionada == "A":
         usuario_ingresado = str(input("Ingrese el nombre del usuario: "))
         
-        if opcion_seleccionada == (conteo_empresas + 1):
+        # Opcion Extra: Todos
+        if opcion_seleccionada == "A":
             empresa_seleccionada = "Todos"
             servidores_consulta = [item for items in hostnames_empresas.values() for item in items]
+        
+        # Consulta general
         else:
             empresa_seleccionada = empresas[opcion_seleccionada - 1]
             servidores_consulta = hostnames_empresas[empresa_seleccionada]
@@ -228,63 +230,71 @@ while opcion_seleccionada != 12:
                         print("...")
                 else:
                     print("No se encontró un ID de sesión válido.")
-
-    # elif opcion_seleccionada == (conteo_empresas + 1):
-    #    print("todos")
         
-    elif opcion_seleccionada == (conteo_empresas + 2):
-        consulta_amplia = not consulta_amplia
-        consulta_amplia_text = "Activado" if consulta_amplia else "Desactivado"
+    
+    #* Validacion si es alguna de las opciones extras definidas en diccionario_consultas_extras
+    
+    elif opcion_seleccionada in diccionario_consultas_extras.keys():
+        # opcion_seleccionada = opcion_seleccionada.Upper()
+        # print(f"cuando se seleciona la opcion {opcion_seleccionada}")
+        
+        #? Opcion Extra: Consulta amplia - Activado
+        if opcion_seleccionada == "C":
+            consulta_amplia = not consulta_amplia
+            consulta_amplia_text = "Activado" if consulta_amplia else "Desactivado"
+        
+        #? Opcion Extra: Editar servidores
+        elif opcion_seleccionada == "E":
+            print("\n1- Añadir Servidor\n2- Eliminar Servidor\n3- Consultar hostnames\n4- Volver")
+            sub_opcion = input("Seleccione una opción: ")
 
-    elif opcion_seleccionada == (conteo_empresas + 3):
-        print("\n1- Añadir Servidor\n2- Eliminar Servidor\n3- Consultar hostnames\n4- Volver")
-        sub_opcion = input("Seleccione una opción: ")
+            try:
+                sub_opcion = int(sub_opcion)
+            except:
+                print("\nIngrese una opción valida.\n")
+                continue
 
-        try:
-            sub_opcion = int(sub_opcion)
-        except:
-            print("\nIngrese una opción valida.\n")
-            continue
+            if sub_opcion == 1:
+                empresa_nueva = input("Ingrese el nombre de la empresa: ").upper()
+                handle_company_query(empresa_nueva)
+                hostname_nuevo = input("Ingrese el hostname del servidor: ")
 
-        if sub_opcion == 1:
-            empresa_nueva = input("Ingrese el nombre de la empresa: ").upper()
-            handle_company_query(empresa_nueva)
-            hostname_nuevo = input("Ingrese el hostname del servidor: ")
-
-            if empresa_nueva in hostnames_empresas:
-                hostnames_empresas[empresa_nueva].append(hostname_nuevo)
-            else:
-                hostnames_empresas[empresa_nueva] = [hostname_nuevo]
-            save_hostnames(hostnames_empresas)
-            print(f"Servidor {hostname_nuevo} añadido a {empresa_nueva}.")
-            show_servers_for_company(empresa_nueva)  # Mostrar la lista actualizada
-
-        elif sub_opcion == 2:
-            empresa_eliminar = input("Ingrese el nombre de la empresa: ").upper()
-            handle_company_query(empresa_eliminar)
-            hostname_eliminar = input("Ingrese el hostname del servidor: ")
-            
-            if empresa_eliminar in hostnames_empresas and hostname_eliminar in hostnames_empresas[empresa_eliminar]:
-                hostnames_empresas[empresa_eliminar].remove(hostname_eliminar)
-            
-                if not hostnames_empresas[empresa_eliminar]:
-                    del hostnames_empresas[empresa_eliminar]
+                if empresa_nueva in hostnames_empresas:
+                    hostnames_empresas[empresa_nueva].append(hostname_nuevo)
+                else:
+                    hostnames_empresas[empresa_nueva] = [hostname_nuevo]
                 save_hostnames(hostnames_empresas)
-                print(f"Servidor {hostname_eliminar} eliminado de {empresa_eliminar}.")
-                show_servers_for_company(empresa_eliminar)  # Mostrar la lista actualizada
-                continue
-            
-            else:
-                print(f"Servidor {hostname_eliminar} no encontrado en {empresa_eliminar}.")
-                continue
+                print(f"Servidor {hostname_nuevo} añadido a {empresa_nueva}.")
+                show_servers_for_company(empresa_nueva)  # Mostrar la lista actualizada
 
-        elif sub_opcion == 3:
-            empresa_consultar = input("Ingrese el nombre de la empresa(ALL): ").upper()
-            handle_company_query(empresa_consultar)
+            elif sub_opcion == 2:
+                empresa_eliminar = input("Ingrese el nombre de la empresa: ").upper()
+                handle_company_query(empresa_eliminar)
+                hostname_eliminar = input("Ingrese el hostname del servidor: ")
+                
+                if empresa_eliminar in hostnames_empresas and hostname_eliminar in hostnames_empresas[empresa_eliminar]:
+                    hostnames_empresas[empresa_eliminar].remove(hostname_eliminar)
+                
+                    if not hostnames_empresas[empresa_eliminar]:
+                        del hostnames_empresas[empresa_eliminar]
+                    save_hostnames(hostnames_empresas)
+                    print(f"Servidor {hostname_eliminar} eliminado de {empresa_eliminar}.")
+                    show_servers_for_company(empresa_eliminar)  # Mostrar la lista actualizada
+                    continue
+                
+                else:
+                    print(f"Servidor {hostname_eliminar} no encontrado en {empresa_eliminar}.")
+                    continue
 
-    elif opcion_seleccionada == (conteo_empresas + 4):
-        break
+            elif sub_opcion == 3:
+                empresa_consultar = input("Ingrese el nombre de la empresa(ALL): ").upper()
+                handle_company_query(empresa_consultar)
+        
+        #? Opcion Extra: Salir
+        elif opcion_seleccionada == "Z":
+            break
 
+    #* Opciones no validas 
     else:
         print("Ingrese una opción valida.")
         continue
